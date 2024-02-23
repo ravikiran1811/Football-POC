@@ -28,7 +28,7 @@
   font-weight: 400;
   color: #232222;
   margin-bottom: 10px;
-}
+} 
 .previewContainer {
   display: flex;
   flex-wrap: wrap;
@@ -64,3 +64,30 @@
   height: 20px;
   box-shadow: 0px 0px 5px 0px #000000;
 }
+.imageModal{
+  margin-top: 7%;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height:500px;
+  margin-left: 25%;
+  box-shadow: 24;
+  padding-left:6%;
+  padding-top: 1.5%;
+
+}
+.imageStyle{
+  width:500px;
+  height:400px;
+}
+.chooseImage:hover{
+   cursor: pointer;
+}
+.modalElements{
+  display: flex;
+  flex-direction: column;
+}
+.closeButton{
+  margin-left: 500px;
+}
+
