@@ -1,25 +1,27 @@
-
-import InputFieldStyles from './InputFeild.module.scss'
+import InputFieldStyles from "./InputFeild.module.scss";
 import { FormLabel, Input } from "@mui/material";
-interface IInput  {
-    placeholder:string;
-    handleInputFunction: (value:string) => void;
-    label: string;
+interface IInput {
+  placeholder: string;
+  handleInputFunction?: (value: string) => void;
+  label: string;
+  register?: any;
+  error?: string;
 }
 const InputField = (props: IInput) => {
-  
-  const {placeholder, handleInputFunction,label} = props;
+  const { placeholder, label, error, register } = props;
   return (
     <>
-    <FormLabel>{label}</FormLabel>
-    <Input
-      className={InputFieldStyles.container}
-      placeholder={placeholder}
-      onChange={(event) => {
-        const inputValue=event.target.value;
-        handleInputFunction(inputValue);
-    }}
-    />
+      <FormLabel>{label}</FormLabel>
+      <Input
+        className={InputFieldStyles.container}
+        placeholder={placeholder}
+        // onChange={(event) => {
+        //   const inputValue = event.target.value;
+        //   handleInputFunction(inputValue);
+        // }}
+        {...register}
+      />
+      {error && <p>{error}</p>}
     </>
   );
 };
