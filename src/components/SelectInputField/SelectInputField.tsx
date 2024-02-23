@@ -8,22 +8,17 @@ interface Item {
   name: string;
 }
 
-interface Props {
+interface SearchFieldProps {
   list: Item[];
   selectedState: string;
   handleChange: (event: string) => void;
 }
-// const selectInputStyle = {
-//   margin: 1,
-//   width: 300,
-// };
-const SelectInput: React.FC<Props> = ({
+const SelectInputField: React.FC<SearchFieldProps> = ({
   list,
   selectedState,
   handleChange,
 }) => {
   return (
-    <div>
       <FormControl className={styles.selectContainer}>
         <Select
           value={selectedState}
@@ -35,15 +30,16 @@ const SelectInput: React.FC<Props> = ({
           <MenuItem value="" disabled>
             Select State
           </MenuItem>
-          {list.map((object) => (
+          { list &&
+          Array.isArray(list) &&
+          list.map((object) => (
             <MenuItem key={object.id} value={object.name}>
               {object.name}
             </MenuItem>
-          ))}
+          ))} : 'Data is Not Available'
         </Select>
       </FormControl>
-    </div>
   );
 };
 
-export default SelectInput;
+export default SelectInputField;
