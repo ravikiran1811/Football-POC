@@ -15,10 +15,6 @@ const InputField = (props: IInput) => {
       <Input
         className={InputFieldStyles.container}
         placeholder={placeholder}
-        // onChange={(event) => {
-        //   const inputValue = event.target.value;
-        //   handleInputFunction(inputValue);
-        // }}
         {...register}
       />
       {error && <p>{error}</p>}
