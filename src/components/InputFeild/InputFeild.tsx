@@ -1,13 +1,12 @@
+
+import InputScss from './InputFeild.module.scss'
+import { FormLabel, Input } from "@mui/material";
 interface IInput  {
     placeholder:string;
     handleInputFunction: (value:string) => void;
     label: string;
 }
-
-import InputScss from './InputComponent.module.scss'
-import { FormLabel, Input } from "@mui/material";
-
-const InputComponent = (props:IInput) => {
+const InputField = (props:IInput) => {
   const {placeholder, handleInputFunction,label} = props;
   return (
     <>
@@ -23,4 +22,4 @@ const InputComponent = (props:IInput) => {
     </>
   );
 };
-export default InputComponent;
+export default InputField;
