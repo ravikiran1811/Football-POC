@@ -4,6 +4,7 @@ import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import DashboardStyles from "./Dashboard.module.scss";
 import TagsSearch from "../../components/TagsSearch/TagsSearch";
 import useCurrentLocation from "../../utils/useCurrentLocation";
+import ClubRegistration from "../ClubRegistration/ClubRegustration";
 
 const Dashboard = () => {
 
@@ -20,6 +21,7 @@ const Dashboard = () => {
     <div className={DashboardStyles.container}>
       <SideDrawer />
       <TagsSearch />
+      <ClubRegistration/>
       <Outlet />
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
