@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import UploadMedia from "./UploadMedia.module.scss";
+import UploadMediaStyles from "./UploadMedia.module.scss";
 import { constants } from "../../constants/stringConstants";
 
 interface FileUploadProps {
   multiple?: boolean;
 }
 
-const FileUpload: React.FC<FileUploadProps> = ({ multiple = false }) => {
+const UploadMedia: React.FC<FileUploadProps> = ({ multiple = false }) => {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +24,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ multiple = false }) => {
   };
 
   return (
-    <div className={UploadMedia.container}>
+    <div className={UploadMediaStyles.container}>
       <input
         id="file-input"
         type="file"
@@ -33,17 +33,17 @@ const FileUpload: React.FC<FileUploadProps> = ({ multiple = false }) => {
         multiple={multiple}
         style={{ display: "none" }}
       />
-      <label className={UploadMedia.label} htmlFor="file-input">
+      <label className={UploadMediaStyles.label} htmlFor="file-input">
         <h2>
           <span>Select</span> {constants.uploadMedia.heading}
         </h2>
         <h3> {constants.uploadMedia.subHeading}</h3>
       </label>
-      <div className={UploadMedia.previewContainer}>
+      <div className={UploadMediaStyles.previewContainer}>
         {previewImages.map((imageUrl, index) => (
-          <div className={UploadMedia.preview}>
+          <div className={UploadMediaStyles.preview}>
             <span
-              className={UploadMedia.cancelButton}
+              className={UploadMediaStyles.cancelButton}
               onClick={() => handleCancelClick(index)}
             >
               X
@@ -56,4 +56,4 @@ const FileUpload: React.FC<FileUploadProps> = ({ multiple = false }) => {
   );
 };
 
-export default FileUpload;
+export default UploadMedia;
