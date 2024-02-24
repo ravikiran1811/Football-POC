@@ -17,10 +17,10 @@ const TimeLine = (props: ITimeLine) => {
       }
     >
       <Box className={TimeLineStyles.content}>
-        <Typography className={TimeLineStyles.content__title}>
+        <Typography className={TimeLineStyles.title}>
           {title}
         </Typography>
-        <Typography className={TimeLineStyles.content__description}>
+        <Typography className={TimeLineStyles.description}>
           {content}
         </Typography>
       </Box>
