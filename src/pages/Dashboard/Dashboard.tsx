@@ -18,7 +18,7 @@ const Dashboard = () => {
     <div className={DashboardStyles.container}>
       <SideDrawer />
       <TagsSearch />
-      <UploadMedia multiple={true} />
+      <UploadMedia multiple={false} />
       <Outlet />
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>

@@ -37,6 +37,7 @@ const UploadMedia: React.FC<FileUploadProps> = ({ multiple = false }) => {
   };
 
   return (
+    multiple?
     <div className={UploadMediaStyles.container}>
       <input
         id="file-input"
@@ -98,6 +99,37 @@ const UploadMedia: React.FC<FileUploadProps> = ({ multiple = false }) => {
         </Box>
       </Modal>
     </div>
+    :  
+
+    <>
+    <input
+      id="file-input"
+      type="file"
+      accept="image/png, image/jpg, image/jpeg, image/svg"
+      onChange={handleFileChange}
+      // multiple={multiple}
+      style={{ display: "none" }}
+    />
+    <div className={UploadMediaStyles.previewContainer}>
+        {previewImages.map((imageUrl, index) => (
+          <div className={UploadMediaStyles.preview} key={index}>
+            <span
+              className={UploadMediaStyles.cancelButton}
+              onClick={() => handleCancelClick(index)}
+            >
+              X
+            </span>
+            <img
+              src={imageUrl}
+              alt="Preview"
+              onClick={() => handleOpenModal(index)}
+              className={UploadMediaStyles.chooseImage}
+            />
+          </div>
+        ))}
+    </div>
+    <label className={UploadMediaStyles.label} htmlFor="file-input"></label>
+    </>
   );
 };
 export default UploadMedia;
