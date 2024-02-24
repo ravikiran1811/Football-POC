@@ -2,7 +2,7 @@ import * as React from "react";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import styles from "./SelectInput.module.scss";
+import SelectInputStyles from "./SelectInput.module.scss";
 
 interface Item {
   id: number;
@@ -12,20 +12,25 @@ interface Item {
 interface SearchFieldProps {
   list: Item[];
   selectedState: string;
-  handleChange: (event: string) => void;
+  handleChange?: (event: string) => void;
   mobileNumber?: boolean;
+  register?: any;
+  error?: string;
 }
 
 const SelectInputField: React.FC<SearchFieldProps> = ({
   list,
   selectedState,
-  handleChange,
   mobileNumber = false,
+  register,
+  error,
 }) => {
   return (
     <FormControl
       className={` ${
-        mobileNumber ? styles.mobileNumber : styles.selectContainer
+        mobileNumber
+          ? SelectInputStyles.mobileNumber
+          : SelectInputStyles.selectContainer
       }`}
     >
       <Select
@@ -38,9 +43,7 @@ const SelectInputField: React.FC<SearchFieldProps> = ({
           },
         }}
         value={selectedState || (list.length > 0 ? list[0].name : "")}
-        onChange={(e) => {
-          handleChange(e.target.value);
-        }}
+        {...register}
       >
         {list &&
           Array.isArray(list) &&
@@ -51,6 +54,7 @@ const SelectInputField: React.FC<SearchFieldProps> = ({
             </MenuItem>
           ))}
       </Select>
+      {error && <p className={SelectInputStyles.error}>{error}</p>}
     </FormControl>
   );
 };

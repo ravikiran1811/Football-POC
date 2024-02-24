@@ -2,6 +2,7 @@
 import { Outlet } from "react-router-dom";
 import DashboardStyles from "./Dashboard.module.scss";
 import useCurrentLocation from "../../utils/useCurrentLocation";
+import ClubRegistration from "../ClubRegistration/ClubRegustration";
 const Dashboard = () => {
   // const navigate = useNavigate();
   // const handleLogout = () => {
@@ -14,6 +15,7 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
+      <ClubRegistration />
       <Outlet />
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
