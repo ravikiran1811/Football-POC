@@ -1,0 +1,49 @@
+.RegistrationBox{
+    background-image: url('../../assets/RegistrationBoxImage.svg');
+    height:186px;
+    margin: auto;
+    width:1775.13px;
+    &__imageStyle{
+        max-width: 100%;
+        height: auto;
+       margin-left: 20.1%;
+       margin-top: 3.9%;
+    }
+    &__headings{
+        color:whitesmoke;
+        margin-left: 25%;
+        margin-top: -3%;
+        &__heading{
+            line-height: 24.2px;
+            font-size: 20px;
+            font-family: Inter;
+            font-weight: 700;
+        }
+        &__subHeading{
+            font-family: Nunito Sans;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: 0em;
+        }
+    }
+    &__Button{
+        margin-left: 67.5%;
+        margin-top: -2.5%;
+        
+        &__registrationButton{
+            border-radius: 1600px;
+            width: 199px;
+            height:54px;
+            color: azure;
+            background-color: grey;
+        }
+    }
+    &__registrationButton:hover{
+        color: white;
+        background-color: grey;
+    }
+}
+.p{
+    color:white
+}

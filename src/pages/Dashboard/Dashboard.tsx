@@ -1,13 +1,10 @@
 // import { useNavigate } from "react-router-dom";
-import { Outlet } from "react-router-dom";
-import SideDrawer from "../../components/SideDrawer/SideDrawer";
+// import { Outlet } from "react-router-dom";
+// import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import DashboardStyles from "./Dashboard.module.scss";
-import TagsSearch from "../../components/TagsSearch/TagsSearch";
+// import TagsSearch from "../../components/TagsSearch/TagsSearch";
 import useCurrentLocation from "../../utils/useCurrentLocation";
-
-
-// import UploadMedia from "../../components/UploadMedia/UploadMedia";
-
+import RegistrationBox from "../../components/RegistrationBox/RegistrationBox";
 const Dashboard = () => {
 
   // const navigate = useNavigate();
@@ -21,10 +18,8 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
-      <SideDrawer />
-      <TagsSearch />
-      <Outlet />
-
+      {/* <DetailsField /> */}
+      <RegistrationBox heading='Register YOUR CLUB HERE' subHeading="shape tomorrow's soccer stars" />
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
   );
