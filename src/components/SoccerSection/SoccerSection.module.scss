@@ -1,0 +1,25 @@
+.SoccerSection{
+    background-color: #14141414;
+    &__part1{
+        margin-left: 5.5%;
+        &__description{
+            margin-top: 3.5%;
+            margin-right: 4%;
+            font-weight: 400;
+            font-size: 20;
+            line-height: 27.28px;
+           &__para{
+            margin-bottom: 1.5%;
+           }
+        }
+    }
+    &__part2{
+        margin-left: 5.5%;
+        margin-top: 4.5%;
+    }
+    &__part3{
+        margin-top: 3%;
+        margin-left: 5.5%;
+        margin-right: 5.5%;
+    }
+}

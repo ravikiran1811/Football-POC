@@ -1,6 +1,7 @@
 import { Box,Button, Typography } from "@mui/material"
 import RegistrationBoxStyles from './RegistrationBox.module.scss'
 import WhiteBoxIcon from '../../assets/WhiteBoxIcon.svg'
+import React from "react";
 // import Button from "../../themes/overrides/Button";
 interface IRegistrationBoxProps {
     heading: string;

@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import HeadingFieldStyles from './HeadingField.module.scss'
+import React from "react";
 interface IHeadingFieldProps {
     heading: string;
     subHeading: string;
@@ -8,8 +9,8 @@ interface IHeadingFieldProps {
 
     return(
         <Box className={HeadingFieldStyles.headingField}>
-            <p className={HeadingFieldStyles.subHeading}>{subHeading}</p>
-            <p className={HeadingFieldStyles.heading}>{heading}</p>
+            <Box className={HeadingFieldStyles.subHeading}>{subHeading}</Box>
+            <Box className={HeadingFieldStyles.heading}>{heading}</Box>
         </Box>
     )
 }

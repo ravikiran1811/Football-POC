@@ -4,18 +4,18 @@ import ShowCardStyles from "./ShowCard.module.scss"
 const ShowCard = () => {
     return (
         <>
-            <Box >
+            <Box className={ShowCardStyles.TotalCard}>
                 {SecondaryCard.map((e: any) => (
-                    <Box className={ShowCardStyles.cardStyle}
+                    <Box className={ShowCardStyles.TotalCard__cardStyle}
                     >
-                        <Box className={ShowCardStyles.cardStyle__image}>
-                            <img className={ShowCardStyles.cardStyle__image__imageStyles} src={e.image} />
+                        <Box className={ShowCardStyles.TotalCard__cardStyle__image}>
+                            <img className={ShowCardStyles.TotalCard__cardStyle__image__imageStyles} src={e.image} />
                         </Box>
-                        <Box className={ShowCardStyles.cardStyle__text}>
-                            <Box className={ShowCardStyles.cardStyle__text__title}>
+                        <Box className={ShowCardStyles.TotalCard__cardStyle__text}>
+                            <Box className={ShowCardStyles.TotalCard__cardStyle__text__title}>
                                 {e.title}
                             </Box>
-                            <Box className={ShowCardStyles.cardStyle__text__description}>
+                            <Box className={ShowCardStyles.TotalCard__cardStyle__text__description}>
                                 {e.description}
                             </Box>
                         </Box>

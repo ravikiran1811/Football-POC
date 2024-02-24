@@ -1,9 +1,15 @@
-.cardStyle{
-    width:342px ;
-    height:423px;
-    border:1px solid black ;
+.TotalCard{
+    display:flex;
+     gap:24px;
+     width: 93vw;
+     border: 2px solid;
+&__cardStyle{
+    width:17% ;
+    height:96%;
+    border:2px solid black ;
     background-color: #FFFFFF;
     display:flex ;
+   
     border-radius: 8px;
     flex-direction: column;
     align-items: center;
@@ -43,3 +49,5 @@
     }
     
 }
+}
+

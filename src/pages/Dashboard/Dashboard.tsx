@@ -4,7 +4,7 @@
 import DashboardStyles from "./Dashboard.module.scss";
 // import TagsSearch from "../../components/TagsSearch/TagsSearch";
 import useCurrentLocation from "../../utils/useCurrentLocation";
-import RegistrationBox from "../../components/RegistrationBox/RegistrationBox";
+
 const Dashboard = () => {
 
   // const navigate = useNavigate();
@@ -18,8 +18,7 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
-      {/* <DetailsField /> */}
-      <RegistrationBox heading='Register YOUR CLUB HERE' subHeading="shape tomorrow's soccer stars" />
+
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
   );
