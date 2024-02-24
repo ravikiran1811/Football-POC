@@ -5,6 +5,9 @@ import DashboardStyles from "./Dashboard.module.scss";
 import TagsSearch from "../../components/TagsSearch/TagsSearch";
 import useCurrentLocation from "../../utils/useCurrentLocation";
 
+
+// import UploadMedia from "../../components/UploadMedia/UploadMedia";
+
 const Dashboard = () => {
 
   // const navigate = useNavigate();
@@ -21,6 +24,7 @@ const Dashboard = () => {
       <SideDrawer />
       <TagsSearch />
       <Outlet />
+
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
   );
