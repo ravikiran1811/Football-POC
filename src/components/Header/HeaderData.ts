@@ -1,4 +1,4 @@
-export const HeaderList = [
+export const headerList = [
   {
     id: 1,
     name: "Home",

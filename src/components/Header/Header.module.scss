@@ -76,9 +76,10 @@ align-items: center;
     &__textright{
         position: absolute;
         right:2%;
-        top:25%;
+        top:300px;
         font-family: Nunito Sans;
         font-size: 30px;
+        width:300px;
         font-weight: 700;
         letter-spacing: 0em;
         text-align: right;
@@ -89,7 +90,8 @@ align-items: center;
     &__textleft{
         position: absolute;
         left:2%;
-        top:45%;
+        top:450px;
+        width:300px;
         font-family: Nunito Sans;
         font-size:40px;
         border: 2px;
@@ -104,13 +106,14 @@ align-items: center;
 .pathCard{
     position: absolute;
     z-index: 2;
-    width:400px;
+    width:300px;
     list-style: none;
     background-color: white;
     color: black;
     top:50px;
     left: 5px;
     text-align: center;
+    text-wrap: wrap;
     cursor: pointer;
     
 }
