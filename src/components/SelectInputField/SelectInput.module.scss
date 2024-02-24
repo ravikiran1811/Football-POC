@@ -1,6 +1,17 @@
-.selectContainer{
-    margin: 1;
-    width: 359px;
-    height:40px;
-    // background-color: black;
+.selectContainer {
+  width: 359px;
+  height: 40px;
+}
+.mobileNumberContainer {
+  margin: 1;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+.noBorder {
+  border: none;
+}
+
+.border {
+  border: 1px solid #e0e0e0;
 }

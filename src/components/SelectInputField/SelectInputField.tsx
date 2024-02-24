@@ -3,6 +3,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import styles from "./SelectInput.module.scss";
+
 interface Item {
   id: number;
   name: string;
@@ -12,33 +13,45 @@ interface SearchFieldProps {
   list: Item[];
   selectedState: string;
   handleChange: (event: string) => void;
+  mobileNumber?: boolean;
 }
+
 const SelectInputField: React.FC<SearchFieldProps> = ({
   list,
   selectedState,
   handleChange,
+  mobileNumber = false,
 }) => {
   return (
-      <FormControl className={styles.selectContainer}>
-        <Select
-          value={selectedState}
-          onChange={(e) => {
-            handleChange(e.target.value);
-          }}
-          displayEmpty
-        >
-          <MenuItem value="" disabled>
-            Select State
-          </MenuItem>
-          { list &&
+    <FormControl
+      className={` ${
+        mobileNumber ? styles.mobileNumber : styles.selectContainer
+      }`}
+    >
+      <Select
+        sx={{
+          "& .MuiOutlinedInput-notchedOutline": {
+            border: `${mobileNumber ? "none" : "1px solid #E0E0E0"}`,
+          },
+          "& .MuiOutlinedInput-input": {
+            padding: "8.5px",
+          },
+        }}
+        value={selectedState || (list.length > 0 ? list[0].name : "")}
+        onChange={(e) => {
+          handleChange(e.target.value);
+        }}
+      >
+        {list &&
           Array.isArray(list) &&
+          list.length > 0 &&
           list.map((object) => (
             <MenuItem key={object.id} value={object.name}>
               {object.name}
             </MenuItem>
-          ))} : 'Data is Not Available'
-        </Select>
-      </FormControl>
+          ))}
+      </Select>
+    </FormControl>
   );
 };
 
