@@ -1,0 +1,28 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline{
+    margin:auto;
+    width:73%;
+    display: flex;
+    flex-direction: column;
+  }
+  .followUpButton{
+    position: relative;
+    border: 1px solid black;
+    margin:40px;
+  }
+  .followUpButton::before{
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left:50%;
+    width:2px;
+    height:40px;
+    border-left: 2px dashed gray;
+  }
+  
