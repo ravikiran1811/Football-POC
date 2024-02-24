@@ -1,49 +1,51 @@
-.RegistrationBox{
-    background-image: url('../../assets/RegistrationBoxImage.svg');
-    height:186px;
-    margin: auto;
-    width: 100%;
-    &__imageStyle{
-        max-width: 100%;
-        height: auto;
-       margin-left: 20.1%;
-       margin-top: 3.9%;
+.RegistrationBox {
+  background-image: url("../../assets/RegistrationBoxImage.svg");
+  height: 186px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  gap: 500px;
+
+  &__part1 {
+    display: flex;
+    gap: 30px;
+    padding-left: 30%;
+    padding-top: 5%;
+  }
+
+  &__part1__headings {
+    color: white;
+    padding-top:10px;
+    &__heading {
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
     }
-    &__headings{
-        color:whitesmoke;
-        margin-left: 25%;
-        margin-top: -3.4%;
-        &__heading{
-            line-height: 24.2px;
-            font-size: 20px;
-            font-family: Inter;
-            font-weight: 700;
-        }
-        &__subHeading{
-            font-family: Nunito Sans;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 22px;
-            letter-spacing: 0em;
-        }
+    &__subheading {
+      font-family: Nunito Sans;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
     }
-    &__Button{
-        margin-left: 67.5%;
-        margin-top: -2.5%;
-        
-        &__registrationButton{
-            border-radius: 1600px;
-            width: 199px;
-            height:54px;
-            color: azure;
-            background-color: grey;
-        }
+  }
+
+  &__Button {
+    padding-top: 5%;
+  }
+
+  &__Button__registrationButton {
+    border-radius: 1600px;
+    width: 199px;
+    height: 54px;
+    color: azure;
+    background-color: grey;
+
+    &:hover {
+      color: white;
+      background-color: grey;
     }
-    &__registrationButton:hover{
-        color: white;
-        background-color: grey;
-    }
-}
-.p{
-    color:white
+  }
 }

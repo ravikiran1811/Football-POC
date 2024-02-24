@@ -10,13 +10,17 @@ interface IRegistrationBoxProps {
 const RegistrationBox: React.FC<IRegistrationBoxProps> = ({ heading, subHeading }) =>{
     return(
         <Box className={RegistrationBoxStyles.RegistrationBox}>
-            <Box className={RegistrationBoxStyles.RegistrationBox__image}>
-            <img className={RegistrationBoxStyles.RegistrationBox__imageStyle} src={WhiteBoxIcon}></img>
+            <Box className={RegistrationBoxStyles.RegistrationBox__part1}>
+            <Box className={RegistrationBoxStyles.RegistrationBox__part1__image}>
+            <img className={RegistrationBoxStyles.RegistrationBox__part1__imageStyle} src={WhiteBoxIcon}></img>
             </Box> 
-            <Box  className={RegistrationBoxStyles.RegistrationBox__headings}>
-                <Typography className={RegistrationBoxStyles.RegistrationBox__headings__heading}>{heading}</Typography>
-                <Typography className={RegistrationBoxStyles.RegistrationBox__headings__subHeading}>{subHeading}</Typography>
+            <Box  className={RegistrationBoxStyles.RegistrationBox__part1__headings}>
+                <Typography className={RegistrationBoxStyles.RegistrationBox__part1__headings__heading}>{heading}</Typography>
+                <Typography className={RegistrationBoxStyles.RegistrationBox__part1__headings__subHeading}>{subHeading}</Typography>
             </Box>
+            </Box>
+          
+
             <Box className={RegistrationBoxStyles.RegistrationBox__Button}>
             <Button className={RegistrationBoxStyles.RegistrationBox__Button__registrationButton}>Register</Button>
             </Box>
