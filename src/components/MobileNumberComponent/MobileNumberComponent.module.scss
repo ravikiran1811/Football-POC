@@ -1,14 +1,16 @@
-.container{
-    display: flex;
-    height: 40px;
-    justify-content: space-around;
-    margin-bottom: 50px;
+.container {
+  display: flex;
+  width: 359px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
 }
-.selectField{
-    width: 40px;
-    height: 30px;
+
+.selectField {
+  width: 60px;
+  border-right: 1px solid #ccc;
 }
-.inputField{
-    width:319px;
-    height: 30px;
+
+.inputField {
+  flex-grow: 1;
 }

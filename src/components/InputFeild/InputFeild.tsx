@@ -1,26 +1,32 @@
-
-import InputFieldStyles from './InputFeild.module.scss'
-import { FormLabel, Input } from "@mui/material";
-interface IInput  {
-    placeholder:string;
-    handleInputFunction: (value:string) => void;
-    label: string;
+import InputFieldStyles from "./InputFeild.module.scss";
+import { Box, FormLabel } from "@mui/material";
+interface IInput {
+  placeholder: string;
+  handleInputFunction?: (value: string) => void;
+  label?: string;
+  mobileNumber?: boolean;
 }
 const InputField = (props: IInput) => {
-  
-  const {placeholder, handleInputFunction,label} = props;
+  const { placeholder, handleInputFunction, label, mobileNumber } = props;
   return (
-    <>
-    <FormLabel>{label}</FormLabel>
-    <Input
-      className={InputFieldStyles.container}
-      placeholder={placeholder}
-      onChange={(event) => {
-        const inputValue=event.target.value;
-        handleInputFunction(inputValue);
-    }}
-    />
-    </>
+    <Box
+      className={`${InputFieldStyles.container}
+        ${mobileNumber ? InputFieldStyles.mobileNumberContainer : ""}`}
+    >
+      {label && (
+        <FormLabel className={InputFieldStyles.label}>{label}</FormLabel>
+      )}
+      <input
+        className={`${InputFieldStyles.input}
+        ${mobileNumber ? InputFieldStyles.noBorder : InputFieldStyles.border}
+        `}
+        placeholder={placeholder}
+        onChange={(event) => {
+          const inputValue = event.target.value;
+          handleInputFunction && handleInputFunction(inputValue);
+        }}
+      />
+    </Box>
   );
 };
 export default InputField;
