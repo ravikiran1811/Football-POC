@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 import InputField from "../../components/InputFeild/InputFeild";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -92,12 +92,16 @@ export default function ClubRegistration() {
     },
   });
 
-  const { fields, append } = useFieldArray({
+  const { fields, append, remove } = useFieldArray({
     control,
     name: "stadiums",
   });
 
-  const { fields: coachFields, append: appendCoach } = useFieldArray({
+  const {
+    fields: coachFields,
+    append: appendCoach,
+    remove: removeCoach,
+  } = useFieldArray({
     control,
     name: "coaches",
   });
@@ -152,7 +156,6 @@ export default function ClubRegistration() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-  console.log(errors, "errors");
 
   return (
     <div>
@@ -406,10 +409,21 @@ export default function ClubRegistration() {
                       }
                     />
                   </Stack>
+                  {fields.length > 1 && (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        remove(index);
+                      }}
+                    >
+                      Remove Stadium
+                    </button>
+                  )}
                 </Stack>
               ))}
               <button
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   append({
                     stadiumAddress: "",
                     stadiumCity: "",
@@ -487,17 +501,28 @@ export default function ClubRegistration() {
                       }
                     />
                   </Box>
+                  {coachFields.length > 1 && (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        removeCoach(index);
+                      }}
+                    >
+                      Remove Coach
+                    </button>
+                  )}
                 </Stack>
               ))}
               <button
-                onClick={() =>
+                onClick={(e) => {
+                  e.preventDefault();
                   appendCoach({
                     coachImage: "",
                     coachFirstName: "",
                     coachLastName: "",
                     aboutTheCoach: "",
-                  })
-                }
+                  });
+                }}
               >
                 Add More Coaches
               </button>
