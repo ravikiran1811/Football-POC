@@ -81,6 +81,7 @@ const UploadMedia: React.FC<FileUploadProps> = ({ multiple = false }) => {
           </Typography>
           <Typography id="modal-modal-description">
             <div className={UploadMediaStyles.modalElements}>
+            <div className={UploadMediaStyles.imageElement}>
             <span onClick={handleCloseModal} className={UploadMediaStyles.closeButton}>X</span>
             {selectedImageIndex !== null && (
               <img
@@ -90,6 +91,7 @@ const UploadMedia: React.FC<FileUploadProps> = ({ multiple = false }) => {
               />
               
             )}
+            </div>
             </div>
            
           </Typography>

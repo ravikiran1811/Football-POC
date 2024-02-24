@@ -74,7 +74,8 @@
   box-shadow: 24;
   padding-left:6%;
   padding-top: 1.5%;
-
+  border:none;
+  outline: none;
 }
 .imageStyle{
   width:500px;
@@ -87,7 +88,16 @@
   display: flex;
   flex-direction: column;
 }
+.imageElement{
+  position: relative;
+  img{
+    width:100%;
+    height:100%;
+  }
+}
 .closeButton{
-  margin-left: 500px;
+  position: absolute;
+  right:10px;
+  top:10px;
 }
 
