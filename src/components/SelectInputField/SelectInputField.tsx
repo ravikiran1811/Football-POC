@@ -11,11 +11,13 @@ interface Item {
 interface SearchFieldProps {
   list: Item[];
   selectedState: string;
+  defaultvalue:string;
   handleChange: (event: string) => void;
 }
 const SelectInputField: React.FC<SearchFieldProps> = ({
   list,
   selectedState,
+  defaultvalue,
   handleChange,
 }) => {
   return (
@@ -28,7 +30,7 @@ const SelectInputField: React.FC<SearchFieldProps> = ({
           displayEmpty
         >
           <MenuItem value="" disabled>
-            Select State
+            {defaultvalue}
           </MenuItem>
           { list &&
           Array.isArray(list) &&
