@@ -7,7 +7,7 @@ const CardText = () => {
         <Box className = {CardTextStyle.title}>
             {
                 cardsHeading.map((e:any)=>(
-                    <Box>
+                    <Box className = {CardTextStyle.title__text}>
                         {e.heading}
                     </Box>
                 ))

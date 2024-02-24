@@ -1,40 +1,51 @@
+.TotalCard{
+    display:flex;
+    gap:2%;
+    color:black;
 .cardStyle{
-    width:342px ;
-    height:427.5px;
+    width:17.8%;
+    height:21%;
     border:1px solid black ;
     border-radius: 8px;
     background-color: #FFFFFF;
     display:flex ;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    &__image{
-        width: 236px;
+    .image{
+        width: 69%;
         height: 258px;
-        margin-top: 6%;
-        &__imageStyles{
+        // margin-top: 6%;
+        .imageStyles{
             height:100%;
             width:100%;
         }
     }
-    &__text{
-        width:237px;
-     
-        &__title{
+    .text{
+        width:79%;
+        .title{
             width:100%;
-            margin-top: 3%;
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
-            margin-left: 24px;
+            padding-left: 7%;
         }
-        &__description{
-            width:237px;
-            // width:100%;
-            margin-left: 24px;
+        .description{
+            width:100%;
+            padding-left: 7%;
             font-weight: 400;
             font-size: 12px;
             line-height: 20px;
         }
     }
     
+}
+}
+.totalText{
+    background-color: #2A2A2A;
+    color:white;
+}
+.primary{
+    background-color: #fff;
+    color:black;
 }

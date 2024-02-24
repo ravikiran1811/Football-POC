@@ -4,6 +4,7 @@ import SideDrawer from "../../components/SideDrawer/SideDrawer";
 import DashboardStyles from "./Dashboard.module.scss";
 import TagsSearch from "../../components/TagsSearch/TagsSearch";
 import useCurrentLocation from "../../utils/useCurrentLocation";
+import TournamentSection from "../../components/TournamentSection/TournamentSection";
 
 
 // import UploadMedia from "../../components/UploadMedia/UploadMedia";
@@ -21,10 +22,10 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
-      <SideDrawer />
+      {/* <SideDrawer />
       <TagsSearch />
-      <Outlet />
-
+      <Outlet /> */}
+      <TournamentSection/>
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
   );

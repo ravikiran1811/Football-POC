@@ -1,45 +1,94 @@
-.cardStyle{
-    width:342px ;
-    height:423px;
+// .TotalCard{
+//     display:flex;
+//     width:93vw;
+// &__cardStyle{
+//     width:342px ;
+//     height:423px;
+//     border:1px solid black ;
+//     background-color: #FFFFFF;
+//     display:flex ;
+//     border-radius: 8px;
+//     flex-direction: column;
+//     align-items: center;
+//     &__image{
+//         width: 326px;
+//         height: 244.5px;
+//         margin-top: 2%;
+//         // border:1px solid black ;
+//         &__imageStyles{
+            
+//             height:100%;
+//             width:100%;
+//         }
+//     }
+//     &__text{
+//         // border:1px solid black;
+//         margin-top:18%;
+//         width:326px;
+//         height:130px;
+     
+//         &__title{
+//             width:294px;
+//             // margin-top: 12%;
+//             font-weight: 600;
+//             font-size: 16px;
+//             line-height: 20px;
+//             margin-left: 24px;
+//         }
+//         &__description{
+//             width:294px;
+//             margin-top: 8%;
+//             margin-left: 24px;
+//             font-weight: 400;
+//             font-size: 14px;
+//             line-height: 19.1px;
+//         }
+//     }
+    
+// }
+// }
+.TotalCard{
+    display:flex;
+    gap:2%;
+    color:black;
+&__cardStyle{
+    width:17.8%;
+    height:21%;
     border:1px solid black ;
+    border-radius: 8px;
     background-color: #FFFFFF;
     display:flex ;
-    border-radius: 8px;
     flex-direction: column;
     align-items: center;
     &__image{
-        width: 326px;
-        height: 244.5px;
-        margin-top: 2%;
-        // border:1px solid black ;
+        width: 69%;
+        height: 258px;
+        margin-top: 6%;
         &__imageStyles{
-            
             height:100%;
             width:100%;
         }
     }
     &__text{
-        // border:1px solid black;
-        margin-top:18%;
-        width:326px;
-        height:130px;
-     
+        width:237px;
         &__title{
-            width:294px;
-            // margin-top: 12%;
+            width:100%;
+            margin-top: 3%;
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
             margin-left: 24px;
         }
         &__description{
-            width:294px;
-            margin-top: 8%;
+            width:237px;
+            // width:100%;
             margin-left: 24px;
             font-weight: 400;
-            font-size: 14px;
-            line-height: 19.1px;
+            font-size: 12px;
+            line-height: 20px;
         }
     }
     
 }
+}
+

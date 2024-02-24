@@ -1,23 +1,28 @@
 import { Box } from "@mui/material";
-import { card } from "../../DummyData/CardData";
 import DisplayCardStyles from "./DisplayCard.module.scss"
-const DisplayCard = () => {
+interface IcardProps {
+    cardArray: any;
+    nameOfTheClass: any;
+}
+const DisplayCard: React.FC<IcardProps> = ({ cardArray, nameOfTheClass }) => {
     return (
         <>
-            <Box >
-                {card.map((e: any) => (
+            <Box className={DisplayCardStyles.TotalCard}>
+                {cardArray.map((e: any) => (
                     <Box className={DisplayCardStyles.cardStyle}
                     >
-                        <Box className={DisplayCardStyles.cardStyle__image}>
-                            <img className={DisplayCardStyles.cardStyle__image__imageStyles} src={e.image} />
+                        <Box className={DisplayCardStyles.image}>
+                            <img className={DisplayCardStyles.imageStyles} src={e.image} />
                         </Box>
-                        <Box className={DisplayCardStyles.cardStyle__text__title}>
-                        <Box className={DisplayCardStyles.cardStyle__text__title}>
-                            {e.title}
-                        </Box>
-                        <Box className={DisplayCardStyles.cardStyle__text__description}>
-                            {e.description}
-                        </Box>
+                        <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.totalText : DisplayCardStyles.primary}>
+                            <Box className={DisplayCardStyles.text}>
+                                <Box className={DisplayCardStyles.title}>
+                                    {e.title}
+                                </Box>
+                                <Box className={DisplayCardStyles.description}>
+                                    {e.description}
+                                </Box>
+                            </Box>
                         </Box>
                     </Box>
                 ))}
