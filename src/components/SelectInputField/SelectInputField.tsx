@@ -21,10 +21,20 @@ interface SearchFieldProps {
 const SelectInputField: React.FC<SearchFieldProps> = ({
   list,
   selectedState,
+  handleChange,
   mobileNumber = false,
   register,
   error,
 }) => {
+  const [selectedValue, setSelectedValue] = React.useState(selectedState);
+
+  const handleSelectChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setSelectedValue(event.target.value as string);
+    if (handleChange) {
+      handleChange(event.target.value as string);
+    }
+  };
+
   return (
     <FormControl
       className={` ${
@@ -34,15 +44,8 @@ const SelectInputField: React.FC<SearchFieldProps> = ({
       }`}
     >
       <Select
-        sx={{
-          "& .MuiOutlinedInput-notchedOutline": {
-            border: `${mobileNumber ? "none" : "1px solid #E0E0E0"}`,
-          },
-          "& .MuiOutlinedInput-input": {
-            padding: "8.5px",
-          },
-        }}
-        value={selectedState || (list.length > 0 ? list[0].name : "")}
+        value={selectedValue || (list.length > 0 ? list[0].name : "")}
+        onChange={handleSelectChange}
         {...register}
       >
         {list &&

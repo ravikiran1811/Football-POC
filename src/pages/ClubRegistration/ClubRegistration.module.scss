@@ -1,0 +1,42 @@
+.container {
+  background: #f5f5f5;
+  padding: 20px 30px;
+}
+.containerLevelOne,
+.licenseContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.rightContainerTopStack {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.mobileNumberContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.licenseContainer,
+.RegisteredAddressContainer {
+  flex-direction: column;
+}
+
+.licenseFieldContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
