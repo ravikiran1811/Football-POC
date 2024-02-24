@@ -44,6 +44,14 @@ const SelectInputField: React.FC<SearchFieldProps> = ({
       }`}
     >
       <Select
+        sx={{
+          "& .MuiOutlinedInput-notchedOutline": {
+            border: `${mobileNumber ? "none" : "1px solid #E0E0E0"}`,
+          },
+          "& .MuiOutlinedInput-input": {
+            padding: "8.5px",
+          },
+        }}
         value={selectedValue || (list.length > 0 ? list[0].name : "")}
         onChange={handleSelectChange}
         {...register}
