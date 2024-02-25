@@ -1,13 +1,6 @@
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
-  justify-content: center;
-
-}
-.eachCard {
-  width: (342px);
-  height: (426.32px);
+.card {
+  width: 342px;
+  height: 426.32px;
   border-radius: 8px;
   gap: 1px;
   display: flex;
@@ -48,7 +41,7 @@
 }
 .star {
   background-color: #dfdfdf;
-  padding:3px;
+  padding: 3px;
   padding-left: 7px;
   padding-top: 4px;
   border-top-left-radius: 15px;
@@ -100,8 +93,8 @@
 .address {
   display: flex;
   gap: 12px;
-  position:absolute;
-  top:120px;
+  position: absolute;
+  top: 120px;
   align-items: center;
 }
 .eachAddress {
@@ -115,4 +108,11 @@
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
 }

@@ -1,22 +1,37 @@
-import { Box } from "@mui/material";
-import HeadingField from "../../components/HeadingField/HeadingField";
-import CardWithDetails from "../../components/CardWithDetails/CardWithDetails";
-import ClubsListingStyles from './ClubsListing.module.scss';
-import clubListingImage from '../../assets/image 25.svg'
-const ClubsListing=()=>{
-    return(
-        <Box className={ClubsListingStyles.clubsList}>
-            <Box className={ClubsListingStyles.clubsListImage}>
-                <img src={clubListingImage} />
-            </Box>
-            <Box className={ClubsListingStyles.heading}>
-            <HeadingField heading={"YOUR AREA"} subHeading={"EXPLORE FOOTBALL OPPURTUNITIES IN "} />
-            </Box>
-            <Box>
-            <CardWithDetails />
-            </Box>
-            
+import { Box, Stack } from "@mui/material";
+import CardWithDetails, {
+  ICard,
+} from "../../components/CardWithDetails/CardWithDetails";
+import ClubsListingStyles from "./ClubsListing.module.scss";
+import clubListingImage from "../../assets/image 25.svg";
+import { detailedCardList } from "../../DummyData/CardWithDetails";
+import SectionHeading from "../../components/HeadingField/HeadingField";
+
+const ClubsListing = () => {
+  return (
+    <Box className={ClubsListingStyles.clubsList}>
+      <Box className={ClubsListingStyles.clubsListImage}>
+        <img src={clubListingImage} alt="" />
+      </Box>
+      <Stack className={ClubsListingStyles.clubsListContainer}>
+        <Box className={ClubsListingStyles.heading}>
+          <SectionHeading
+            heading={"YOUR AREA"}
+            subHeading={"EXPLORE FOOTBALL OPPURTUNITIES IN "}
+          />
         </Box>
-    )
-}
+        <Box>
+          <Box className={ClubsListingStyles.cardsContainer}>
+            {detailedCardList &&
+              Array.isArray(detailedCardList) &&
+              detailedCardList.length > 0 &&
+              detailedCardList.map((card: ICard) => (
+                <CardWithDetails card={card} />
+              ))}
+          </Box>
+        </Box>
+      </Stack>
+    </Box>
+  );
+};
 export default ClubsListing;

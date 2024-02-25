@@ -1,66 +1,115 @@
 import { Box, Typography } from "@mui/material";
-import { DetailedCard } from "../../DummyData/CardWithDetails";
-import CardWthDetailsStyles from './CardWithDetails.module.scss'
-const CardWithDetails = () => {
-  return (
-    <Box className={CardWthDetailsStyles.cards}>
-      {DetailedCard.map((card: any) => (
-        <Box className={CardWthDetailsStyles.eachCard}>
-          <Box className={CardWthDetailsStyles.part1}>
-            <Box className={CardWthDetailsStyles.academyTag}>
-              <Box className={CardWthDetailsStyles.academyIcon}>
-                <img src={card.academyIcon} />
-              </Box>
-              <Box>
-                <Typography  className={CardWthDetailsStyles.certification}>{card.certification}</Typography>
-              </Box>
-            </Box>
-            <Box  className={CardWthDetailsStyles.clubImage}>
-              <img src={card.clubImage} />
-            </Box>
-            <Box className={CardWthDetailsStyles.yearsTag}>
-              <Box className={CardWthDetailsStyles.star}>
-                <img src={card.star} />
-              </Box>
-              <Box>
-                <Typography  className={CardWthDetailsStyles.years}>{card.years}</Typography>
-              </Box>
-            </Box>
-          </Box>
+import CardWthDetailsStyles from "./CardWithDetails.module.scss";
 
-          <Box className={CardWthDetailsStyles.part2}>
-                <Box>
-                    <Typography className={CardWthDetailsStyles.cardTitle}>{card.title}</Typography>
-                </Box>
-                <Box>
-                    <Typography className={CardWthDetailsStyles.cardDescription}>{card.description}</Typography>
-                </Box>
-                <Box className={CardWthDetailsStyles.address}>
-                   <Box className={CardWthDetailsStyles.eachAddress}>
-                    <Box>
-                        <img src={card.locationIcon} />
-                    </Box>
-                   <Typography className={CardWthDetailsStyles.eachAddressTexts}>{card.location}</Typography>
-                   </Box>
-                   <Box className={CardWthDetailsStyles.eachAddress}>
-                   <Box>
-                        <img src={card.groupIcon} />
-                    </Box>
-                   <Typography className={CardWthDetailsStyles.eachAddressTexts}>{card.group}</Typography>
-                   </Box>
-                   {card.tierFlag&&(
-                      <Box className={CardWthDetailsStyles.eachAddress}>
-                      <Box>
-                           <img src={card.tierIcon} />
-                       </Box>
-                      <Typography className={CardWthDetailsStyles.eachAddressTexts}>{card.tier}</Typography>
-                      </Box>
-                   )}
-                 
-                </Box>
+export interface ICard {
+  id: number;
+  academyIcon: string;
+  certification: string;
+  clubImage: string;
+  star: string;
+  years: string;
+  title: string;
+  description: string;
+  locationIcon: string;
+  location: string;
+  groupIcon: string;
+  group: string;
+  tierIcon: string;
+  tier: string;
+  tierFlag: boolean;
+}
+interface ICardWithDetails {
+  card: ICard;
+}
+
+const CardWithDetails = ({ card }: ICardWithDetails) => {
+  console.log(card, "praveen");
+
+  const {
+    academyIcon,
+    certification,
+    clubImage,
+    star,
+    years,
+    title,
+    description,
+    locationIcon,
+    location,
+    groupIcon,
+    group,
+    tierIcon,
+    tier,
+    tierFlag,
+  } = card;
+
+  return (
+    <Box className={CardWthDetailsStyles.card}>
+      <Box className={CardWthDetailsStyles.part1}>
+        <Box className={CardWthDetailsStyles.academyTag}>
+          <Box className={CardWthDetailsStyles.academyIcon}>
+            <img src={academyIcon} />
+          </Box>
+          <Box>
+            <Typography className={CardWthDetailsStyles.certification}>
+              {certification}
+            </Typography>
           </Box>
         </Box>
-      ))}
+        <Box className={CardWthDetailsStyles.clubImage}>
+          <img src={clubImage} alt={clubImage} />
+        </Box>
+        <Box className={CardWthDetailsStyles.yearsTag}>
+          <Box className={CardWthDetailsStyles.star}>
+            <img src={star} alt={star} />
+          </Box>
+          <Box>
+            <Typography className={CardWthDetailsStyles.years}>
+              {years}
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box className={CardWthDetailsStyles.part2}>
+        <Box>
+          <Typography className={CardWthDetailsStyles.cardTitle}>
+            {title}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography className={CardWthDetailsStyles.cardDescription}>
+            {description}
+          </Typography>
+        </Box>
+        <Box className={CardWthDetailsStyles.address}>
+          <Box className={CardWthDetailsStyles.eachAddress}>
+            <Box>
+              <img src={locationIcon} />
+            </Box>
+            <Typography className={CardWthDetailsStyles.eachAddressTexts}>
+              {location}
+            </Typography>
+          </Box>
+          <Box className={CardWthDetailsStyles.eachAddress}>
+            <Box>
+              <img src={groupIcon} alt={groupIcon} />
+            </Box>
+            <Typography className={CardWthDetailsStyles.eachAddressTexts}>
+              {group}
+            </Typography>
+          </Box>
+          {tierFlag && (
+            <Box className={CardWthDetailsStyles.eachAddress}>
+              <Box>
+                <img src={tierIcon} alt={tierIcon} />
+              </Box>
+              <Typography className={CardWthDetailsStyles.eachAddressTexts}>
+                {tier}
+              </Typography>
+            </Box>
+          )}
+        </Box>
+      </Box>
     </Box>
   );
 };
