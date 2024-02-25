@@ -1,10 +1,6 @@
 import "./App.scss";
 import Router from "./routes";
 import ThemeProvider from "./themes/ThemeProvider";
-// import { useState } from "react";
-// import InputField from "./components/InputFeild/InputFeild";
-// import { Numberlist } from "./DummyData/MobileNumberData";
-// import MobileNumberComponent from "./components/MobileNumberComponent/MobileNumberComponent";
 function App() {
   // const [countryCode, setCountryCode] = useState("");
   // const [number, setNumber] = useState("");
@@ -19,6 +15,7 @@ function App() {
   return (
     <>
       <ThemeProvider>
+        <Router />
         <Router />
       </ThemeProvider>
     </>
