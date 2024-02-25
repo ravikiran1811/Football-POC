@@ -1,9 +1,22 @@
-.clubFields{
- display: flex;
- flex-direction: column;
- gap:50px;
-    &__cards{
-        display: flex;
-        gap:24px;
-    }
+.clubFields {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  &__heading {
+    display: flex;
+    gap: 1150px;
+    
+   &__viewmore{
+    padding-top: 7%;
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: underline;
+   }
+  }
+  &__cards {
+    display: flex;
+    gap: 24px;
+  }
 }
