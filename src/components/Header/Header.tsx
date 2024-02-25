@@ -4,9 +4,9 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { headerList } from "./headerData";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { headerList } from "./HeaderData";
 
 interface IHeaderButtonProps {
   page: {
