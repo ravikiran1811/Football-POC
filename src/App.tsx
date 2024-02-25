@@ -16,7 +16,7 @@ function App() {
     <>
       <ThemeProvider>
         <Router />
-        <Router />
+        {/* <Router /> */}
       </ThemeProvider>
     </>
   );
