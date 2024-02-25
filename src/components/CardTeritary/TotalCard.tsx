@@ -4,20 +4,24 @@ import TotalCardStyles from "./TotalCard.module.scss"
 const TotalCard = () => {
     return (
         <>
-            <Box >
-                { TeriaryCard.map((e: any) => (
-                    <Box className={TotalCardStyles.cardStyle}
+            <Box className={TotalCardStyles.TotalCard} >
+                {TeriaryCard.map((e: any) => (
+                    <Box className={TotalCardStyles.TotalCard__cardStyle}
                     >
-                        <Box className={TotalCardStyles.cardStyle__image}>
-                            <img className={TotalCardStyles.cardStyle__image__imageStyles} src={e.image} />
+                        <Box className={TotalCardStyles.TotalCard__cardStyle__image}>
+                            <img className={TotalCardStyles.TotalCard__cardStyle__image__imageStyles} src={e.image} />
                         </Box>
-                        <Box className={TotalCardStyles.cardStyle__text}>
-                            <Box className={TotalCardStyles.cardStyle__text__title}>
-                                {e.title}
-                            </Box>
-                            <Box className={TotalCardStyles.cardStyle__text__description}>
-                                {e.description}
-                            </Box>
+                        <Box className={TotalCardStyles.totalText}>
+
+                        <Box className={TotalCardStyles.TotalCard__cardStyle__text}>
+                            
+                        <Box className={TotalCardStyles.TotalCard__cardStyle__text__title}>
+                            {e.title}
+                        </Box>
+                        <Box className={TotalCardStyles.TotalCard__cardStyle__text__description}>
+                            {e.description}
+                        </Box>
+                        </Box>
                         </Box>
                     </Box>
                 ))}
@@ -26,3 +30,4 @@ const TotalCard = () => {
     )
 }
 export default TotalCard;
+
