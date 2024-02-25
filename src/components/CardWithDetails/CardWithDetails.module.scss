@@ -1,0 +1,118 @@
+.card {
+  width: 342px;
+  height: 426.32px;
+  border-radius: 8px;
+  gap: 1px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 10px;
+}
+.academyIcon {
+  width: 13.51px;
+  height: 17.32px;
+}
+.certification {
+  font-family: Nunito Sans;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.academyTag {
+  display: flex;
+  gap: 2px;
+  background-color: #dfdfdf;
+  width: (106.51px);
+  padding: 6px;
+  border-top-left-radius: 8px;
+}
+.clubImage {
+  //   width: 205.72px;
+  height: 206.49px;
+
+  display: flex;
+  justify-content: space-around;
+}
+.yearsTag {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.star {
+  background-color: #dfdfdf;
+  padding: 3px;
+  padding-left: 7px;
+  padding-top: 4px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.years {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  padding-right: 8px;
+  background-color: #dfdfdf;
+}
+
+.part2 {
+  background-color: #dfdfdf;
+  display: flex;
+  height: 157px;
+  position: relative;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.cardTitle {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.cardDescription {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.address {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 120px;
+  align-items: center;
+}
+.eachAddress {
+  display: flex;
+  gap: 5px;
+}
+.eachAddressTexts {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+}
