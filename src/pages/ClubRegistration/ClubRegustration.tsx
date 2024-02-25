@@ -26,6 +26,7 @@ const schema = yup.object().shape({
   clubCity: yup.string().required("City is required"),
   clubState: yup.string().required("State is required"),
   clubLicenseNumber: yup.string().required("License number is required"),
+  clubGoogleMapLink: yup.string().required("Google map link is required"),
   clubLicenseNumberFile: yup
     .mixed()
     .required("License number file is required"),
@@ -108,7 +109,8 @@ export default function ClubRegistration() {
 
   const [activeStep, setActiveStep] = useState(0);
   const values = getValues();
-  console.log(values, "values");
+  console.log(values?.clubMedia, "values");
+  console.log(errors, "errors");
 
   const onSubmit = (data: any) => console.log(data, "data");
   const handleNext = async () => {
@@ -140,6 +142,7 @@ export default function ClubRegistration() {
         "clubLogo",
         "clubLicenseNumber",
         "clubLicenseNumberFile",
+        "clubGoogleMapLink",
         ...fields.map((_, index) => `stadiums.${index}.stadiumAddress`),
         ...fields.map((_, index) => `stadiums.${index}.stadiumCity`),
         ...fields.map((_, index) => `stadiums.${index}.stadiumState`),
@@ -342,7 +345,7 @@ export default function ClubRegistration() {
                     label="clubGoogleMapLink"
                     placeholder="Paste google map link"
                     register={register("clubGoogleMapLink")}
-                    error={errors.clubEmailId?.message as any}
+                    error={errors.clubGoogleMapLink?.message as any}
                   />
                 </Stack>
               </Stack>
@@ -534,7 +537,19 @@ export default function ClubRegistration() {
                     <UploadMedia
                       label="Upload Club Media (Optional)"
                       values={value}
-                      handleChange={(e) => onChange(e.target.files)}
+                      handleChange={(e) => {
+                        if (e.target.files) {
+                          const newFiles = Array.from(e.target.files);
+                          const existingFiles = Array.isArray(value)
+                            ? value
+                            : [];
+                          if (newFiles.length + existingFiles.length > 5) {
+                            alert("You can only upload a maximum of 5 files");
+                          } else {
+                            onChange([...existingFiles, ...newFiles]);
+                          }
+                        }
+                      }}
                       multiple={true}
                       fieldData={field}
                     />
