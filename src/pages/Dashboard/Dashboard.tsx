@@ -1,8 +1,8 @@
 import DashboardStyles from "./Dashboard.module.scss";
 import { Outlet } from "react-router-dom";
 import useCurrentLocation from "../../utils/useCurrentLocation";
-import ClubsListing from "../ClubsListing/ClubsListing";
-
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 const Dashboard = () => {
   // const navigate = useNavigate();
@@ -15,11 +15,14 @@ const Dashboard = () => {
   console.log(location);
 
   return (
-    <div className={DashboardStyles.container}>
-      <Outlet />
-      <ClubsListing />
-      {/* <button onClick={handleLogout}>Logout</button> */}
-    </div>
+    <>
+      <div className={DashboardStyles.container}>
+        <Header />
+        <Outlet />
+        <Footer />
+        {/* <button onClick={handleLogout}>Logout</button> */}
+      </div>
+    </>
   );
 };
 
