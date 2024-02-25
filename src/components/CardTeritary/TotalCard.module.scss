@@ -1,0 +1,47 @@
+.cardStyle{
+    width:342px ;
+    height:446.5px;
+    border:1px solid black ;
+    background-color: #2A2A2A;;
+    display:flex ;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    &__image{
+
+        width: 329px;
+        height: 240px;
+        margin-top: 1.5%;
+        &__imageStyles{
+            
+            height:100%;
+            width:100%;
+            border-radius: 7px;
+             border:1px solid black ;
+        }
+    }
+    &__text{
+        margin-top:15%;
+        width:326px;
+        height:130px;
+     
+        &__title{
+            width:273px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 24px;
+        }
+        &__description{
+            width:294px;
+            margin-top: 8%;
+            margin-left: 24px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19.1px;
+        }
+    }
+    
+}
+
