@@ -1,0 +1,129 @@
+
+.container{
+    width:100vw;
+    display: flex;
+    top:0px;
+    padding: 0px;
+    justify-content: flex-start;
+    gap:10%;
+    height: 60px;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: Nunito Sans;
+    font-size: 22px;
+    background-color: #D9D9D9;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    &__logo{
+        width:232px;
+        height: 60px;
+        background: #434343;
+        display: flex;
+        padding-left: 0px;
+        margin-left: 0px;
+        left:0px;
+        cursor: pointer;
+        align-items: center;
+        img{
+            width:232px;
+            height: 38px;
+            object-fit: contain;
+        }
+    }
+}
+.container__content{
+width:100%;
+display: flex;
+justify-content: flex-start;
+gap:40px;
+list-style: none;
+flex-wrap: wrap;
+height: 60px;
+box-sizing: border-box;
+align-items: center;
+ button{
+   background-color: #D9D9D9;
+   font-family: Nunito Sans;
+    font-size: 22px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+ }
+ button:hover,button:active{
+    font-weight: 700px;
+    border: none;
+	padding: 0;
+    list-style: none;
+ }
+}
+.container__content__select{
+    outline: none;
+    color: black;
+    border:0px solid black
+}
+.homeImage{
+    height:100%;
+    width:100%;
+    video{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    &__textright{
+        position: absolute;
+        right:2%;
+        top:300px;
+        font-family: Nunito Sans;
+        font-size: 30px;
+        width:300px;
+        font-weight: 700;
+        letter-spacing: 0em;
+        text-align: right;
+        color: transparent;
+        -webkit-text-stroke-width: 0.3px;
+        -webkit-text-stroke-color: white;
+    }
+    &__textleft{
+        position: absolute;
+        left:2%;
+        top:450px;
+        width:300px;
+        font-family: Nunito Sans;
+        font-size:40px;
+        border: 2px;
+        font-weight: 700;
+        letter-spacing: 0em;
+        color:#FFFFFF;
+    }
+}
+.PathButton{
+    position: relative;
+}
+.pathCard{
+    position: absolute;
+    z-index: 2;
+    width:300px;
+    list-style: none;
+    background-color: white;
+    color: black;
+    top:50px;
+    left: 5px;
+    text-align: center;
+    text-wrap: wrap;
+    cursor: pointer;
+    
+}
+.triangleDown {
+	width: 0;
+	height: 0;
+    margin-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 7px solid #555;
+}
