@@ -9,7 +9,8 @@ const TotalTournaments: React.FC<ITournamentsProps>= ({Tournament}) =>{
         <>
         <Box className = {TotalTournament.title}>
         <Box className = {TotalTournament.text}>{Tournament}</Box>
-        <Box className = {TotalTournament.viewmore}><a href="">view more</a></Box>
+        <a href="default">View More</a>
+        
         </Box>
         </>
     )

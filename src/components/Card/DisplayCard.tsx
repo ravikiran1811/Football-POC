@@ -7,11 +7,11 @@ interface IcardProps {
 const DisplayCard: React.FC<IcardProps> = ({ cardArray, nameOfTheClass }) => {
     return (
         <>
-            <Box className={DisplayCardStyles.TotalCard}>
+            <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.TotalCard: DisplayCardStyles.TotalCard}>
                 {cardArray.map((e: any) => (
-                    <Box className={DisplayCardStyles.cardStyle}
+                    <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.cardStyle: DisplayCardStyles.cardStyle}
                     >
-                        <Box className={DisplayCardStyles.image}>
+                        <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.secondaryImage : DisplayCardStyles.image}>
                             <img className={DisplayCardStyles.imageStyles} src={e.image} />
                         </Box>
                         <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.totalText : DisplayCardStyles.primary}>
@@ -19,7 +19,7 @@ const DisplayCard: React.FC<IcardProps> = ({ cardArray, nameOfTheClass }) => {
                                 <Box className={DisplayCardStyles.title}>
                                     {e.title}
                                 </Box>
-                                <Box className={DisplayCardStyles.description}>
+                                <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.Secondarydescription : DisplayCardStyles.description}>
                                     {e.description}
                                 </Box>
                             </Box>

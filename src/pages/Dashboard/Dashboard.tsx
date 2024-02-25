@@ -22,9 +22,9 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
-      <SideDrawer />
+      {/* <SideDrawer />
       <TagsSearch />
-      <Outlet />
+      <Outlet /> */}
       <TournamentSection/>
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
