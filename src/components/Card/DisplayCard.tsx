@@ -1,33 +1,55 @@
+import React from "react";
 import { Box } from "@mui/material";
-import DisplayCardStyles from "./DisplayCard.module.scss"
+import DisplayCardStyles from "./DisplayCard.module.scss";
 interface IcardProps {
-    cardArray: any;
-    nameOfTheClass: any;
+  cardArray: any;
+  variant: string;
 }
-const DisplayCard: React.FC<IcardProps> = ({ cardArray, nameOfTheClass }) => {
-    return (
-        <>
-            <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.TotalCard: DisplayCardStyles.TotalCard}>
-                {cardArray.map((e: any) => (
-                    <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.cardStyle: DisplayCardStyles.cardStyle}
-                    >
-                        <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.secondaryImage: DisplayCardStyles.image}>
-                            <img className={DisplayCardStyles.imageStyles} src={e.image} />
-                        </Box>
-                        <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.totalText : DisplayCardStyles.primary}>
-                            <Box className={DisplayCardStyles.text}>
-                                <Box className={DisplayCardStyles.title}>
-                                    {e.title}
-                                </Box>
-                                <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.SecondaryDescription: DisplayCardStyles.description}>
-                                    {e.description}
-                                </Box>
-                            </Box>
-                        </Box>
-                    </Box>
-                ))}
+
+const DisplayCard: React.FC<IcardProps> = ({ cardArray, variant }) => {
+  return (
+    <>
+      <Box className={DisplayCardStyles.TotalCard}>
+        {cardArray &&
+          Array.isArray(cardArray) &&
+          cardArray.length > 0 &&
+          cardArray.map((e: any) => (
+            <Box
+              className={
+                variant === "primary"
+                  ? DisplayCardStyles.cardPrimary
+                  : variant === "secondary"
+                  ? DisplayCardStyles.cardSecondary
+                  : DisplayCardStyles.cardStyle
+              }
+            >
+              <Box
+                className={
+                  variant === "primary"
+                    ? DisplayCardStyles.primaryImage
+                    : variant === "secondary"
+                    ? DisplayCardStyles.secondaryImage
+                    : DisplayCardStyles.image
+                }
+              >
+                <img className={DisplayCardStyles.imageStyles} src={e.image} />
+              </Box>
+              <Box
+                className={`${DisplayCardStyles.cardDetails}
+              
+              ${
+                variant === "teritiary" ? DisplayCardStyles.teritiaryText : ""
+              }`}
+              >
+                <Box className={DisplayCardStyles.heading}>{e.title}</Box>
+                <Box className={DisplayCardStyles.description}>
+                  {e.description}
+                </Box>
+              </Box>
             </Box>
-        </>
-    )
-}
+          ))}
+      </Box>
+    </>
+  );
+};
 export default DisplayCard;
