@@ -16,7 +16,6 @@ function App() {
     <>
       <ThemeProvider>
         <Router />
-        <Router />
       </ThemeProvider>
     </>
   );
