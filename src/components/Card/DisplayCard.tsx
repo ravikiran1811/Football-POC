@@ -11,7 +11,7 @@ const DisplayCard: React.FC<IcardProps> = ({ cardArray, nameOfTheClass }) => {
                 {cardArray.map((e: any) => (
                     <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.cardStyle: DisplayCardStyles.cardStyle}
                     >
-                        <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.secondaryImage : DisplayCardStyles.image}>
+                        <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.secondaryImage: DisplayCardStyles.image}>
                             <img className={DisplayCardStyles.imageStyles} src={e.image} />
                         </Box>
                         <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.totalText : DisplayCardStyles.primary}>
@@ -19,7 +19,7 @@ const DisplayCard: React.FC<IcardProps> = ({ cardArray, nameOfTheClass }) => {
                                 <Box className={DisplayCardStyles.title}>
                                     {e.title}
                                 </Box>
-                                <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.Secondarydescription : DisplayCardStyles.description}>
+                                <Box className={nameOfTheClass ==="teritiary" ?  DisplayCardStyles.SecondaryDescription: DisplayCardStyles.description}>
                                     {e.description}
                                 </Box>
                             </Box>
