@@ -1,6 +1,7 @@
 import SelectInputField from "../SelectInputField/SelectInputField";
 import InputComponent from "../InputFeild/InputFeild";
-import MobileNumberComponentStyles from "./MobileNumberComponent.module.scss";
+import MobileNumberStyles from "./MobileNumberComponent.module.scss";
+import { Box, FormLabel, Stack } from "@mui/material";
 
 interface Item {
   id: number;
@@ -14,31 +15,54 @@ interface IMobile {
   label: string;
   list: Item[];
   selectedState: string;
+  countryCodeRegister?: any;
+  mobileNumberRegister?: any;
+  countryCodeError?: string;
+  mobileNumberError?: string;
 }
 
-const MobileNumberComponent = (props: IMobile) => {
-  const { placeholder, inputField, selectField, label, list, selectedState } =
-    props;
+const MobileNumberInputField = (props: IMobile) => {
+  const {
+    placeholder,
+    inputField,
+    selectField,
+    label,
+    list,
+    selectedState,
+    countryCodeRegister,
+    mobileNumberRegister,
+    countryCodeError,
+    mobileNumberError,
+  } = props;
 
   return (
-    <div className={MobileNumberComponentStyles.container}>
-      <div className={MobileNumberComponentStyles.selectField}>
-        <SelectInputField
-          mobileNumber={true}
-          list={list}
-          selectedState={selectedState ?? list[0].name}
-          handleChange={selectField}
-        />
-      </div>
-      <div className={MobileNumberComponentStyles.inputField}>
-        <InputComponent
-          mobileNumber={true}
-          placeholder={placeholder}
-          handleInputFunction={inputField}
-        />
-      </div>
-    </div>
+    <Box className={MobileNumberStyles.container}>
+      {label && (
+        <FormLabel className={MobileNumberStyles.label}>{label}</FormLabel>
+      )}
+      <Stack className={MobileNumberStyles.fieldContainer}>
+        <Stack className={MobileNumberStyles.selectField}>
+          <SelectInputField
+            register={countryCodeRegister}
+            mobileNumber={true}
+            list={list}
+            selectedState={selectedState ?? list[0].name}
+            handleChange={selectField}
+            error={countryCodeError}
+          />
+        </Stack>
+        <Stack className={MobileNumberStyles.inputField}>
+          <InputComponent
+            register={mobileNumberRegister}
+            mobileNumber={true}
+            placeholder={placeholder}
+            handleInputFunction={inputField}
+            error={mobileNumberError}
+          />
+        </Stack>
+      </Stack>
+    </Box>
   );
 };
 
-export default MobileNumberComponent;
+export default MobileNumberInputField;
