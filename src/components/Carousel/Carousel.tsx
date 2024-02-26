@@ -2,8 +2,15 @@ import Slider from "react-slick";
 import './Carousel.scss'
 import HeadingField from "../HeadingField/HeadingField";
 import { coachCertificationImages } from "../../constants/coachImagesConstants";
+interface Idata{
+  id:number,
+  name:string,
+  imageLink:string,
+  experience:string,
+  certification:string
+}
 interface IcarouselData{
-  data: any;
+  data: Idata;
   variant:string;
   noOfSlides:number;
 }
