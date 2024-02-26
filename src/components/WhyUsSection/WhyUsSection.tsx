@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import RegistrationBox from "../RegistrationBox/RegistrationBox";
-import { SoccerScoutData } from "../../DummyData/SoccerScoutData";
 import WhyUsSectionStyles from "./WhyUsSection.module.scss";
 import SectionHeading from "../HeadingField/HeadingField";
 import PopularIndianClubsSection from "../PopularIndianClubsSection/PopularIndianClubsSection";
+import { soccerScoutData } from "../../DummyData/SoccerScoutData";
 
 const WhyUsSection = () => {
   return (
@@ -16,28 +16,28 @@ const WhyUsSection = () => {
               WhyUsSectionStyles.SoccerSection__part1__description__para
             }
           >
-            {SoccerScoutData[0].paragraph1}
+            {soccerScoutData.paragraph1}
           </Typography>
           <Typography
             className={
               WhyUsSectionStyles.SoccerSection__part1__description__para
             }
           >
-            {SoccerScoutData[0].paragraph2}
+            {soccerScoutData.paragraph2}
           </Typography>
           <Typography
             className={
               WhyUsSectionStyles.SoccerSection__part1__description__para
             }
           >
-            {SoccerScoutData[0].paragraph3}
+            {soccerScoutData.paragraph3}
           </Typography>
           <Typography
             className={
               WhyUsSectionStyles.SoccerSection__part1__description__para
             }
           >
-            {SoccerScoutData[0].paragraph4}
+            {soccerScoutData.paragraph4}
           </Typography>
         </Box>
       </Box>

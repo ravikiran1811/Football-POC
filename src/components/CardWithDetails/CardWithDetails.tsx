@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import CardWthDetailsStyles from "./CardWithDetails.module.scss";
+import { useNavigate } from "react-router-dom";
 
 export interface ICard {
   id: number;
@@ -23,9 +24,9 @@ interface ICardWithDetails {
 }
 
 const CardWithDetails = ({ card }: ICardWithDetails) => {
-  console.log(card, "praveen");
-
+  const navigate = useNavigate();
   const {
+    id,
     academyIcon,
     certification,
     clubImage,
@@ -43,7 +44,10 @@ const CardWithDetails = ({ card }: ICardWithDetails) => {
   } = card;
 
   return (
-    <Box className={CardWthDetailsStyles.card}>
+    <Box
+      className={CardWthDetailsStyles.card}
+      onClick={() => navigate(`/club-details/${id}`)}
+    >
       <Box className={CardWthDetailsStyles.part1}>
         <Box className={CardWthDetailsStyles.academyTag}>
           <Box className={CardWthDetailsStyles.academyIcon}>

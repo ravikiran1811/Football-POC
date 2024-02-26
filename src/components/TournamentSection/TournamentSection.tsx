@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import TournamentSectionStyles from "./TournamentSection.module.scss";
 import DisplayCard from "../Card/DisplayCard";
-import { card } from "../../DummyData/CardData";
+import { card } from "../../DummyData/cardData";
 import SectionHeading from "../HeadingField/HeadingField";
 import SecondarySectionHeading from "../TotalTournaments/TotalTournaments";
 const TournamentSection = () => {

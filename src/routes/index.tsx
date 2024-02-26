@@ -19,6 +19,9 @@ const Home = Loadable(lazy(() => import("../pages/Home/Home")));
 const ClubListing = Loadable(
   lazy(() => import("../pages/ClubsListing/ClubsListing"))
 );
+const ClubDetails = Loadable(
+  lazy(() => import("../pages/ClubDetails/ClubDetails"))
+);
 const Page404 = Loadable(lazy(() => import("../pages/404/Error404")));
 const Scout = Loadable(lazy(() => import("../pages/Scout/Scout")));
 // const Login = Loadable(lazy(() => import("../pages/Login/Login")));
@@ -34,8 +37,9 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { path: "*", element: <Navigate to="/" replace /> },
-        { path: "home", element: <Home /> },
+        { path: "/", element: <Home /> },
         { path: "clubs", element: <ClubListing /> },
+        { path: "club-details/:id", element: <ClubDetails /> },
         { path: "scout", element: <Scout /> },
       ],
     },
