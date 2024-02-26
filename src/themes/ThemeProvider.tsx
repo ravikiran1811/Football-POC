@@ -25,7 +25,7 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
     []
   );
 
-  const theme = createTheme(themeOptions);
+  const theme: any = createTheme(themeOptions);
 
   theme.components = componentsOverride(theme);
 

@@ -100,6 +100,8 @@ export default function ClubRegistration() {
     },
   });
   const [clubMediaData, setClubMediaData] = useState<any>([]);
+  console.log(clubMediaData, "clubMediaData");
+
   const { fields, append, remove } = useFieldArray({
     control,
     name: "stadiums",
@@ -405,7 +407,7 @@ export default function ClubRegistration() {
                         placeholder="Address"
                         register={register(`stadiums[${index}].stadiumAddress`)}
                         error={
-                          errors.stadiums?.[index]?.stadiumAddress
+                          (errors.stadiums as any)?.[index]?.stadiumAddress
                             ?.message as any
                         }
                       />
@@ -449,7 +451,7 @@ export default function ClubRegistration() {
                         placeholder="Enter google map link"
                         register={register(`stadiums[${index}].googleMapLink`)}
                         error={
-                          errors.stadiums?.[index]?.googleMapLink
+                          (errors.stadiums as any)?.[index]?.googleMapLink
                             ?.message as any
                         }
                       />
@@ -521,9 +523,12 @@ export default function ClubRegistration() {
                               />
                             )}
                           />
-                          {errors.coaches && errors.coaches[index] && (
+                          {errors.coaches && (errors.coaches as any)[index] && (
                             <p className={ClubRegistrationStyles.error}>
-                              {errors.coaches[index].coachImage?.message}
+                              {
+                                (errors.coaches as any)[index].coachImage
+                                  ?.message
+                              }
                             </p>
                           )}
                         </Box>
@@ -541,7 +546,7 @@ export default function ClubRegistration() {
                               )}
                               error={
                                 errors.coaches &&
-                                (errors.coaches[index]?.coachFirstName
+                                ((errors.coaches as any)[index]?.coachFirstName
                                   ?.message as any)
                               }
                             />
@@ -553,7 +558,7 @@ export default function ClubRegistration() {
                               )}
                               error={
                                 errors.coaches &&
-                                (errors.coaches[index]?.coachLastName
+                                ((errors.coaches as any)[index]?.coachLastName
                                   ?.message as any)
                               }
                             />
@@ -567,7 +572,7 @@ export default function ClubRegistration() {
                             )}
                             error={
                               errors.coaches &&
-                              (errors.coaches[index]?.aboutTheCoach
+                              ((errors.coaches as any)[index]?.aboutTheCoach
                                 ?.message as any)
                             }
                           />
@@ -586,7 +591,7 @@ export default function ClubRegistration() {
                           )}
                           error={
                             errors.coaches &&
-                            (errors.coaches[index]?.coachQualification
+                            ((errors.coaches as any)[index]?.coachQualification
                               ?.message as any)
                           }
                         />
@@ -598,7 +603,7 @@ export default function ClubRegistration() {
                           )}
                           error={
                             errors.coaches &&
-                            (errors.coaches[index]?.yearOfExperience
+                            ((errors.coaches as any)[index]?.yearOfExperience
                               ?.message as any)
                           }
                         />
