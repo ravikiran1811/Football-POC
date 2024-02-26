@@ -8,7 +8,7 @@ const PopularIndianClubsSection = () => {
   return (
     <Box className={PopularIndianClubsSectionStyles.clubFields}>
       <Box className={PopularIndianClubsSectionStyles.clubFields__heading}>
-        <SectionHeading heading="CLUBS" subHeading="POPULAR INDIAN" />
+        <SectionHeading heading="CLUBS" subHeading="POPULAR INDIAN" colors="false" />
         <Typography
           className={
             PopularIndianClubsSectionStyles.clubFields__heading__viewmore

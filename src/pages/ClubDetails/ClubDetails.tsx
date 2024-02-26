@@ -7,6 +7,7 @@ import clubImage from "../../assets/DurandCup.svg";
 import { Box, Stack } from "@mui/material";
 import ClubDetailsStyles from "./ClubDetails.module.scss";
 
+
 const ClubDetails = () => {
   return (
     <Box className={ClubDetailsStyles.container}>

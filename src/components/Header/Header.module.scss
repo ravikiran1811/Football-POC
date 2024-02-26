@@ -9,22 +9,24 @@
   align-items: center;
   font-family: Nunito Sans;
   font-size: 22px;
-  background-color: #d9d9d9;
+  background-color: #fff;
   font-weight: 400;
   line-height: 44px;
   letter-spacing: 0em;
   text-align: left;
   max-width: 100%;
+
   &__logo {
     width: 232px;
     height: 60px;
-    background: #434343;
+    background: #415ce0;
     display: flex;
     padding-left: 0px;
     margin-left: 0px;
     left: 0px;
     cursor: pointer;
     align-items: center;
+
     img {
       width: 232px;
       height: 38px;
@@ -32,6 +34,7 @@
     }
   }
 }
+
 .container__content {
   width: 100%;
   display: flex;
@@ -42,8 +45,9 @@
   height: 60px;
   box-sizing: border-box;
   align-items: center;
+
   button {
-    background-color: #d9d9d9;
+    background-color: #fff;
     font-size: 22px;
     color: #000000;
     font-weight: 400;
@@ -51,6 +55,7 @@
     letter-spacing: 0em;
     text-align: left;
   }
+
   button:hover,
   button:active {
     font-weight: 700px;
@@ -58,6 +63,7 @@
     list-style: none;
   }
 }
+
 .container__content__select {
   outline: none;
   color: black;
@@ -67,6 +73,7 @@
 .PathButton {
   position: relative;
 }
+
 .pathCard {
   position: absolute;
   z-index: 2;
@@ -80,6 +87,7 @@
   text-wrap: wrap;
   cursor: pointer;
 }
+
 .triangleDown {
   width: 0;
   height: 0;
