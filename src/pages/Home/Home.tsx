@@ -1,9 +1,4 @@
 import { Box, Typography } from "@mui/material";
-<<<<<<< HEAD
-import { timeLineData } from "../../DummyData/TimeLineData";
-=======
-// import { timeLineData, timeLineDataEven } from "../../DummyData/timeLineData";
->>>>>>> 418e02863529d7d2524db532ebd0808722e623ff
 import SectionHeading from "../../components/HeadingField/HeadingField";
 import TimeLineDisplay from "../../components/TimeLineDisplay/TimeLineDisplay";
 import TournamentSection from "../../components/TournamentSection/TournamentSection";
