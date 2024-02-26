@@ -21,9 +21,10 @@ export interface ICard {
 }
 interface ICardWithDetails {
   card: ICard;
+  tournament?: boolean;
 }
 
-const CardWithDetails = ({ card }: ICardWithDetails) => {
+const CardWithDetails = ({ card, tournament }: ICardWithDetails) => {
   const navigate = useNavigate();
   const {
     id,
@@ -46,7 +47,11 @@ const CardWithDetails = ({ card }: ICardWithDetails) => {
   return (
     <Box
       className={CardWthDetailsStyles.card}
-      onClick={() => navigate(`/club-details/${id}`)}
+      onClick={() =>
+        tournament
+          ? navigate(`/tournament-details/${id}`)
+          : navigate(`/club-details/${id}`)
+      }
     >
       <Box className={CardWthDetailsStyles.part1}>
         <Box className={CardWthDetailsStyles.academyTag}>

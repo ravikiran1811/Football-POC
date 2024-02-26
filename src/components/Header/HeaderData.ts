@@ -12,7 +12,7 @@ export const headerList = [
   {
     id: 3,
     name: "Tournament",
-    path: "/tournament",
+    path: "/tournaments",
   },
   {
     id: 4,
