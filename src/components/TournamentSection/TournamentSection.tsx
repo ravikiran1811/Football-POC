@@ -9,7 +9,11 @@ const TournamentSection = () => {
   return (
     <>
       <Box className={TournamentSectionStyles.totalTournament}>
-        <SectionHeading heading="Tournaments" subHeading="POPULAR INDIAN" colors="true" />
+        <SectionHeading
+          heading="Tournaments"
+          subHeading="POPULAR INDIAN"
+          colors="true"
+        />
         <SecondarySectionHeading heading={"NATIONAL AND TROPHY"} />
         <DisplayCard cardArray={card.primary} variant={"primary"} />
         <SecondarySectionHeading heading={"LOCAL AND STATE"} />
