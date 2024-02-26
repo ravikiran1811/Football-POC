@@ -1,7 +1,7 @@
 .championsSectionImage {
   position: relative;
   width: 100vw;
-  height: 1154px;
+  object-fit: cover;
   img {
     height: 100%;
     width: 100%;
@@ -11,7 +11,7 @@
   position: absolute;
   width: 1045.21px;
   height: 363.95px;
-  top: 900px;
+  top: 870px;
   left: 92.5px;
 }
 .championsSectionText {
@@ -24,4 +24,34 @@
   line-height: 136px;
   letter-spacing: 0em;
   text-align: left;
+}
+@media screen and (max-width:1400px){
+  .championsSectionImage {
+    position: relative;
+    width: 200%;
+    height: 1154px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .championsSectionTextbox {
+    position: absolute;
+    width: 745.21px;
+    height: 363.95px;
+    top: 870px;
+    left: 300.5px;
+  }
+  .championsSectionText {
+    font-size: 70px;
+    color: white;
+    opacity: 80%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(99, 98, 98);
+    font-weight: 700;
+    line-height: 136px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }

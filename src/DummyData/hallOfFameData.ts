@@ -1,5 +1,8 @@
-import testImage from "../assets/pexels-pixabay-326055.jpg";
-
+import testImage from "../assets/Pixstory-image-167211580375737 1.svg";
+import testImage2 from '../assets/440px-P._K 1.svg'
+import testImage3 from '../assets/chuni-goswami-1588319109-37477 1.svg';
+import testImage4 from '../assets/Baichung-Bhutia 1.svg';
+import testImage5 from '../assets/Sunil_Chhetri_Indian_Football_Player 1.svg'
 export const hallOfFameData = [
   {
     id: 1,
@@ -21,7 +24,7 @@ export const hallOfFameData = [
   },
   {
     id: 2,
-    imageLink: testImage,
+    imageLink: testImage2,
     heading: "PK BANERJEE",
     description:
       "A prolific forward who played a key role in India's success in the 1950s and 1960s.He represented India in numerous Durand Cup",
@@ -42,7 +45,7 @@ export const hallOfFameData = [
   },
   {
     id: 3,
-    imageLink: testImage,
+    imageLink: testImage3,
     heading: "CHUNI GOSWAMI",
     description:
       "A versatile and influential player who captained both Mohun Bagan and the Indian national team.He led Mohun Bagan to several Durand Cup triumphs and is considered one of the finest footballers India has produced.",
@@ -63,7 +66,7 @@ export const hallOfFameData = [
   },
   {
     id: 4,
-    imageLink: testImage,
+    imageLink: testImage4,
     heading: "Baichung Bhutia",
     description:
       "Baichung Bhutia: A successful footballer who played both domestically and internationally. He is widely regarded as one of India's greatest footballers.",
@@ -87,7 +90,7 @@ export const hallOfFameData = [
   },
   {
     id: 5,
-    imageLink: testImage,
+    imageLink: testImage5,
     heading: "Sunil Chhetri",
     description:
       "India's all-time leading goal scorer who has left a significant impact on the Durand Cup. As a prolific scorer and influential leader, Chhetri's performances have led to numerous accolades and victories for his clubs and the national team.",

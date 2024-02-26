@@ -5,6 +5,7 @@
   justify-content: center;
   background: #415CE0;
   height: 100px;
+  margin-top: -78px;
   .newsletter {
     display: flex;
     flex-direction: row;
@@ -53,5 +54,10 @@
     .heading {
       margin-top: -6px;
     }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .container{
+    width: 200%;
   }
 }
