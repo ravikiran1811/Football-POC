@@ -1,0 +1,74 @@
+.hallOfFameCarouselContainer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  .sliderContainer {
+    width: 1400px;
+    height: 100%;
+    border: 1px solid;
+    .images {
+      width: 292px !important;
+      height: 336px;
+      img {
+        width: 292px;
+        height: 262px;
+      }
+    }
+  }
+  .coachContent {
+    height: 74px;
+    background-color: rgb(193, 190, 190);
+  }
+  .coachName {
+    padding-left: 10px;
+  }
+  .coachExpertise {
+    display: flex;
+    width: 100%;
+    .coachExperience,
+    .coachCertificate {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+      span {
+        font-size: 12px;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  .slickSlider {
+    padding: 20px 0px 20px 30px;
+    .slick-arrow {
+      width: 100px;
+      height: 100px;
+      background-color: black !important;
+    }
+    .slick-next {
+      top: -50px;
+      right: 0px;
+    }
+    .slick-prev {
+      top: -50px;
+      right: 10px;
+      left: 90%;
+    }
+  }
+  .secondaryCarousel {
+    img {
+      width: 460px;
+      height: 484px;
+    }
+  } /* the slides */
+  // .slick-slide {
+  //   margin-left: 100px;
+  // }
+
+  // /* the parent */
+  // .slick-list {
+  //   margin-left: -100px;
+  // }
+}
