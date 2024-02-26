@@ -1,27 +1,33 @@
+
+.summarySection{
+    display: flex;
+    flex-direction: column;
+    gap:50px
+}
 .tournaments {
     display: flex;
     width:1478px;
     align-items: center;
-// Hug (1,478px)
-// he
-// Hug (494.41px)
     gap: 58px;
+    padding-left: 99px;
+}
+.heading{
+    padding-left: 162px;
 }
 .summary {
     display: flex;
     flex-direction: column;
-    font-family: Nunito Sans;
     font-size: 32px;
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0em;
     text-align: left;
     gap: 44px;
+   
 }
 .eligibility {
     // display: flex;
     flex-direction: column;
-    font-family: Nunito Sans;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -37,7 +43,6 @@
     height: 402px;
 }
 .criteria {
-    font-family: Nunito Sans;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -46,7 +51,7 @@
 }
 .checkCriteria {
     display: flex;
-    font-family: Nunito Sans;
+
     font-size: 16px;
     font-weight: 600;
     line-height: 22px;
@@ -55,7 +60,7 @@
     color: #707070;
 }
 .aboutSummary {
-    font-family: Nunito Sans;
+
     font-size: 22px;
     font-weight: 400;
     line-height: 30px;
@@ -74,11 +79,18 @@
     gap: 8px;
 }
 .result{
-    font-family: Nunito Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
     color: #707070; 
+}
+@media screen and (max-width: 1400px) {
+    .summarySection{
+      padding-left: 140px;
+    }
+    .heading{
+        padding-left: 100px;
+    }
 }

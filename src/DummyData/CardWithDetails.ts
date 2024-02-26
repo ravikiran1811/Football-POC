@@ -10,7 +10,12 @@ import onslaught from "../assets/image 83.svg";
 import telanganafc from "../assets/image 84.svg";
 import southcentral from "../assets/image 86.svg";
 import ywa from "../assets/image 87.svg";
-
+import benguluru from "../assets/image 88.png";
+import mumbai from "../assets/image 89.png";
+import chennai from "../assets/image 90.png";
+import kerala from "../assets/image 91.png"
+import eastBengal from "../assets/image 92.png";
+import secunderabad from "../assets/image 80.png"
 export const detailedCardList = [
   {
     id: 1,
@@ -161,7 +166,7 @@ export const detailedCardList = [
     id: 9,
     academyIcon: academyIcon,
     certification: "AIFF Certified",
-    clubImage: hyderabadFc,
+    clubImage: benguluru,
     star: star,
     years: "09 years ",
     title: "Bengaluru FC",
@@ -179,7 +184,7 @@ export const detailedCardList = [
     id: 10,
     academyIcon: academyIcon,
     certification: "AIFF Certified",
-    clubImage: hyderabadFc,
+    clubImage: mumbai,
     star: star,
     years: "09 years ",
     title: "Mumbai City FC",
@@ -197,7 +202,7 @@ export const detailedCardList = [
     id: 11,
     academyIcon: academyIcon,
     certification: "AIFF Certified",
-    clubImage: hyderabadFc,
+    clubImage: chennai,
     star: star,
     years: "09 years ",
     title: "Chennaiyin FC",
@@ -215,7 +220,7 @@ export const detailedCardList = [
     id: 12,
     academyIcon: academyIcon,
     certification: "AIFF Certified",
-    clubImage: hyderabadFc,
+    clubImage: kerala,
     star: star,
     years: "09 years ",
     title: "Kerala Blasters FC",
@@ -233,7 +238,7 @@ export const detailedCardList = [
     id: 13,
     academyIcon: academyIcon,
     certification: "AIFF Certified",
-    clubImage: hyderabadFc,
+    clubImage: eastBengal,
     star: star,
     years: "10 years ",
     title: "East Bengal FC",
@@ -251,7 +256,7 @@ export const detailedCardList = [
     id: 14,
     academyIcon: academyIcon,
     certification: "AIFF Certified",
-    clubImage: hyderabadFc,
+    clubImage: secunderabad,
     star: star,
     years: "146 years ",
     title: "Secunderabad Club",

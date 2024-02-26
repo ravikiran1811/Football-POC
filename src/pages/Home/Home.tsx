@@ -7,6 +7,7 @@ import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
 import HomeStyles from "./Home.module.scss";
 import { timeLineData, timeLineDataEven } from "../../DummyData/TimeLineData";
 
+
 const Home = () => {
   return (
     <>

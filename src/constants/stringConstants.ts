@@ -35,6 +35,14 @@ export const constants = {
     email: "Email-id",
     contact: "Contact Number",
   },
+  tournamentPagedetails:{
+    level:"Level",
+    ageGroup:"Age group",
+    clubsAssociated:"Clubs associated",
+    upcomingMatch:"Upcoming Match",
+    totalPrizePool:"Total Prize Pool",
+    tournamentName:"Tournament name"
+  },
   videoMedia: {
     rightText: "TODAY, TOMORROW & ALWAYS",
     leftText: "UNVEIL THE REALM OF INDIAN SOCCER",

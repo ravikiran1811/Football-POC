@@ -3,7 +3,7 @@ import CardWithDetails, {
   ICard,
 } from "../../components/CardWithDetails/CardWithDetails";
 import TournamentListingStyles from "./TournamentListing.module.scss";
-import clubListingImage from "../../assets/image 25.svg";
+import clubListingImage from "../../assets/palyers2.jpg";
 import { detailedCardList } from "../../DummyData/CardWithDetails";
 import SectionHeading from "../../components/HeadingField/HeadingField";
 
@@ -16,6 +16,7 @@ const TournamentListing = () => {
       <Stack className={TournamentListingStyles.clubsListContainer}>
         <Box className={TournamentListingStyles.heading}>
           <SectionHeading
+            colors="false"
             heading={"TOURNAMENT"}
             subHeading={"EXPLORE TOURNAMENT LIST IN "}
           />

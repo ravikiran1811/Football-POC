@@ -1,4 +1,4 @@
-export const Numberlist = [
+export const numberlist = [
   { id: 1, name: "+91" },
   { id: 2, name: "+1" },
   { id: 3, name: "+44" },

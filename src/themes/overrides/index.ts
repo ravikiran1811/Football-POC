@@ -4,5 +4,5 @@ import Select from "./Select";
 import Input from "./Input";
 
 export default function ComponentsOverrides(theme: Theme) {
-  return Object.assign(Button(theme), Select(theme), Input());
+  return Object.assign(Button(theme), Select(), Input());
 }

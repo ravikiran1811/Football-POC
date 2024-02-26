@@ -7,9 +7,9 @@ const ChampionsSection=()=>{
         <Box> 
             <Box className={ChampionSectionStyles.championsSectionImage}>
                 <img src={ChampionsSectionImage} alt="championsSectionImage" />
-            </Box>
             <Box className={ChampionSectionStyles.championsSectionTextbox}>
                 <Typography variant="h1" className={ChampionSectionStyles.championsSectionText}>{constants.championsSectionText.text}</Typography>
+            </Box>
             </Box>
         </Box>
     )

@@ -1,6 +1,4 @@
-import { Theme } from "@mui/material/styles";
-
-export default function Select(theme: Theme) {
+export default function Select() {
   return {
     MuiSelect: {
       styleOverrides: {

@@ -3,7 +3,7 @@ import CardWithDetails, {
   ICard,
 } from "../../components/CardWithDetails/CardWithDetails";
 import ClubsListingStyles from "./ClubsListing.module.scss";
-import clubListingImage from "../../assets/image 25.svg";
+import clubListingImage from "../../assets/playes1.jpg";
 import { detailedCardList } from "../../DummyData/CardWithDetails";
 import SectionHeading from "../../components/HeadingField/HeadingField";
 
@@ -16,6 +16,7 @@ const ClubsListing = () => {
       <Stack className={ClubsListingStyles.clubsListContainer}>
         <Box className={ClubsListingStyles.heading}>
           <SectionHeading
+            colors="false"
             heading={"YOUR AREA"}
             subHeading={"EXPLORE FOOTBALL OPPURTUNITIES IN "}
           />
