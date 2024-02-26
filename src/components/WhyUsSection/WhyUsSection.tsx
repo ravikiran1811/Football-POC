@@ -7,44 +7,28 @@ import { soccerScoutData } from "../../DummyData/SoccerScoutData";
 
 const WhyUsSection = () => {
   return (
-    <Box className={WhyUsSectionStyles.SoccerSection}>
-      <Box className={WhyUsSectionStyles.SoccerSection__part1}>
+    <Box className={WhyUsSectionStyles.soccerSection}>
+      <Box className={WhyUsSectionStyles.part1}>
         <SectionHeading heading={"SOCCER SCOUT"} subHeading={"WHY"} />
-        <Box className={WhyUsSectionStyles.SoccerSection__part1__description}>
-          <Typography
-            className={
-              WhyUsSectionStyles.SoccerSection__part1__description__para
-            }
-          >
+        <Box className={WhyUsSectionStyles.description}>
+          <Typography className={WhyUsSectionStyles.para}>
             {soccerScoutData.paragraph1}
           </Typography>
-          <Typography
-            className={
-              WhyUsSectionStyles.SoccerSection__part1__description__para
-            }
-          >
+          <Typography className={WhyUsSectionStyles.para}>
             {soccerScoutData.paragraph2}
           </Typography>
-          <Typography
-            className={
-              WhyUsSectionStyles.SoccerSection__part1__description__para
-            }
-          >
+          <Typography className={WhyUsSectionStyles.para}>
             {soccerScoutData.paragraph3}
           </Typography>
-          <Typography
-            className={
-              WhyUsSectionStyles.SoccerSection__part1__description__para
-            }
-          >
+          <Typography className={WhyUsSectionStyles.para}>
             {soccerScoutData.paragraph4}
           </Typography>
         </Box>
       </Box>
-      <Box className={WhyUsSectionStyles.SoccerSection__part2}>
+      <Box className={WhyUsSectionStyles.part2}>
         <PopularIndianClubsSection />
       </Box>
-      <Box className={WhyUsSectionStyles.SoccerSection__part3}>
+      <Box className={WhyUsSectionStyles.part3}>
         <RegistrationBox
           heading={"Register YOUR CLUB HERE"}
           subHeading={"shape tomorrow's soccer stars"}

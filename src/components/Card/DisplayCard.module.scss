@@ -9,6 +9,8 @@
   overflow: hidden;
   padding: 3px 8px;
   height: 423px;
+  width: 332px;
+  min-width: 332px;
   .primaryImage,
   .image {
     width: 320px;
@@ -55,7 +57,10 @@
 }
 .TotalCard {
   display: flex;
-  gap: 2%;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+
   color: black;
   &__cardStyle {
     width: 17.8%;
@@ -101,4 +106,79 @@
 .totalText {
   background-color: #2a2a2a;
   color: white;
+}
+
+@media (max-width: 1366px) {
+  .cardPrimary,
+  .cardStyle {
+    gap: 30px;
+    height: 400px;
+    width: 289px;
+    min-width: 289px;
+    .primaryImage,
+    .image {
+      width: 300px;
+      height: 220px;
+    }
+  }
+  .TotalCard {
+    &__cardStyle {
+      width: 40%;
+      height: 30%;
+      &__image {
+        width: 70%;
+        height: 200px;
+      }
+      &__text {
+        &__title {
+          font-size: 14px;
+        }
+        &__description {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .TotalCard {
+    &__cardStyle {
+      width: 60%;
+      height: 40%;
+      &__image {
+        width: 80%;
+        height: 180px;
+      }
+      &__text {
+        &__title {
+          font-size: 12px;
+        }
+        &__description {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .TotalCard {
+    &__cardStyle {
+      width: 80%;
+      height: 50%;
+      &__image {
+        width: 90%;
+        height: 160px;
+      }
+      &__text {
+        &__title {
+          font-size: 10px;
+        }
+        &__description {
+          font-size: 6px;
+        }
+      }
+    }
+  }
 }
