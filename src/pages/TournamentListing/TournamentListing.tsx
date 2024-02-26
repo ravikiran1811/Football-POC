@@ -3,7 +3,7 @@ import CardWithDetails, {
   ICard,
 } from "../../components/CardWithDetails/CardWithDetails";
 import TournamentListingStyles from "./TournamentListing.module.scss";
-import clubListingImage from "../../assets/image 25.png";
+import clubListingImage from "../../assets/palyers2.jpg";
 import { detailedCardList } from "../../DummyData/CardWithDetails";
 import SectionHeading from "../../components/HeadingField/HeadingField";
 

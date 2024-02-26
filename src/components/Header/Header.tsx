@@ -4,7 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { headerList } from "./HeaderData";
 
@@ -28,6 +28,8 @@ const HeaderButton = ({
 }: IHeaderButtonProps) => {
   const { id, name, path, subLinks } = page;
 
+  const { pathname } = useLocation();
+
   useEffect(() => {
     window.addEventListener("click", (event: any) => {
       if (event.target.textContent != "Career Path") {
@@ -38,6 +40,7 @@ const HeaderButton = ({
   return (
     <Box className={subLinks ? styles.PathButton : ""}>
       <Button
+        className={pathname === path ? styles.active : ""}
         key={id}
         onClick={() => {
           if (!subLinks) {

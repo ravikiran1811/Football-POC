@@ -98,3 +98,18 @@
   border-right: 5px solid transparent;
   border-top: 7px solid #555;
 }
+
+.active {
+  color: #415ce0 !important;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    border-radius: 30px;
+    bottom: 5px;
+    left: 0;
+    background-color: #415ce0;
+  }
+}

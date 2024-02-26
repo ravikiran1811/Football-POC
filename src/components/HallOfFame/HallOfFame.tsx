@@ -23,13 +23,21 @@ const HallOfFame = (props: IhallOfFame) => {
   return (
     <div id="Hall of Fame">
       <div className={hallOfFameStyles.heading}>
-      <SectionHeading heading={"FAME"} subHeading={"HALL OF"} colors={""}  />
+        <SectionHeading
+          heading={"FAME"}
+          subHeading={"HALL OF"}
+          colors={"false"}
+        />
       </div>
       {data &&
         Array.isArray(data) &&
         data.length !== 0 &&
         data.map((each) => (
-          <div className={each.id % 2 === 0 ? hallOfFameStyles.card : hallOfFameStyles.even}>
+          <div
+            className={
+              each.id % 2 === 0 ? hallOfFameStyles.card : hallOfFameStyles.even
+            }
+          >
             <div className={hallOfFameStyles.image}>
               <img src={each.imageLink} alt="" />
             </div>

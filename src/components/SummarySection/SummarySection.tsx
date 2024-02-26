@@ -10,7 +10,10 @@ interface ISummaryProps {
 const SummarySection: React.FC<ISummaryProps> = ({ Eligibility, About }) => {
   return (
     <>
-      <Box className={summarySectionStyles.summarySection}>
+      <Box
+        className={summarySectionStyles.summarySection}
+        id="Tournament Summary"
+      >
         <Box className={summarySectionStyles.heading}>
           <SectionHeading
             heading={"SUMMARY"}
@@ -18,7 +21,7 @@ const SummarySection: React.FC<ISummaryProps> = ({ Eligibility, About }) => {
             colors="false"
           />
         </Box>
-        <Box className={summarySectionStyles.tournaments} id="Summary">
+        <Box className={summarySectionStyles.tournaments}>
           <Box className={summarySectionStyles.DuranCupImage}>
             <img src="../../../src/assets/Durand_Cup 3.svg"></img>
           </Box>
