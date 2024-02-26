@@ -1,3 +1,9 @@
+
+.summarySection{
+    display: flex;
+    flex-direction: column;
+    gap:50px
+}
 .tournaments {
     display: flex;
     width:1478px;
@@ -6,6 +12,10 @@
 // he
 // Hug (494.41px)
     gap: 58px;
+    padding-left: 99px;
+}
+.heading{
+    padding-left: 162px;
 }
 .summary {
     display: flex;
@@ -17,6 +27,7 @@
     letter-spacing: 0em;
     text-align: left;
     gap: 44px;
+   
 }
 .eligibility {
     // display: flex;

@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import summarySectionStyles from "./summarySection.module.scss";
 import { constants } from "../../constants/stringConstants";
+import SectionHeading from "../HeadingField/HeadingField";
 interface ISummaryProps {
   Eligibility: any;
   About: string;
@@ -9,6 +10,10 @@ interface ISummaryProps {
 const SummarySection: React.FC<ISummaryProps> = ({ Eligibility, About }) => {
   return (
     <>
+    <Box className={summarySectionStyles.summarySection}>
+    <Box className={summarySectionStyles.heading}>
+      <SectionHeading heading={"SUMMARY"} subHeading={"TOURNAMENT "} />
+    </Box>
       <Box className={summarySectionStyles.tournaments} id="Summary">
         <Box className={summarySectionStyles.DuranCupImage}>
           <img src="../../../src/assets/Durand_Cup 3.svg"></img>
@@ -120,6 +125,7 @@ const SummarySection: React.FC<ISummaryProps> = ({ Eligibility, About }) => {
             <Box className={summarySectionStyles.aboutSummary}>{About}</Box>
           </Box>
         </Box>
+      </Box>
       </Box>
     </>
   );
