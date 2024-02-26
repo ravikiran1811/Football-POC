@@ -12,6 +12,9 @@
   flex-direction: column;
 }
 .followUpButton {
+  -webkit-box-shadow: -9px 13px 47px -14px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: -9px 13px 47px -14px rgba(0, 0, 0, 0.37);
+  box-shadow: -9px 13px 47px -14px rgba(0, 0, 0, 0.37);
   position: relative;
   display: inline-flex;
   padding: 10px 26px;

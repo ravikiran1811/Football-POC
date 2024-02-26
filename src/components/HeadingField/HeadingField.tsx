@@ -4,15 +4,17 @@ import React from "react";
 interface IHeadingFieldProps {
   heading: string;
   subHeading: string;
+  colors:string;
 }
 const SectionHeading: React.FC<IHeadingFieldProps> = ({
   heading,
   subHeading,
+  colors,
 }) => {
   return (
     <Box className={HeadingFieldStyles.headingField}>
       <Box className={HeadingFieldStyles.subHeading}>{subHeading}</Box>
-      <Box className={HeadingFieldStyles.heading}>{heading}</Box>
+      <Box className={colors==="false"?HeadingFieldStyles.heading:HeadingFieldStyles.headingColor}>{heading}</Box>
     </Box>
   );
 };

@@ -52,9 +52,9 @@ function Carousel(props: IcarouselData) {
   return (
     <div className="hallOfFameCarouselContainer">
       {variant === "primary" ? (
-        <HeadingField subHeading="OUR" heading="HALL OF EXPERTISE" />
+        <HeadingField subHeading="OUR" heading="HALL OF EXPERTISE" colors="false" />
       ) : (
-        <HeadingField subHeading="OUR" heading="MOMENTS" />
+        <HeadingField subHeading="OUR" heading="MOMENTS" colors="false" />
       )}{" "}
       <div className="sliderContainer">
         <Slider {...settings} className="slickSlider">
