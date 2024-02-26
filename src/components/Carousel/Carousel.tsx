@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "./Carousel.scss";
 import HeadingField from "../HeadingField/HeadingField";
 import { coachCertificationImages } from "../../constants/coachImagesConstants";
+import { Box } from "@mui/material";
 interface Idata {
   id: number;
   name: string;
@@ -13,9 +14,10 @@ interface IcarouselData {
   data: Idata[];
   variant: string;
   noOfSlides: number;
+  secondCarouselData:any;
 }
 function Carousel(props: IcarouselData) {
-  const { data, variant, noOfSlides } = props;
+  const { data, variant, noOfSlides,secondCarouselData } = props;
   var settings = {
     infinite: false,
     gap: 100,
@@ -33,7 +35,7 @@ function Carousel(props: IcarouselData) {
       {
         breakpoint: 1366,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 3,
           infinite:true,
         }
@@ -58,9 +60,9 @@ function Carousel(props: IcarouselData) {
   return (
     <div className="hallOfFameCarouselContainer">
       {variant === "primary" ? (
-        <HeadingField subHeading="OUR" heading="HALL OF EXPERTISE" />
+       <Box className="heading"><HeadingField  subHeading="OUR" heading="HALL OF EXPERTISE" /></Box>
       ) : (
-        <HeadingField subHeading="OUR" heading="MOMENTS" />
+        <Box className="heading"><HeadingField  subHeading="OUR" heading="MOMENTS"/></Box>
       )}{" "}
       <div className={`${"sliderContainer"} ${variant === "secondary"? "secondarySlideContainer": ""}`}>
         <Slider {...settings} className="slickSlider">
@@ -97,29 +99,16 @@ function Carousel(props: IcarouselData) {
               );
             })}
           {variant === "secondary" &&
-            data &&
-            Array.isArray(data) &&
-            data.length !== 0 &&
-            data.map((each) => {
+            secondCarouselData &&
+            Array.isArray(secondCarouselData) &&
+            secondCarouselData.length !== 0 &&
+            secondCarouselData.map((each) => {
               return (
                 <div className="secondaryCarousel">
                   <img src={each.imageLink} alt="" />
                 </div>
               );
             })}
-
-          {/* <div className="images"><img src={image} alt="" /></div>
-        <div className="images"><img src={testImage} alt="" /></div>
-        <div className="images"><img src={image} alt="" /></div>
-        <div className="images"><img src={testImage} alt="" /></div>
-        <div className="images"><img src={image} alt="" /></div>
-        <div className="images"><img src={testImage} alt="" /></div>
-        <div className="images"><img src={image} alt="" /></div>
-        <div className="images"><img src={testImage} alt="" /></div>
-        <div className="images"><img src={image} alt="" /></div>
-        <div className="images"><img src={testImage} alt="" /></div>
-        <div className="images"><img src={image} alt="" /></div>
-        <div className="images"><img src={testImage} alt="" /></div> */}
         </Slider>
       </div>
     </div>

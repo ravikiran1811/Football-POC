@@ -1,10 +1,14 @@
-import testImage from "../assets/pexels-pixabay-326055.jpg";
+import coach from "../assets/Screenshot 2024-02-23 at 19.27 6.png";
+import secondCarousel1 from "../assets/Rectangle 40995.png";
+import secondCarousel2 from "../assets/Rectangle 40990.png";
+import secondCarousel3 from "../assets/Rectangle 40991.png";
+import secondCarousel4 from "../assets/Rectangle 40993.png"
 
 export const carouselData = [
   {
     id: 1,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS",
@@ -12,7 +16,7 @@ export const carouselData = [
   {
     id: 2,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -20,7 +24,7 @@ export const carouselData = [
   {
     id: 3,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -28,7 +32,7 @@ export const carouselData = [
   {
     id: 4,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -36,7 +40,7 @@ export const carouselData = [
   {
     id: 5,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -44,7 +48,7 @@ export const carouselData = [
   {
     id: 6,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -52,7 +56,7 @@ export const carouselData = [
   {
     id: 7,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -60,7 +64,7 @@ export const carouselData = [
   {
     id: 8,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -68,7 +72,7 @@ export const carouselData = [
   {
     id: 9,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
@@ -76,10 +80,24 @@ export const carouselData = [
   {
     id: 10,
     name: "Local Groups and Clubs",
-    imageLink: testImage,
+    imageLink: coach,
     experience:
       "10 Years Exp.",
     certification:"AIFF ,NCLS"
   }
 ];
+export const secondCarouselData=[
+  {imageLink:secondCarousel1},
+  {imageLink:secondCarousel2},
+  {imageLink:secondCarousel3},
+  {imageLink:secondCarousel4},
+  {imageLink:secondCarousel1},
+  {imageLink:secondCarousel2},
+  {imageLink:secondCarousel3},
+  {imageLink:secondCarousel4},
+  {imageLink:secondCarousel1},
+  {imageLink:secondCarousel2},
+  {imageLink:secondCarousel3},
+  {imageLink:secondCarousel4}
+]
 

@@ -29,14 +29,14 @@ const ClubReview = () => {
           </Box>
         </Modal>
       </div>
-      <div className={clubReviewStyles.review}>
-        <SectionHeading subHeading="LEAVE US A" heading="REVIEW" />
+        <Box className={clubReviewStyles.heading}>
+          <SectionHeading subHeading="LEAVE US A" heading="REVIEW" />
         <textarea
           onClick={handleOpen}
           placeholder="| Share your experience here..."
           className={clubReviewStyles.reviewText}
         ></textarea>
-      </div>
+        </Box>
     </>
   );
 };
