@@ -1,7 +1,7 @@
 import styles from './ClubDetails.module.scss';
 import { Box } from '@mui/material';
 import { constants } from '../../constants/stringConstants';
-import chatwithusimage from '../../assets/ChatDots.png';
+import chatwithusimage from '../../assets/chatbotimage.png';
 import { useNavigate } from 'react-router-dom';
   
 interface Ilocations{
