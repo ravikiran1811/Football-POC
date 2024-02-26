@@ -29,7 +29,7 @@ const ClubReview = () => {
           </Box>
         </Modal>
       </div>
-      <div>
+      <div className={clubReviewStyles.review}>
         <SectionHeading subHeading="LEAVE US A" heading="REVIEW" />
         <textarea
           onClick={handleOpen}

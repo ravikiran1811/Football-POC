@@ -27,10 +27,16 @@ function Carousel(props: IcarouselData) {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
+          slidesToShow: 4,
         },
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite:true,
+        }
       },
       {
         breakpoint: 600,
@@ -56,7 +62,7 @@ function Carousel(props: IcarouselData) {
       ) : (
         <HeadingField subHeading="OUR" heading="MOMENTS" />
       )}{" "}
-      <div className="sliderContainer">
+      <div className={`${"sliderContainer"} ${variant === "secondary"? "secondarySlideContainer": ""}`}>
         <Slider {...settings} className="slickSlider">
           {variant === "primary" &&
             data &&
