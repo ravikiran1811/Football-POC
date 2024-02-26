@@ -1,3 +1,4 @@
+
 export const list = [
     { id: 1, name: 'Oliver Hansen' },
     { id: 2, name: 'Telangana' },
@@ -10,5 +11,8 @@ export const list = [
     { id: 9, name: 'Virginia Andrews' },
     { id: 10, name: 'Kelly Snyder' }
   ];
+
+
+
   
 //SelectInputData.ts

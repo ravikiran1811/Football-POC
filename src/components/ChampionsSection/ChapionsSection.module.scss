@@ -1,0 +1,27 @@
+.championsSectionImage {
+  position: relative;
+  width: 100vw;
+  height: 1154px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.championsSectionTextbox {
+  position: absolute;
+  width: 1045.21px;
+  height: 363.95px;
+  top: 900px;
+  left: 92.5px;
+}
+.championsSectionText {
+  font-size: 100px;
+  color: white;
+  opacity: 80%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(99, 98, 98);
+  font-weight: 700;
+  line-height: 136px;
+  letter-spacing: 0em;
+  text-align: left;
+}

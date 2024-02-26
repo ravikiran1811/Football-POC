@@ -1,8 +1,8 @@
-// import { useNavigate } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 import DashboardStyles from "./Dashboard.module.scss";
+import { Outlet } from "react-router-dom";
 import useCurrentLocation from "../../utils/useCurrentLocation";
-import ClubRegistration from "../ClubRegistration/ClubRegustration";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 const Dashboard = () => {
   // const navigate = useNavigate();
   // const handleLogout = () => {
@@ -15,8 +15,9 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
-      <ClubRegistration />
+      <Header />
       <Outlet />
+      <Footer />
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
   );
