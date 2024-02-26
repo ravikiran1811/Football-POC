@@ -9,6 +9,8 @@
     justify-content: center;
     gap:40px;
     color: #6A6A6A;
+    margin-left: 10%;
+    scroll-behavior: smooth;
 }
 .navContent {
     width:250px;
@@ -20,13 +22,24 @@
     letter-spacing: 0px;
     text-align: left;
 }
-.contentDiv:active{
+.contentDiv{
+   border-bottom: 1px solid  #9D9D9D;
+}
+.anchorStyles{
+    color: #6A6A6A;
+    scroll-behavior: smooth;
+}
+.anchorStyles:hover{
+    color: #6A6A6A;
+    scroll-behavior: smooth;
+}
+.selectedContentDiv {
     border-bottom: 4px solid black;
-    .navContent{
-        font-weight: bolder;    
+
+    .anchorStyles {
+        font-weight: bolder;
         color: black;
     }
 }
-.contentDiv{
-   border-bottom: 1px solid;
-}
+
+

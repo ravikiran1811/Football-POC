@@ -9,7 +9,7 @@ interface ISummaryProps {
 const SummarySection: React.FC<ISummaryProps> = ({ Eligibility, About }) => {
     return (
         <>
-            <Box className={summarySectionStyles.tournaments}>
+            <Box className={summarySectionStyles.tournaments} id="Summary">
                 <Box className={summarySectionStyles.DuranCupImage}>
                     <img src="../../../src/assets/Durand_Cup 3.svg" ></img>
                 </Box>
