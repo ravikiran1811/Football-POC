@@ -27,8 +27,13 @@ const HeaderButton = ({
   setShowSublinks,
 }: IHeaderButtonProps) => {
   const { id, name, path, subLinks } = page;
+  window.addEventListener('click', (event:any) => {
+    if(event.target.textContent!='Career Path'){
+      setShowSublinks(false)
+    }
+});
   return (
-    <Box className={subLinks ? styles.PathButton : ""}>
+<Box className={subLinks ? styles.PathButton : ""}>
       <Button
         key={id}
         onClick={() => {
@@ -40,7 +45,7 @@ const HeaderButton = ({
         }}
       >
         {name}
-        {subLinks && <Box className={styles.triangleDown}></Box>}
+        {subLinks && <Box className={styles.triangleDown} ></Box>}
       </Button>
       {subLinks && showSublinks && (
         <Box className={styles.pathCard}>
@@ -69,7 +74,7 @@ const Header = () => {
         </Box>
         <Box className={styles.container__content}>
           {headerList.map((page) => (
-            <HeaderButton
+            <HeaderButton 
               key={page.id}
               page={page}
               navigate={navigate}

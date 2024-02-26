@@ -15,10 +15,9 @@ const Dashboard = () => {
 
   return (
     <div className={DashboardStyles.container}>
-      <Header/>
+      <Header />
       <Outlet />
-      <Footer/>
-      {/* <SoccerSection /> */}
+      <Footer />
       {/* <button onClick={handleLogout}>Logout</button> */}
     </div>
   );

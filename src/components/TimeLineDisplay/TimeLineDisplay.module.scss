@@ -34,3 +34,34 @@
   height: 40px;
   border-left: 2px dashed gray;
 }
+
+@media (max-width: 1366px) {
+  .container {
+    width: 90vw;
+  }
+  .followUpButton {
+    padding: 8px 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95vw;
+  }
+  .followUpButton {
+    padding: 6px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+  }
+  .followUpButton {
+    padding: 4px 20px;
+    margin-bottom: 10px;
+  }
+  .followUpButton::before {
+    height: 10px;
+  }
+}

@@ -76,4 +76,7 @@ export const constants = {
       icon: footerEmail,
     },
   },
+  championsSectionText:{
+    text:"CELEBRATING THE LEGENDS"
+  }
 };
