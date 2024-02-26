@@ -1,10 +1,11 @@
 import DashboardStyles from "./Dashboard.module.scss";
 import { Outlet } from "react-router-dom";
 import useCurrentLocation from "../../utils/useCurrentLocation";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-// import ClubDetails from "../ClubDetails/ClubDetails";
-
+import SummarySection from "../../components/SummarySection/SummarySection";
+import { SummaryData } from "../../DummyData/SummaryContent";
+import { sideNavData } from "../../DummyData/sideNavData";
+import SideNav from "../../components/SideNavBar/SideNav";
+import SoccerSection from "../../components/SoccerSection/SoccerSection";
 const Dashboard = () => {
   // const navigate = useNavigate();
   // const handleLogout = () => {
@@ -16,14 +17,13 @@ const Dashboard = () => {
   console.log(location);
 
   return (
-    <>
-      <div className={DashboardStyles.container}>
-        <Header />
-        <Outlet />
-        <Footer />
-        {/* <button onClick={handleLogout}>Logout</button> */}
-      </div>
-    </>
+    <div className={DashboardStyles.container}>
+      <Outlet />
+      <SoccerSection />
+      <SideNav content ={sideNavData[0].durandCup}/>
+      <SummarySection Eligibility={SummaryData.DuranCup.Eligibility} About={SummaryData.DuranCup.About}/>
+      {/* <button onClick={handleLogout}>Logout</button> */}
+    </div>
   );
 };
 
