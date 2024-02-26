@@ -5,6 +5,7 @@ import tournamentStyles from './Tournament.module.scss';
 import tournamentHomePage from '../../assets/image 56.svg';
 import {constants} from '../../constants/stringConstants';
 import {Typography} from '@mui/material';
+import arrow from '../../assets/CaretLeft.svg'
 interface ItournamentDetails{
   tournamentName:string;
   tournamentPrize:string;
@@ -23,7 +24,8 @@ const TournamentDetais=(props:ItournamentDetails)=>{
         <img src={tournamentHomePage} />
       </Box>
       <Box className={tournamentStyles.backButton}>
-        <Typography className={tournamentStyles.buttonText} onClick={() => navigate("/")}>{'< '}Back</Typography>
+        <img src={arrow} alt="arrow" />
+        <Typography className={tournamentStyles.buttonText} onClick={() => navigate("/")}>Back</Typography>
       </Box>
       <Box className={tournamentStyles.homeImage__textleft}>
         <Typography className={tournamentStyles.textStyle}>{tournamentName}</Typography>

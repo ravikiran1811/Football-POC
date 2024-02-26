@@ -27,7 +27,7 @@ const xLabels = [
 
 const ViewerShipGraph = () => {
   return (
-    <Box>
+    <Box id="Tournament stats">
       <Box  className={ViewerShipGraphStyles.heading}>
         <SectionHeading heading={"STATS"} subHeading={"TOURNAMENT"} />
       </Box>

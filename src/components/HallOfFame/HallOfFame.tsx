@@ -21,7 +21,7 @@ const HallOfFame = (props: IhallOfFame) => {
   const { data } = props;
 
   return (
-    <div>
+    <div id="Hall of Fame">
       <div className={hallOfFameStyles.heading}>
       <SectionHeading heading={"FAME"} subHeading={"HALL OF"}  />
       </div>
