@@ -69,7 +69,7 @@ const ClubDetails=(props:IclubPageDetail)=> {
             <Box>
                 <p>Our Training Arenas</p>
                 <div className={styles.locationData}>
-                {locations.map((item:any)=>(
+                {locations.map((item)=>(
                     <div>
                     <span className={styles.locations}>{item.name}</span>
                     </div>
