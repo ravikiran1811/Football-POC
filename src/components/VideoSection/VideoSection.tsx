@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import VideoSectionStyles from "./VideoSection.module.scss";
-import game from "../../assets/hmoepagevideo.mp4";
+import game from "../../assets/India 2026 FIFA World Cup (1).mp4";
 import { constants } from "../../constants/stringConstants";
 
 const VideoSection = () => {
