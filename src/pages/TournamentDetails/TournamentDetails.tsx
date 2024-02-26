@@ -1,4 +1,4 @@
-import { summaryData } from "../../DummyData/summaryContent";
+import { summaryData } from "../../DummyData/SummaryContent";
 import { hallOfFameData } from "../../DummyData/hallOfFameData";
 import { sideNavData } from "../../DummyData/sideNavData";
 import ChampionsSection from "../../components/ChampionsSection/ChampionsSection";

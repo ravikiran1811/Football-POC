@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { timeLineData } from "../../DummyData/timeLineData";
+import { timeLineData } from "../../DummyData/TimeLineData";
 import SectionHeading from "../../components/HeadingField/HeadingField";
 import TimeLineDisplay from "../../components/TimeLineDisplay/TimeLineDisplay";
 import TournamentSection from "../../components/TournamentSection/TournamentSection";

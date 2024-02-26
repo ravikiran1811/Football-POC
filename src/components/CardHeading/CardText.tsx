@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { cardsHeading } from "../../DummyData/cardsHeading";
+import { cardsHeading } from "../../DummyData/CardsHeading";
 import CardTextStyle from "./CardText.module.scss"
 const CardText = () => {
     return (
