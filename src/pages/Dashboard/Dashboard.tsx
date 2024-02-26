@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import useCurrentLocation from "../../utils/useCurrentLocation";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-// import ClubDetails from "../ClubDetails/ClubDetails";
 
 const Dashboard = () => {
   // const navigate = useNavigate();
@@ -20,7 +19,9 @@ const Dashboard = () => {
       <div className={DashboardStyles.container}>
         <Header />
         <Outlet />
+
         <Footer />
+       
         {/* <button onClick={handleLogout}>Logout</button> */}
       </div>
     </>

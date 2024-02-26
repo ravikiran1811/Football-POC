@@ -1,0 +1,71 @@
+.container {
+    width: 100vw;
+  }
+  .homeImage {
+    height: 100%;
+    width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &__textright {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      right: 5%;
+      top: 53vh;
+      width:850px;
+      height:352px;
+      text-align: left;
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 136px;
+      letter-spacing: 0em;
+      color: white;
+      background-color: black;
+      opacity: 0.6;
+    }
+    &__textleft {
+      position: absolute;
+      left: 5%;
+      top: 25vh;
+      min-width: 300px;
+      max-width: 750px;
+      font-size: 40px;
+      border: 2px;
+      font-weight: 700;
+      letter-spacing: 0em;
+      color: #ffffff;
+      font-size: 100px;
+      font-weight: 900;
+      line-height: 87px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  
+  .textStyle{
+    font-size: 100px;
+    width:470px;
+  }
+  .rightTextFirstLine{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    align-items: flex-start;
+    height: 50%;
+    padding-left: 30px;
+    justify-content: space-around;
+  }
+ 
+.backButton{
+  position:absolute;
+  top:20vh;
+  left:20px;
+}
+.buttonText{
+  font-size: 32px;
+  color: white;
+}
