@@ -3,10 +3,10 @@
   flex-direction: column;
   height: auto;
   .sliderContainer {
-    width: 1750px;
+    width: 91vw;
     height: 100%;
     border: 1px solid;
-    border-right:0px;
+    border-right: 0px;
     margin-left: auto;
     .images {
       width: 292px !important;
@@ -17,10 +17,10 @@
       }
     }
   }
-  .secondarySlideContainer{
+  .secondarySlideContainer {
     border: none !important;
     margin-left: 0 !important;
-    width: 1920px;
+    width: 100vw;
   }
   .coachContent {
     height: 74px;
@@ -60,21 +60,21 @@
     .slick-next {
       top: -50px;
       right: 0px;
-      background: url('../../assets/nextSlide.svg') no-repeat;
-      &:before{
-          content: ''!important;
+      background: url("../../assets/nextSlide.svg") no-repeat;
+      &:before {
+        content: "" !important;
       }
     }
     .slick-prev {
       top: -50px;
       right: 10px;
       left: 93%;
-      background: url('../../assets/previosSlide.svg') no-repeat;
-      &:before{
-        content: ''!important;
+      background: url("../../assets/previosSlide.svg") no-repeat;
+      &:before {
+        content: "" !important;
+      }
     }
   }
-}
   .secondaryCarousel {
     img {
       width: 460px;
@@ -82,18 +82,27 @@
     }
   }
   .slick-list {
-    .slick-track{
+    .slick-track {
       display: flex;
       width: 100%;
-
     }
-    .slick-slide{
+    .slick-slide {
       display: flex;
-      margin-right: 80px;  
+      margin-right: 80px;
     }
-
   }
 }
-.heading{
-  padding-left:160px;
+.heading {
+  padding-left: 160px;
+}
+@media (max-width: 1366px) {
+  .sliderContainer {
+    width: 94vw !important;
+  }
+  .secondarySlideContainer {
+    width: 100vw !important;
+  }
+  .heading {
+    padding-left: 80px;
+  }
 }

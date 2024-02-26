@@ -36,7 +36,7 @@
   line-height: normal;
 }
 .contentDetails {
-  width: 1280px;
+  // width: 1280px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -50,6 +50,7 @@
   font-size: 18px;
 }
 .buttons {
+  cursor: pointer;
   display: flex;
   gap: 10px;
   align-items: center;

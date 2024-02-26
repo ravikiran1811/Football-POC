@@ -4,8 +4,8 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { headerList } from "./HeaderData";
 
 interface IHeaderButtonProps {
@@ -27,13 +27,16 @@ const HeaderButton = ({
   setShowSublinks,
 }: IHeaderButtonProps) => {
   const { id, name, path, subLinks } = page;
-  window.addEventListener('click', (event:any) => {
-    if(event.target.textContent!='Career Path'){
-      setShowSublinks(false)
-    }
-});
+
+  useEffect(() => {
+    window.addEventListener("click", (event: any) => {
+      if (event.target.textContent != "Career Path") {
+        setShowSublinks(false);
+      }
+    });
+  }, []);
   return (
-<Box className={subLinks ? styles.PathButton : ""}>
+    <Box className={subLinks ? styles.PathButton : ""}>
       <Button
         key={id}
         onClick={() => {
@@ -45,7 +48,7 @@ const HeaderButton = ({
         }}
       >
         {name}
-        {subLinks && <Box className={styles.triangleDown} ></Box>}
+        {subLinks && <Box className={styles.triangleDown}></Box>}
       </Button>
       {subLinks && showSublinks && (
         <Box className={styles.pathCard}>
@@ -74,7 +77,7 @@ const Header = () => {
         </Box>
         <Box className={styles.container__content}>
           {headerList.map((page) => (
-            <HeaderButton 
+            <HeaderButton
               key={page.id}
               page={page}
               navigate={navigate}

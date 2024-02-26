@@ -16,7 +16,11 @@ const ClubpageFounder = (props: IFounderData) => {
   return (
     <>
       <Box className={styles.container}>
-        <HeadingField heading={heading} subHeading={subheading} />
+        <HeadingField
+          heading={heading}
+          subHeading={subheading}
+          colors="false"
+        />
         <Box className={styles.content}>
           <Box className={styles.contentImage}>
             <img src={image} alt="Founder" />
