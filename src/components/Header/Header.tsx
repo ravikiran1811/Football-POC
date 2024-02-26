@@ -5,9 +5,9 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { headerList } from "./HeaderData";
-
 interface IHeaderButtonProps {
   page: {
     id: number;
@@ -52,7 +52,14 @@ const HeaderButton = ({
           {subLinks.map((item) => {
             const { name, path } = item;
             return (
-              <p key={name} onClick={() => navigate(path)}>
+              <p key={name}  onClick={() => {
+              const { pathname } = useLocation();
+              console.log(pathname,"as the pathname")
+              console.log(path,"as the path")
+              const className = (pathname === path) ? styles.changeTextStyle : null;
+              console.log(className,"as the name")
+                navigate(path)}}
+                >
                 {name}
               </p>
             );
@@ -65,6 +72,7 @@ const HeaderButton = ({
 
 const Header = () => {
   const navigate = useNavigate();
+  const {pathname} = useLocation();
   const [showSublinks, setShowSublinks] = useState(false);
   return (
     <AppBar position="fixed" className={styles.container}>
