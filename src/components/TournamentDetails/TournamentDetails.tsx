@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import tournamentStyles from './Tournament.module.scss';
-import tournamentHomePage from '../../assets/tournamentHomeImage.png';
+import tournamentHomePage from '../../assets/image 56.svg';
 import {constants} from '../../constants/stringConstants';
 import {Typography} from '@mui/material';
 interface ItournamentDetails{

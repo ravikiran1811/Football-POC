@@ -1,6 +1,7 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { BarChart } from "@mui/x-charts/BarChart";
-
+import SectionHeading from "../HeadingField/HeadingField";
+import ViewerShipGraphStyles from './ViewerShipGraph.module.scss'
 const uData = [
     { country: 'Country 1', value: 4000 },
     { country: 'Country 2', value: 3000 },
@@ -27,13 +28,21 @@ const xLabels = [
 const ViewerShipGraph = () => {
   return (
     <Box>
+      <Box  className={ViewerShipGraphStyles.heading}>
+        <SectionHeading heading={"STATS"} subHeading={"TOURNAMENT"} />
+      </Box>
+      <Box>
+        <Typography className={ViewerShipGraphStyles.subHeading}>Durand Cup Viewership over the years</Typography>
+      </Box>
+      <Box className={ViewerShipGraphStyles.barGraph}>
       <BarChart
-        width={500}
-        height={300}
+      className={ViewerShipGraphStyles.graph}
+        width={ 1785}
+        height={987.81}
         series={[{ data: uData.map(item => item.value), id: "uvId", color:'gray' }]}
         xAxis={[{ data: xLabels, scaleType: "band" }]}
-        
       />
+      </Box>
     </Box>
   );
 };

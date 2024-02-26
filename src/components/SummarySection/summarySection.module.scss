@@ -93,3 +93,11 @@
     text-align: left;
     color: #707070; 
 }
+@media screen and (max-width: 1400px) {
+    .summarySection{
+      padding-left: 400px;
+    }
+    .heading{
+        padding-left: 100px;
+    }
+}

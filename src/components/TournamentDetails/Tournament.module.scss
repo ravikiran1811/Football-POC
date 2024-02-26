@@ -1,5 +1,5 @@
 .container {
-    width: 100vw;
+    width: 100%;
   }
   .homeImage {
     height: 100%;
@@ -14,8 +14,8 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      right: 5%;
-      top: 53vh;
+      left:1030px;
+      top: 661px;
       width:850px;
       height:352px;
       text-align: left;
@@ -29,8 +29,8 @@
     }
     &__textleft {
       position: absolute;
-      left: 5%;
-      top: 25vh;
+      left: 190px;
+      top: 211px;
       min-width: 300px;
       max-width: 750px;
       font-size: 40px;
@@ -62,10 +62,77 @@
  
 .backButton{
   position:absolute;
-  top:20vh;
-  left:20px;
+  top:117.29px;
+  left:31px;
 }
 .buttonText{
   font-size: 32px;
-  color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+  
+  .homeImage {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .homeImage__textright {
+    position: absolute;
+    left: 980px; 
+    top: 682px; 
+    width: 533px; 
+    height: 222px; 
+    text-align: left;
+    font-size: 45px; 
+    font-weight: 700;
+    line-height: 68px; 
+    letter-spacing: 0em;
+    color: white;
+    background-color: black;
+    opacity: 0.6;
+  }
+  
+  .homeImage__textleft {
+    position: absolute;
+    left: 100px; 
+    top: 251px; 
+    width: 300px; 
+    font-size: 30px; 
+    font-weight: 700;
+    line-height: 65px; 
+    letter-spacing: 0em;
+    color: #ffffff;
+  }
+  
+  .textStyle {
+    font-size: 60px; /* Adjusted for 1366 resolution */
+    width: 352px; /* Adjusted for 1366 resolution */
+  }
+  
+  .rightTextFirstLine {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    height: 50%;
+    padding-left: 20px; 
+    justify-content: space-around;
+  }
+  
+  .backButton {
+    position: absolute;
+    top: 208px;
+    left: 31px; 
+  }
+  
+  .buttonText {
+    font-size: 24px; 
+    color: black;
+  }
+  
 }
