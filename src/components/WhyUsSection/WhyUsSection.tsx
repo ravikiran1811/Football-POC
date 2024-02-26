@@ -3,7 +3,7 @@ import RegistrationBox from "../RegistrationBox/RegistrationBox";
 import WhyUsSectionStyles from "./WhyUsSection.module.scss";
 import SectionHeading from "../HeadingField/HeadingField";
 import PopularIndianClubsSection from "../PopularIndianClubsSection/PopularIndianClubsSection";
-import { soccerScoutData } from "../../DummyData/soccerScoutData";
+import { soccerScoutData } from "../../DummyData/SoccerScoutData";
 
 const WhyUsSection = () => {
   return (
