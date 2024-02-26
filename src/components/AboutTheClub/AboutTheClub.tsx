@@ -7,7 +7,11 @@ const AboutTheClub = () => {
   return (
     <>
       <Box className={AboutTheClubStyles.part1}>
-        <SectionHeading heading={"Club"} subHeading={"About the "} />
+        <SectionHeading
+          heading={"Club"}
+          subHeading={"About the "}
+          colors="false"
+        />
         <Box className={AboutTheClubStyles.description}>
           <Typography className={AboutTheClubStyles.para}>
             {aboutTheFounder.paragraph1}

@@ -1,9 +1,10 @@
 .reviewText {
-  width: 1602.67px;
+  width: 90%;
   height: 193.26px;
   border-radius: 10px;
   background: #e3e3e3;
   position: relative;
+  align-self: center;
 }
 textarea::placeholder {
   text-align: center;
@@ -13,6 +14,7 @@ textarea::placeholder {
   top: 80px;
   left: 100px;
 }
+
 #modal-modal-title {
   font-size: 32px;
   font-weight: 400;
@@ -36,11 +38,20 @@ textarea::placeholder {
     font-size: 32px;
     font-weight: 400;
   }
-  .close{
-   position: absolute;
-   top:37.89px;
-   left:922.7px;
-   width:29px;
-   height:29px;
+  .close {
+    position: absolute;
+    top: 37.89px;
+    left: 922.7px;
+    width: 29px;
+    height: 29px;
+  }
+}
+.heading {
+  padding-left: 160px;
+}
+
+@media (max-width: 1366px) {
+  .heading {
+    padding-left: 80px;
   }
 }

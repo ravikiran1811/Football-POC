@@ -21,7 +21,7 @@ const ClubHeaderDetails = (props: IClubHeaderDetails) => {
     <>
       <Box className={ClubHeaderDetailsStyles.parentContainer}>
         <Box className={ClubHeaderDetailsStyles.buttons}>
-          <span onClick={() => navigate("/")}>
+          <span onClick={() => navigate(-1)}>
             <img src={leftArrow} alt="" />
             <span> Back</span>
           </span>

@@ -3,9 +3,11 @@
   flex-direction: column;
   height: auto;
   .sliderContainer {
-    width: 1400px;
+    width: 91vw;
     height: 100%;
     border: 1px solid;
+    border-right: 0px;
+    margin-left: auto;
     .images {
       width: 292px !important;
       height: 336px;
@@ -15,24 +17,33 @@
       }
     }
   }
+  .secondarySlideContainer {
+    border: none !important;
+    margin-left: 0 !important;
+    width: 100vw;
+  }
   .coachContent {
     height: 74px;
     background-color: rgb(193, 190, 190);
   }
   .coachName {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 6px;
     padding-left: 10px;
   }
   .coachExpertise {
+    padding-top: 6px;
     display: flex;
     width: 100%;
     .coachExperience,
     .coachCertificate {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center;
       width: 50%;
       span {
-        font-size: 12px;
+        font-size: 16px;
       }
       img {
         width: 24px;
@@ -43,18 +54,25 @@
   .slickSlider {
     padding: 20px 0px 20px 30px;
     .slick-arrow {
-      width: 100px;
-      height: 100px;
-      background-color: black !important;
+      width: 60px;
+      height: 60px;
     }
     .slick-next {
       top: -50px;
       right: 0px;
+      background: url("../../assets/nextSlide.svg") no-repeat;
+      &:before {
+        content: "" !important;
+      }
     }
     .slick-prev {
       top: -50px;
       right: 10px;
-      left: 90%;
+      left: 93%;
+      background: url("../../assets/previosSlide.svg") no-repeat;
+      &:before {
+        content: "" !important;
+      }
     }
   }
   .secondaryCarousel {
@@ -62,13 +80,35 @@
       width: 460px;
       height: 484px;
     }
-  } /* the slides */
-  // .slick-slide {
-  //   margin-left: 100px;
-  // }
-
-  // /* the parent */
-  // .slick-list {
-  //   margin-left: -100px;
-  // }
+  }
+  .slick-list {
+    .slick-track {
+      display: flex;
+      width: 100%;
+    }
+    .slick-slide {
+      display: flex;
+      margin-right: 80px;
+    }
+  }
+}
+.heading {
+  padding-left: 160px;
+}
+@media (max-width: 1370px) {
+  .sliderContainer {
+    width: 94vw !important;
+  }
+  .secondarySlideContainer {
+    width: 100vw !important;
+  }
+  .heading {
+    padding-left: 80px;
+  }
+  .slick-prev {
+    left:90% !important;
+  }
+  .hallOfFameCarouselContainer .slick-list .slick-slide{
+    margin-right:140px;
+  }
 }
