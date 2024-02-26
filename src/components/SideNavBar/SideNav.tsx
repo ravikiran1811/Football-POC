@@ -1,19 +1,22 @@
 import { Box, } from "@mui/material";
 import sideNavstyles from "./SideNav.module.scss"
-const SideNav = () => {
+import React from "react";
+interface ITournamentSummaryProps {
+    content: string[]
+}
+const SideNav: React.FC<ITournamentSummaryProps> = ({ content }) => {
     return (
         <>
             <Box className={sideNavstyles.navbar}>
-                <Box  className={sideNavstyles.contentDiv}>
-                    <Box className={sideNavstyles.navContent} id="summary">Summary</Box>
-                </Box>
-                <Box className={sideNavstyles.contentDiv}>
-                    <Box className={sideNavstyles.navContent} id="timeline">TimeLine</Box>
-                </Box>
-                <Box className={sideNavstyles.contentDiv}>
-                    <Box className={sideNavstyles.navContent} id="hallOfFame">Hall of Fame</Box>
-                </Box>
-            </Box>
+                {
+                    content.map((tournamentTitle: any) => (
+                
+                        <Box className={sideNavstyles.contentDiv}>
+                            <Box className={sideNavstyles.navContent} id="summary">{tournamentTitle}</Box>
+                        </Box>
+                    ))}
+                    </Box>
+            
         </>
     )
 }
