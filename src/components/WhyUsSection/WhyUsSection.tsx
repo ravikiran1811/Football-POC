@@ -7,19 +7,15 @@ import { soccerScoutData } from "../../DummyData/SoccerScoutData";
 
 const WhyUsSection = () => {
   return (
-    <Box className={WhyUsSectionStyles.SoccerSection}>
-      <Box className={WhyUsSectionStyles.SoccerSection__part1}>
+    <Box className={WhyUsSectionStyles.soccerSection}>
+      <Box className={WhyUsSectionStyles.part1}>
         <SectionHeading
           heading={"SOCCER SCOUT"}
           subHeading={"WHY"}
-          colors="false"
+          colors={"false"}
         />
-        <Box className={WhyUsSectionStyles.SoccerSection__part1__description}>
-          <Typography
-            className={
-              WhyUsSectionStyles.SoccerSection__part1__description__para
-            }
-          >
+        <Box className={WhyUsSectionStyles.description}>
+          <Typography className={WhyUsSectionStyles.para}>
             {soccerScoutData.paragraph1}
           </Typography>
           <Typography className={WhyUsSectionStyles.para}>
