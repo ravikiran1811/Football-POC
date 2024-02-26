@@ -19,22 +19,20 @@ const TimeLineDisplay = (props: ITimeLineDisplay) => {
       <div className={TimeLineDisplayStyles.followUpButton}>
         <button>You can Begin from</button>
       </div>
-      <div>
-        <Box className={TimeLineDisplayStyles.timeline}>
-          {data &&
-            Array.isArray(data) &&
-            data.map((each, index) => {
-              return (
-                <TimeLine
-                  id={index + 1}
-                  title={each.title}
-                  imageLink={each.imageLink}
-                  content={each.content}
-                />
-              );
-            })}
-        </Box>
-      </div>
+      <Box className={TimeLineDisplayStyles.timeline}>
+        {data &&
+          Array.isArray(data) &&
+          data.map((each, index) => {
+            return (
+              <TimeLine
+                id={index + 1}
+                title={each.title}
+                imageLink={each.imageLink}
+                content={each.content}
+              />
+            );
+          })}
+      </Box>
     </div>
   );
 };

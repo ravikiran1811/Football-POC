@@ -7,7 +7,7 @@ export const headerList = [
   {
     id: 2,
     name: "Club",
-    path: "/club",
+    path: "/clubs",
   },
   {
     id: 3,
@@ -18,14 +18,15 @@ export const headerList = [
     id: 4,
     name: "Career Path",
     path: "/careerpath",
-    subLinks:[
-        {
-            name:"National Team Dynamics",
-            path:'/nationalteamdynamics',
-        },{
-            name:"Clubs & Leagues Ecosystem",
-            path:'/clubsleaguesecosystem',
-        },
-    ]
+    subLinks: [
+      {
+        name: "National Team Dynamics",
+        path: "/nationalteamdynamics",
+      },
+      {
+        name: "Clubs & Leagues Ecosystem",
+        path: "/clubsleaguesecosystem",
+      },
+    ],
   },
 ];
