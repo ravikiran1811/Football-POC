@@ -29,7 +29,7 @@ const ViewerShipGraph = () => {
   return (
     <Box id="Tournament stats">
       <Box  className={ViewerShipGraphStyles.heading}>
-        <SectionHeading heading={"STATS"} subHeading={"TOURNAMENT"} />
+        <SectionHeading heading={"STATS"} subHeading={"TOURNAMENT"} colors={"false"} />
       </Box>
       <Box>
         <Typography className={ViewerShipGraphStyles.subHeading}>Durand Cup Viewership over the years</Typography>
