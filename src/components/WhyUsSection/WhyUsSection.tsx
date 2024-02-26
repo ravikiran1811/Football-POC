@@ -9,7 +9,7 @@ const WhyUsSection = () => {
   return (
     <Box className={WhyUsSectionStyles.SoccerSection}>
       <Box className={WhyUsSectionStyles.SoccerSection__part1}>
-        <SectionHeading heading={"SOCCER SCOUT"} subHeading={"WHY"} />
+        <SectionHeading heading={"SOCCER SCOUT"} subHeading={"WHY"} colors="false"/>
         <Box className={WhyUsSectionStyles.SoccerSection__part1__description}>
           <Typography
             className={
