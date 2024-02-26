@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import PopularIndianClubsSectionStyles from "./PopularIndianClubsSection.module.scss";
 import SectionHeading from "../HeadingField/HeadingField";
 import DisplayCard from "../Card/DisplayCard";
-import { card } from "../../DummyData/CardData";
+import { card } from "../../DummyData/cardData";
 
 const PopularIndianClubsSection = () => {
   return (

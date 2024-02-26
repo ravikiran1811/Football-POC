@@ -3,10 +3,9 @@ import TournamentSectionStyles from "./TournamentSection.module.scss";
 import DisplayCard from "../Card/DisplayCard";
 import SectionHeading from "../HeadingField/HeadingField";
 import SecondarySectionHeading from "../TotalTournaments/TotalTournaments";
-import { card } from "../../DummyData/CardData"; 
+import { card } from "../../DummyData/cardData";
 
-
-  const TournamentSection = () => {
+const TournamentSection = () => {
   return (
     <>
       <Box className={TournamentSectionStyles.totalTournament}>
