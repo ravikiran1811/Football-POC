@@ -23,7 +23,7 @@ const HallOfFame = (props: IhallOfFame) => {
   return (
     <div id="Hall of Fame">
       <div className={hallOfFameStyles.heading}>
-      <SectionHeading heading={"FAME"} subHeading={"HALL OF"}  />
+      <SectionHeading heading={"FAME"} subHeading={"HALL OF"} colors={""}  />
       </div>
       {data &&
         Array.isArray(data) &&

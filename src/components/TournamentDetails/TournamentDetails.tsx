@@ -25,7 +25,7 @@ const TournamentDetais=(props:ItournamentDetails)=>{
       </Box>
       <Box className={tournamentStyles.backButton}>
         <img src={arrow} alt="arrow" />
-        <Typography className={tournamentStyles.buttonText} onClick={() => navigate("/")}>Back</Typography>
+        <Typography className={tournamentStyles.buttonText} onClick={() => navigate(-1)}>Back</Typography>
       </Box>
       <Box className={tournamentStyles.homeImage__textleft}>
         <Typography className={tournamentStyles.textStyle}>{tournamentName}</Typography>
