@@ -7,12 +7,14 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, StepIcon, Typography } from "@mui/material";
 import ClubRegistrationStyles from "./ClubRegistration.module.scss";
 import MobileNumberInputField from "../../components/MobileNumberComponent/MobileNumberComponent";
 import UploadMedia from "../../components/UploadMedia/UploadMedia";
 import SelectInputField from "../../components/SelectInputField/SelectInputField";
 import { list } from "../../DummyData/SelectInputData";
+import addButtonIcon from "../../assets/tabler_circle-plus.svg";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   clubName: yup.string().required("Club name is required"),
@@ -49,6 +51,10 @@ const schema = yup.object().shape({
       coachFirstName: yup.string().required("Coach first name is required"),
       coachLastName: yup.string().required("Coach last name is required"),
       aboutTheCoach: yup.string().required("About the coach is required"),
+      yearOfExperience: yup.string().required("Year of experience is required"),
+      coachQualification: yup
+        .string()
+        .required("Coach qualification is required"),
     })
   ),
   clubMedia: yup.mixed().optional(),
@@ -62,6 +68,7 @@ const schema = yup.object().shape({
 const steps = ["Step 1", "Step 2"];
 
 export default function ClubRegistration() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -92,7 +99,7 @@ export default function ClubRegistration() {
       ],
     },
   });
-
+  const [clubMediaData, setClubMediaData] = useState<any>([]);
   const { fields, append, remove } = useFieldArray({
     control,
     name: "stadiums",
@@ -151,6 +158,8 @@ export default function ClubRegistration() {
         ...coachFields.map((_, index) => `coaches.${index}.coachFirstName`),
         ...coachFields.map((_, index) => `coaches.${index}.coachLastName`),
         ...coachFields.map((_, index) => `coaches.${index}.aboutTheCoach`),
+        ...coachFields.map((_, index) => `coaches.${index}.yearOfExperience`),
+        ...coachFields.map((_, index) => `coaches.${index}.coachQualification`),
       ]);
       if (!isValid) return;
     }
@@ -161,14 +170,44 @@ export default function ClubRegistration() {
   };
 
   return (
-    <div>
-      <Stepper activeStep={activeStep} alternativeLabel>
+    <Box className={ClubRegistrationStyles.ClubRegistrationContainer}>
+      <Typography variant="h4" className={ClubRegistrationStyles.heading}>
+        Welcome to the Scout Family.
+      </Typography>
+      <Stack>
+        <Typography variant="h6" className={ClubRegistrationStyles.subHeading}>
+          Club Setup
+        </Typography>
+        <Typography variant="h6" className={ClubRegistrationStyles.subHeading2}>
+          Let’s setup all your business details
+        </Typography>
+      </Stack>
+      <Stepper
+        className={ClubRegistrationStyles.stepperContainer}
+        activeStep={activeStep}
+        alternativeLabel
+      >
         {steps.map((label) => (
           <Step key={label}>
-            <StepLabel>{label}</StepLabel>
+            <StepLabel
+              StepIconComponent={(props) => (
+                <StepIcon
+                  {...props}
+                  style={{
+                    borderRadius: "30px",
+                    width: "100px",
+                    height: "30px",
+                  }}
+                />
+              )}
+            >
+              <Typography variant="h6">Club Information</Typography>
+              {label}
+            </StepLabel>
           </Step>
         ))}
       </Stepper>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         {activeStep === 0 && (
           <Box className={ClubRegistrationStyles.container}>
@@ -342,7 +381,6 @@ export default function ClubRegistration() {
                     )}
                   />
                   <InputField
-                    label="clubGoogleMapLink"
                     placeholder="Paste google map link"
                     register={register("clubGoogleMapLink")}
                     error={errors.clubGoogleMapLink?.message as any}
@@ -351,190 +389,262 @@ export default function ClubRegistration() {
               </Stack>
             </Stack>
             <Stack className={ClubRegistrationStyles.licenseContainer}>
-              <Typography variant="h6">Stadium & Training Area</Typography>
-              {fields.map((field, index) => (
-                <Stack
-                  key={field.id}
-                  className={ClubRegistrationStyles.RegisteredAddressContainer}
-                >
+              <Stack className={ClubRegistrationStyles.stadiumContainer}>
+                <Typography variant="h6">Stadium & Training Area</Typography>
+                {fields.map((field, index) => (
                   <Stack
-                    className={ClubRegistrationStyles.rightContainerTopStack}
+                    key={field.id}
+                    className={
+                      ClubRegistrationStyles.registeredAddressContainer
+                    }
                   >
-                    <InputField
-                      placeholder="Address"
-                      register={register(`stadiums[${index}].stadiumAddress`)}
-                      error={
-                        errors.stadiums?.[index]?.stadiumAddress?.message as any
-                      }
-                    />
-                    <Controller
-                      control={control}
-                      name={`stadiums[${index}].stadiumCity`}
-                      render={({ field: { onChange, value, ...field } }) => (
-                        <SelectInputField
-                          list={list}
-                          selectedState={
-                            value ||
-                            (list.length > 0
-                              ? list[0].name
-                              : "Select Stadium City")
-                          }
-                          handleChange={(value) => onChange(value)}
-                          register={field}
-                        />
-                      )}
-                    />
-                  </Stack>
-                  <Stack
-                    className={ClubRegistrationStyles.rightContainerTopStack}
-                  >
-                    <Controller
-                      control={control}
-                      name={`stadiums[${index}].stadiumState`}
-                      render={({ field: { onChange, value, ...field } }) => (
-                        <SelectInputField
-                          list={list}
-                          selectedState={
-                            value ||
-                            (list.length > 0 ? list[0].name : "Select State")
-                          }
-                          handleChange={(value) => onChange(value)}
-                          register={field}
-                        />
-                      )}
-                    />
-                    <InputField
-                      label="google map link"
-                      placeholder="Enter google map link"
-                      register={register(`stadiums[${index}].googleMapLink`)}
-                      error={
-                        errors.stadiums?.[index]?.googleMapLink?.message as any
-                      }
-                    />
-                  </Stack>
-                  {fields.length > 1 && (
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        remove(index);
-                      }}
-                    >
-                      Remove Stadium
-                    </button>
-                  )}
-                </Stack>
-              ))}
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  append({
-                    stadiumAddress: "",
-                    stadiumCity: "",
-                    stadiumState: "",
-                    googleMapLink: "",
-                  });
-                }}
-              >
-                Add More Stadiums
-              </button>
-
-              {coachFields.map((field, index) => (
-                <Stack
-                  className={ClubRegistrationStyles.containerLevelOne}
-                  key={field.id}
-                >
-                  <Box className={ClubRegistrationStyles.leftContainer}>
-                    <Controller
-                      control={control}
-                      name={`coaches.${index}.coachImage` as const}
-                      rules={{ required: "Coach image is required" }}
-                      render={({ field: { onChange, value, ...field } }) => (
-                        <UploadMedia
-                          label="Coach Photo"
-                          values={value}
-                          handleChange={(e) => onChange(e.target.files[0])}
-                          multiple={false}
-                          fieldData={field}
-                        />
-                      )}
-                    />
-                    {errors.coaches && errors.coaches[index] && (
-                      <p className={ClubRegistrationStyles.error}>
-                        {errors.coaches[index].coachImage?.message}
-                      </p>
-                    )}
-                  </Box>
-                  <Box className={ClubRegistrationStyles.rightContainer}>
                     <Stack
                       className={ClubRegistrationStyles.rightContainerTopStack}
                     >
                       <InputField
-                        label="Coach Name"
-                        placeholder="First Name"
-                        register={register(
-                          `coaches.${index}.coachFirstName` as const
-                        )}
+                        placeholder="Address"
+                        register={register(`stadiums[${index}].stadiumAddress`)}
                         error={
-                          errors.coaches &&
-                          (errors.coaches[index]?.coachFirstName
-                            ?.message as any)
+                          errors.stadiums?.[index]?.stadiumAddress
+                            ?.message as any
                         }
                       />
-                      <InputField
-                        placeholder="Last Name"
-                        register={register(
-                          `coaches.${index}.coachLastName` as const
+                      <Controller
+                        control={control}
+                        name={`stadiums[${index}].stadiumCity`}
+                        render={({ field: { onChange, value, ...field } }) => (
+                          <SelectInputField
+                            list={list}
+                            selectedState={
+                              value ||
+                              (list.length > 0
+                                ? list[0].name
+                                : "Select Stadium City")
+                            }
+                            handleChange={(value) => onChange(value)}
+                            register={field}
+                          />
                         )}
+                      />
+                    </Stack>
+                    <Stack
+                      className={ClubRegistrationStyles.rightContainerTopStack}
+                    >
+                      <Controller
+                        control={control}
+                        name={`stadiums[${index}].stadiumState`}
+                        render={({ field: { onChange, value, ...field } }) => (
+                          <SelectInputField
+                            list={list}
+                            selectedState={
+                              value ||
+                              (list.length > 0 ? list[0].name : "Select State")
+                            }
+                            handleChange={(value) => onChange(value)}
+                            register={field}
+                          />
+                        )}
+                      />
+                      <InputField
+                        placeholder="Enter google map link"
+                        register={register(`stadiums[${index}].googleMapLink`)}
                         error={
-                          errors.coaches &&
-                          (errors.coaches[index]?.coachLastName?.message as any)
+                          errors.stadiums?.[index]?.googleMapLink
+                            ?.message as any
                         }
                       />
                     </Stack>
-                    <InputField
-                      textArea={true}
-                      label="About the Coach"
-                      placeholder="Write a brief about the coach"
-                      register={register(
-                        `coaches.${index}.aboutTheCoach` as const
-                      )}
-                      error={
-                        errors.coaches &&
-                        (errors.coaches[index]?.aboutTheCoach?.message as any)
+                    {fields.length > 1 && (
+                      <button
+                        className={
+                          ClubRegistrationStyles.removeStadiumButtonContainer
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          remove(index);
+                        }}
+                      >
+                        Remove Stadium
+                      </button>
+                    )}
+                  </Stack>
+                ))}
+
+                <button
+                  className={
+                    ClubRegistrationStyles.addMoreStadiumsButtonContainer
+                  }
+                  onClick={(e) => {
+                    e.preventDefault();
+                    append({
+                      stadiumAddress: "",
+                      stadiumCity: "",
+                      stadiumState: "",
+                      googleMapLink: "",
+                    });
+                  }}
+                >
+                  <img src={addButtonIcon} alt="" />
+                  Add More Stadiums
+                </button>
+              </Stack>
+              <Stack className={ClubRegistrationStyles.stadiumContainer}>
+                {coachFields.map((field, index) => (
+                  <Stack
+                    className={ClubRegistrationStyles.containerLevelOne}
+                    key={field.id}
+                  >
+                    <Stack
+                      className={
+                        ClubRegistrationStyles.registeredCoachContainer
                       }
-                    />
-                  </Box>
-                  {coachFields.length > 1 && (
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        removeCoach(index);
-                      }}
                     >
-                      Remove Coach
-                    </button>
-                  )}
-                </Stack>
-              ))}
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  appendCoach({
-                    coachImage: "",
-                    coachFirstName: "",
-                    coachLastName: "",
-                    aboutTheCoach: "",
-                  });
-                }}
-              >
-                Add More Coaches
-              </button>
+                      <Stack
+                        className={ClubRegistrationStyles.coachImageContainer}
+                      >
+                        <Box className={ClubRegistrationStyles.leftContainer}>
+                          <Controller
+                            control={control}
+                            name={`coaches.${index}.coachImage` as const}
+                            rules={{ required: "Coach image is required" }}
+                            render={({
+                              field: { onChange, value, ...field },
+                            }) => (
+                              <UploadMedia
+                                label="Coach Photo"
+                                values={value}
+                                handleChange={(e) =>
+                                  onChange(e.target.files[0])
+                                }
+                                multiple={false}
+                                fieldData={field}
+                              />
+                            )}
+                          />
+                          {errors.coaches && errors.coaches[index] && (
+                            <p className={ClubRegistrationStyles.error}>
+                              {errors.coaches[index].coachImage?.message}
+                            </p>
+                          )}
+                        </Box>
+                        <Box className={ClubRegistrationStyles.rightContainer}>
+                          <Stack
+                            className={
+                              ClubRegistrationStyles.rightContainerTopStack
+                            }
+                          >
+                            <InputField
+                              label="First Name"
+                              placeholder="First Name"
+                              register={register(
+                                `coaches.${index}.coachFirstName` as const
+                              )}
+                              error={
+                                errors.coaches &&
+                                (errors.coaches[index]?.coachFirstName
+                                  ?.message as any)
+                              }
+                            />
+                            <InputField
+                              label="Last Name"
+                              placeholder="Last Name"
+                              register={register(
+                                `coaches.${index}.coachLastName` as const
+                              )}
+                              error={
+                                errors.coaches &&
+                                (errors.coaches[index]?.coachLastName
+                                  ?.message as any)
+                              }
+                            />
+                          </Stack>
+                          <InputField
+                            textArea={true}
+                            label="About the Coach"
+                            placeholder="Write a brief about the coach"
+                            register={register(
+                              `coaches.${index}.aboutTheCoach` as const
+                            )}
+                            error={
+                              errors.coaches &&
+                              (errors.coaches[index]?.aboutTheCoach
+                                ?.message as any)
+                            }
+                          />
+                        </Box>
+                      </Stack>
+                      <Stack
+                        className={
+                          ClubRegistrationStyles.rightContainerTopStack
+                        }
+                      >
+                        <InputField
+                          label="Coach Qualification"
+                          placeholder="Certificates"
+                          register={register(
+                            `coaches.${index}.coachQualification` as const
+                          )}
+                          error={
+                            errors.coaches &&
+                            (errors.coaches[index]?.coachQualification
+                              ?.message as any)
+                          }
+                        />
+                        <InputField
+                          label="Year of Experience"
+                          placeholder="Number of Experience"
+                          register={register(
+                            `coaches.${index}.yearOfExperience` as const
+                          )}
+                          error={
+                            errors.coaches &&
+                            (errors.coaches[index]?.yearOfExperience
+                              ?.message as any)
+                          }
+                        />
+                      </Stack>
+                    </Stack>
+                    {coachFields.length > 1 && (
+                      <button
+                        className={`${ClubRegistrationStyles.removeStadiumButtonContainer}
+                        ${ClubRegistrationStyles.removeCoachButtonContainer}
+                        `}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          removeCoach(index);
+                        }}
+                      >
+                        Remove Coach
+                      </button>
+                    )}
+                  </Stack>
+                ))}
+                <button
+                  className={`${ClubRegistrationStyles.addMoreStadiumsButtonContainer}
+                  ${ClubRegistrationStyles.addMoreCoachesButtonContainer}
+                  `}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    appendCoach({
+                      coachImage: "",
+                      coachFirstName: "",
+                      coachLastName: "",
+                      aboutTheCoach: "",
+                    });
+                  }}
+                >
+                  <img src={addButtonIcon} alt="" />
+                  Add More Coaches
+                </button>
+              </Stack>
+
               <Box className={ClubRegistrationStyles.leftContainer}>
                 <Controller
                   control={control}
                   name="clubMedia"
                   render={({ field: { onChange, value, ...field } }) => (
                     <UploadMedia
+                      setClubMediaData={setClubMediaData}
                       label="Upload Club Media (Optional)"
                       values={value}
                       handleChange={(e) => {
@@ -547,6 +657,7 @@ export default function ClubRegistration() {
                             alert("You can only upload a maximum of 5 files");
                           } else {
                             onChange([...existingFiles, ...newFiles]);
+                            setClubMediaData([...existingFiles, ...newFiles]);
                           }
                         }
                       }}
@@ -560,7 +671,10 @@ export default function ClubRegistration() {
           </Box>
         )}
         {activeStep === 1 && (
-          <Stack className={ClubRegistrationStyles.containerLevelOne}>
+          <Stack
+            className={`${ClubRegistrationStyles.containerLevelOne}
+            ${ClubRegistrationStyles.optionalSectionContainer}`}
+          >
             <Typography variant="h4">Optional Section</Typography>
             <Typography variant="h6">Founder Details</Typography>
             <Box className={ClubRegistrationStyles.leftContainer}>
@@ -608,11 +722,15 @@ export default function ClubRegistration() {
             </Box>
           </Stack>
         )}
-        <div>
-          <Button disabled={activeStep === 0} onClick={handleBack}>
-            Back
+        <div className={ClubRegistrationStyles.buttonContainer}>
+          <Button
+            className={ClubRegistrationStyles.backButtonContainer}
+            onClick={() => (activeStep === 0 ? navigate(-1) : handleBack())}
+          >
+            {activeStep === 0 ? "Cancel" : "Previous"}
           </Button>
           <Button
+            className={ClubRegistrationStyles.nextButtonContainer}
             variant="contained"
             color="primary"
             onClick={
@@ -621,10 +739,10 @@ export default function ClubRegistration() {
                 : handleNext
             }
           >
-            {activeStep === steps.length - 1 ? "Finish" : "Next"}
+            {activeStep === steps.length - 1 ? "Submit" : "Next"}
           </Button>
         </div>
       </form>
-    </div>
+    </Box>
   );
 }

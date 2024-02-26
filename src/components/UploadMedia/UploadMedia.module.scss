@@ -1,34 +1,44 @@
 .label {
   display: flex;
-  background: #f5f5f5;
   height: 191px;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  flex-direction: column;
   width: 891px;
-  border: 2px dashed #232222;
+  gap: 25px;
   cursor: pointer;
   border-radius: 5px;
+  border-radius: 10px;
+  border: 1px dashed #101c2d;
 }
 
-.label h2 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #000;
-}
-
-.label h2 span {
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 10px;
+.label {
+  .selectTextContainer {
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #101c2d;
+      font-family: "Nunito Sans";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .selectText {
+      color: #415ce0;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
 }
 
 .label h3 {
   font-size: 13px;
   font-weight: 400;
   color: #232222;
-  margin-bottom: 10px;
 }
 .previewContainer {
   display: flex;
@@ -63,7 +73,8 @@
   justify-content: center;
   width: 20px;
   height: 20px;
-  box-shadow: 0px 0px 5px 0px #000000;
+  fill: #fff;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
 }
 .imageModal {
   margin-top: 7%;
@@ -98,13 +109,25 @@
 }
 .closeButton {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: -10px;
+  top: -7px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  img {
+    height: 100%;
+    width: 100%;
+    padding: 6px;
+  }
 }
 
 .singleUploadContainer {
   width: 359px;
-  height: 276px;
+  height: 254px;
+  min-height: 254px;
+  max-height: 254px;
 }
 
 .singleUploadContainer .label {
@@ -122,13 +145,26 @@
 }
 
 .labelText {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0px;
   text-align: left;
+  color: #4d6581;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .smallHeight {
   height: 80px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+.singleUploadSubHeading {
+  color: #101c2d;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

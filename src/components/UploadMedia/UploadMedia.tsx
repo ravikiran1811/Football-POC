@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import UploadMediaStyles from "./UploadMedia.module.scss";
 import { constants } from "../../constants/stringConstants";
 import { Box, Modal, Typography } from "@mui/material";
-
+import uploadImageIcon from "../../assets/feather_upload-cloud.svg";
+import cancelIcon from "../../assets/Path.svg";
 interface FileUploadProps {
   multiple?: boolean;
   values?: any;
@@ -11,6 +12,7 @@ interface FileUploadProps {
   smallHeight?: boolean;
   name?: string;
   fieldData?: any;
+  setClubMediaData?: any;
 }
 
 interface ImagePreviewProps {
@@ -31,7 +33,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
       className={UploadMediaStyles.cancelButton}
       onClick={() => handleCancelClick(index)}
     >
-      X
+      <img src={cancelIcon} alt="Cancel" />
     </span>
     <img
       src={imageUrl}
@@ -95,7 +97,7 @@ const SingleUploadInput: React.FC<{
             className={UploadMediaStyles.cancelButton}
             onClick={handleCancelClick}
           >
-            X
+            <img src={cancelIcon} alt="Cancel" />
           </span>
           <img
             src={uploadedImage}
@@ -109,10 +111,14 @@ const SingleUploadInput: React.FC<{
           className={UploadMediaStyles.label}
           htmlFor={`${fieldData.name}`}
         >
-          <h2>
-            <span>Select</span> {constants.uploadMedia.heading}
-          </h2>
-          <h3> {constants.uploadMedia.singleUploadSubHeading}</h3>
+          <img src={uploadImageIcon} alt="upload-image" />
+          <div className={UploadMediaStyles.selectTextContainer}>
+            <h2>
+              <span className={UploadMediaStyles.selectText}>Select</span>{" "}
+              {constants.uploadMedia.heading}
+            </h2>
+            <h3> {constants.uploadMedia.singleUploadSubHeading}</h3>
+          </div>
         </label>
       )}
     </div>
@@ -135,11 +141,16 @@ const MultipleUploadInput: React.FC<{
       multiple
       style={{ display: "none" }}
     />
+
     <label className={UploadMediaStyles.label} htmlFor="multiple-file-input">
-      <h2>
-        <span>Select</span> {constants.uploadMedia.heading}
-      </h2>
-      <h3> {constants.uploadMedia.multipleUploadSubHeading}</h3>
+      <img src={uploadImageIcon} alt="upload-image" />
+      <div className={UploadMediaStyles.selectTextContainer}>
+        <h2>
+          <span className={UploadMediaStyles.selectText}>Select</span>{" "}
+          {constants.uploadMedia.heading}
+        </h2>
+        <h3> {constants.uploadMedia.singleUploadSubHeading}</h3>
+      </div>
     </label>
   </div>
 );
@@ -151,6 +162,7 @@ const UploadMedia: React.FC<FileUploadProps> = ({
   smallHeight = false,
   handleChange,
   fieldData,
+  setClubMediaData,
 }) => {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [openModal, setOpenModal] = useState<boolean>(false);
@@ -170,20 +182,32 @@ const UploadMedia: React.FC<FileUploadProps> = ({
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (multiple) {
       handleChange(event);
+      const files = event.target.files;
+      if (files) {
+        setClubMediaData(files);
+      }
     }
   };
+  // useEffect(() => {
+  //   if (values && values.length > 0) {
+  //     const imageUrls = Array.from(values).map((file: any) =>
+  //       URL.createObjectURL(file)
+  //     );
+  //     setPreviewImages((prevImages) => {
+  //       if (multiple) {
+  //         return [...prevImages, ...imageUrls];
+  //       } else {
+  //         return imageUrls;
+  //       }
+  //     });
+  //   }
+  // }, [values]);
   useEffect(() => {
     if (values && values.length > 0) {
       const imageUrls = Array.from(values).map((file: any) =>
         URL.createObjectURL(file)
       );
-      setPreviewImages((prevImages) => {
-        if (multiple) {
-          return [...prevImages, ...imageUrls];
-        } else {
-          return imageUrls;
-        }
-      });
+      setPreviewImages(imageUrls);
     }
   }, [values]);
 
@@ -242,7 +266,7 @@ const UploadMedia: React.FC<FileUploadProps> = ({
                     onClick={handleCloseModal}
                     className={UploadMediaStyles.closeButton}
                   >
-                    X
+                    <img src={cancelIcon} alt="Cancel" />
                   </span>
                   {selectedImageIndex !== null && (
                     <img
