@@ -1,11 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import { timeLineData } from "../../DummyData/timeLineData";
+// import { timeLineData, timeLineDataEven } from "../../DummyData/timeLineData";
 import SectionHeading from "../../components/HeadingField/HeadingField";
 import TimeLineDisplay from "../../components/TimeLineDisplay/TimeLineDisplay";
 import TournamentSection from "../../components/TournamentSection/TournamentSection";
 import VideoSection from "../../components/VideoSection/VideoSection";
 import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
 import HomeStyles from "./Home.module.scss";
+import { timeLineData, timeLineDataEven } from "../../DummyData/TimeLineData";
 
 const Home = () => {
   return (
@@ -17,11 +18,12 @@ const Home = () => {
         <SectionHeading
           heading="Career in Soccer"
           subHeading="ARE YOU lOOKING A"
+          colors="false"
         />
         <Typography component={"p"} className={HomeStyles.heading}>
           National Team Dynamics
         </Typography>
-        <TimeLineDisplay data={timeLineData} />
+        <TimeLineDisplay data={timeLineDataEven} />
       </Box>
       <hr />
       <Box className={HomeStyles.nationalTeamDynamicsContainer}>
