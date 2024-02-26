@@ -24,6 +24,12 @@ const ClubDetails = Loadable(
 );
 const Page404 = Loadable(lazy(() => import("../pages/404/Error404")));
 const Scout = Loadable(lazy(() => import("../pages/Scout/Scout")));
+const TournamentListing = Loadable(
+  lazy(() => import("../pages/TournamentListing/TournamentListing"))
+);
+const TournamentDetails = Loadable(
+  lazy(() => import("../pages/TournamentDetails/TournamentDetails"))
+);
 // const Login = Loadable(lazy(() => import("../pages/Login/Login")));
 // const Signup = Loadable(lazy(() => import("../pages/SignUp/SignUp")));
 
@@ -40,7 +46,8 @@ export default function Router() {
         { path: "/", element: <Home /> },
         { path: "clubs", element: <ClubListing /> },
         { path: "club-details/:id", element: <ClubDetails /> },
-        { path: "scout", element: <Scout /> },
+        { path: "tournaments", element: <TournamentListing /> },
+        { path: "tournament-details/:id", element: <TournamentDetails /> },
       ],
     },
     // : {

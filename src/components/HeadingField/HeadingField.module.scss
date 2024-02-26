@@ -8,6 +8,7 @@
   margin-bottom: -25px;
   text-transform: uppercase;
 }
+
 .heading {
   font-family: Inter;
   font-size: 100px;
@@ -16,4 +17,40 @@
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
+}
+
+@media (max-width: 1366px) {
+  .subHeading {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .heading {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subHeading {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .heading {
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subHeading {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 60px;
+  }
 }

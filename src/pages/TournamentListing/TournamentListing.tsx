@@ -2,7 +2,7 @@ import { Box, Stack } from "@mui/material";
 import CardWithDetails, {
   ICard,
 } from "../../components/CardWithDetails/CardWithDetails";
-import TournamentListingStyles from './TournamentListing.module.scss'
+import TournamentListingStyles from "./TournamentListing.module.scss";
 import clubListingImage from "../../assets/image 25.svg";
 import { detailedCardList } from "../../DummyData/CardWithDetails";
 import SectionHeading from "../../components/HeadingField/HeadingField";
@@ -26,7 +26,7 @@ const TournamentListing = () => {
               Array.isArray(detailedCardList) &&
               detailedCardList.length > 0 &&
               detailedCardList.map((card: ICard) => (
-                <CardWithDetails card={card} />
+                <CardWithDetails card={card} tournament={true} />
               ))}
           </Box>
         </Box>
