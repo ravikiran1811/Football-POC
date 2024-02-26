@@ -2,13 +2,17 @@ import { Box, Typography } from "@mui/material";
 import PopularIndianClubsSectionStyles from "./PopularIndianClubsSection.module.scss";
 import SectionHeading from "../HeadingField/HeadingField";
 import DisplayCard from "../Card/DisplayCard";
-import { card } from "../../DummyData/cardData";
+import { card } from "../../DummyData/CardData";
 
 const PopularIndianClubsSection = () => {
   return (
     <Box className={PopularIndianClubsSectionStyles.clubFields}>
       <Box className={PopularIndianClubsSectionStyles.clubFields__heading}>
-        <SectionHeading heading="CLUBS" subHeading="POPULAR INDIAN" colors="false" />
+        <SectionHeading
+          heading="CLUBS"
+          subHeading="POPULAR INDIAN"
+          colors="false"
+        />
         <Typography
           className={
             PopularIndianClubsSectionStyles.clubFields__heading__viewmore
