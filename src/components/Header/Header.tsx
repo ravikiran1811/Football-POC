@@ -4,65 +4,82 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { headerList } from "./HeaderData";
 import { useNavigate } from "react-router-dom";
-import { videoConstants } from "../../constants/homeVideoConstants";
 import { useState } from "react";
-import game from "../../assets/1100229001-preview.mp4";
+import { headerList } from "./HeaderData";
+
+interface IHeaderButtonProps {
+  page: {
+    id: number;
+    name: string;
+    path: string;
+    subLinks?: { name: string; path: string }[];
+  };
+  navigate: (path: string) => void;
+  showSublinks: boolean;
+  setShowSublinks: (showSublinks: boolean) => void;
+}
+
+const HeaderButton = ({
+  page,
+  navigate,
+  showSublinks,
+  setShowSublinks,
+}: IHeaderButtonProps) => {
+  const { id, name, path, subLinks } = page;
+  return (
+    <Box className={subLinks ? styles.PathButton : ""}>
+      <Button
+        key={id}
+        onClick={() => {
+          if (!subLinks) {
+            navigate(path);
+          } else {
+            setShowSublinks(!showSublinks);
+          }
+        }}
+      >
+        {name}
+        {subLinks && <Box className={styles.triangleDown}></Box>}
+      </Button>
+      {subLinks && showSublinks && (
+        <Box className={styles.pathCard}>
+          {subLinks.map((item) => {
+            const { name, path } = item;
+            return (
+              <p key={name} onClick={() => navigate(path)}>
+                {name}
+              </p>
+            );
+          })}
+        </Box>
+      )}
+    </Box>
+  );
+};
+
 const Header = () => {
   const navigate = useNavigate();
   const [showSublinks, setShowSublinks] = useState(false);
   return (
-    <>
-      <AppBar position="static" className={styles.container}>
-        <Container maxWidth="xl" className={styles.container}>
-          <Box className={styles.container__logo}>
-            <img src={headerlogo} onClick={() => navigate("/home")} />
-          </Box>
-          <Box className={styles.container__content}>
-            {headerList.map((page) => (
-              <Box className={page.subLinks ? styles.PathButton : ""}>
-                <Button
-                  key={page.id}
-                  onClick={() => {
-                    if (!page.subLinks) {
-                      navigate(page.path);
-                    } else {
-                      setShowSublinks(!showSublinks);
-                    }
-                  }}
-                >
-                  {page.name}
-                  {page.subLinks && <Box className={styles.triangleDown}></Box>}
-                </Button>
-                {page.subLinks && showSublinks && (
-                  <Box className={styles.pathCard}>
-                    {page.subLinks.map((item, index) => (
-                      <p key={index} onClick={() => navigate(item.name)}>
-                        {item.name}
-                      </p>
-                    ))}
-                  </Box>
-                )}
-              </Box>
-            ))}
-          </Box>
-        </Container>
-      </AppBar>
-      <Box>
-        <Box className={styles.homeImage}>
-          <video autoPlay muted loop>
-            <source src={game}></source>
-          </video>
+    <AppBar position="fixed" className={styles.container}>
+      <Container maxWidth="xl" className={styles.container}>
+        <Box className={styles.container__logo}>
+          <img src={headerlogo} onClick={() => navigate("/home")} />
         </Box>
-        <Box className={styles.homeImage__textright}>
-          <p>{videoConstants.videoMedia.rightText}</p>
+        <Box className={styles.container__content}>
+          {headerList.map((page) => (
+            <HeaderButton
+              key={page.id}
+              page={page}
+              navigate={navigate}
+              showSublinks={showSublinks}
+              setShowSublinks={setShowSublinks}
+            />
+          ))}
         </Box>
-        <Box className={styles.homeImage__textleft}>
-          <p>{videoConstants.videoMedia.leftText}</p>
-        </Box>
-      </Box>
-      </>
-)
-}
+      </Container>
+    </AppBar>
+  );
+};
 export default Header;

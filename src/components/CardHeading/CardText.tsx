@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { cardsHeading } from "../../DummyData/CardsHeading";
+import { cardsHeading } from "../../DummyData/cardsHeading";
 import CardTextStyle from "./CardText.module.scss"
 const CardText = () => {
     return (
@@ -7,7 +7,7 @@ const CardText = () => {
         <Box className = {CardTextStyle.title}>
             {
                 cardsHeading.map((e:any)=>(
-                    <Box>
+                    <Box className = {CardTextStyle.title__text}>
                         {e.heading}
                     </Box>
                 ))
