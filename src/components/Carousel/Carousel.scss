@@ -95,7 +95,7 @@
 .heading {
   padding-left: 160px;
 }
-@media (max-width: 1366px) {
+@media (max-width: 1370px) {
   .sliderContainer {
     width: 94vw !important;
   }
@@ -104,5 +104,11 @@
   }
   .heading {
     padding-left: 80px;
+  }
+  .slick-prev {
+    left:90% !important;
+  }
+  .hallOfFameCarouselContainer .slick-list .slick-slide{
+    margin-right:140px;
   }
 }
