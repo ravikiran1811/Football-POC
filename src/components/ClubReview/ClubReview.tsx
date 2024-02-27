@@ -3,10 +3,12 @@ import SectionHeading from "../HeadingField/HeadingField";
 import clubReviewStyles from "./ClubReview.module.scss";
 import { Box, Modal, Typography } from "@mui/material";
 import closeImage from "../../assets/carbon_close.png";
+import { useNavigate } from "react-router-dom";
 const ClubReview = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
   return (
     <>
       <div>
@@ -23,7 +25,9 @@ const ClubReview = () => {
             <Typography id="modal-modal-title" variant="h6" component="h2">
               To leave a review, kindly register
             </Typography>
-            <button>Click here to Sign Up</button>
+            <button onClick={() => navigate("/club-registration")}>
+              Click here to Sign Up
+            </button>
           </Box>
         </Modal>
       </div>

@@ -17,7 +17,7 @@ interface IcarouselData {
   secondCarouselData: any;
 }
 function Carousel(props: IcarouselData) {
-  const { data, variant, noOfSlides, secondCarouselData } = props;
+  const { data, variant, secondCarouselData } = props;
   var settings = {
     infinite: false,
     gap: 100,

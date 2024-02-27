@@ -82,7 +82,6 @@ const HeaderButton = ({
 
 const Header = () => {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
   const [showSublinks, setShowSublinks] = useState(false);
   return (
     <AppBar position="fixed" className={styles.container}>

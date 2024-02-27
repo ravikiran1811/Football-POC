@@ -13,14 +13,12 @@ import { tournamentDetails } from "../../DummyData/tournamentDetails";
 import ViewerShipGraph from "../../components/ViewerShipGraph/ViewerShipGraph";
 import TournamentDetailsKeyHighlights from "../../components/TournamentDetailsKeyHighlights/TournamentDetailsKeyHighlights";
 import { tournamentHighlightData } from "../../DummyData/tournamentHighlightsData";
-import SectionHeading from "../../components/HeadingField/HeadingField";
 import { useEffect, useState } from "react";
 const TournamentDetails = () => {
-  const [componentHeight, setComponentHeight] = useState(500); 
+  const [componentHeight, setComponentHeight] = useState(500);
 
   useEffect(() => {
     const handleResize = () => {
-     
       if (window.innerWidth >= 1920) {
         setComponentHeight(1000);
       } else if (window.innerWidth <= 1500) {
@@ -29,8 +27,8 @@ const TournamentDetails = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
     <>
@@ -47,9 +45,11 @@ const TournamentDetails = () => {
           About={summaryData.DuranCup.About}
           Eligibility={summaryData.DuranCup.Eligibility}
         />
-        <SideNav content={sideNavData[0].durandCup} scrollValue={componentHeight} /> 
+        <SideNav
+          content={sideNavData[0].durandCup}
+          scrollValue={componentHeight}
+        />
       </Box>
-    
       <TournamentDetailsKeyHighlights data={tournamentHighlightData} />
       <ViewerShipGraph />
       <ClubsChart />

@@ -21,8 +21,9 @@ const ClubDetails = () => {
         details={clubDetailsData}
         locations={locationData}
       />
+      
       <Stack className={ClubDetailsStyles.AboutClubContainer}>
-        <Box id="About the Club">
+      <Box id="About the Club">
         <AboutTheClub />
         <Box className={ClubDetailsStyles.sideBar}>
         <SideNav content={sidebarData} scrollValue={140}/>
@@ -35,8 +36,10 @@ const ClubDetails = () => {
           description={visionData}
           image={founder}
         />
-        </Box>
+         </Box>
       </Stack>
+     
+     
       <Box id='Our Hall of Expertise'>
       <Carousel
         noOfSlides={5}
