@@ -1,5 +1,6 @@
 .evencontainer,
 .oddContainer {
+  font-family: "Nunito", sans-serif;
   position: relative;
   width: 100%;
   height: 654px;
@@ -33,6 +34,7 @@
     font-size: 21px;
   }
   .title {
+    font-family: "Nunito", sans-serif;
     font-weight: bolder;
     font-size: 38px;
     margin-bottom: 10px;
@@ -45,6 +47,7 @@
   }
 }
 .oddContainer {
+  
   padding-left: 0px;
   padding-right: 50px;
   border-top: 0px;
@@ -52,6 +55,7 @@
   .content {
     .title,
     .description {
+      font-family: "Nunito", sans-serif;
       padding-left: 70px;
     }
   }

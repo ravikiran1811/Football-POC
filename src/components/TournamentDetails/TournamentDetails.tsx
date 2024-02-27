@@ -46,38 +46,38 @@ const TournamentDetais = (props: ItournamentDetails) => {
         <Box className={tournamentStyles.homeImage__textright}>
           <Box className={tournamentStyles.rightTextFirstLine}>
             <Box>
-              <Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>
                 {constants.tournamentPagedetails.tournamentName}
               </Typography>
-              <Typography>{tournamentName}</Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>{tournamentName}</Typography>
             </Box>
             <Box>
-              <Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>
                 {constants.tournamentPagedetails.clubsAssociated}
               </Typography>
-              <Typography>{tournamentClubAssociated}</Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>{tournamentClubAssociated}</Typography>
             </Box>
           </Box>
           <Box className={tournamentStyles.rightTextFirstLine}>
             <Box>
-              <Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>
                 {constants.tournamentPagedetails.totalPrizePool}
               </Typography>
-              <Typography>{tournamentPrize}</Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>{tournamentPrize}</Typography>
             </Box>
             <Box>
-              <Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>
                 {constants.tournamentPagedetails.ageGroup}
               </Typography>
-              <Typography>{tournamentAgeGroup}</Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>{tournamentAgeGroup}</Typography>
             </Box>
           </Box>
           <Box className={tournamentStyles.rightTextFirstLine}>
             <Box>
-              <Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>
                 {constants.tournamentPagedetails.upcomingMatch}
               </Typography>
-              <Typography>{tournamentUpcomingMatch}</Typography>
+              <Typography className={tournamentStyles.tournamentNamefont}>{tournamentUpcomingMatch}</Typography>
             </Box>
             <Box>
               <Typography>{constants.tournamentPagedetails.level}</Typography>

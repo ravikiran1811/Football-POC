@@ -1,5 +1,6 @@
 .container {
     width: 100%;
+    font-family: "Nunito", sans-serif;
   }
   .homeImage {
     height: 100%;
@@ -19,6 +20,7 @@
       width:850px;
       height:352px;
       text-align: left;
+      font-family: "Nunito", sans-serif;
       font-size: 90px;
       font-weight: 700;
       line-height: 136px;
@@ -41,6 +43,7 @@
     border: 2px;
   font-weight: 900;
   letter-spacing: 0em;
+  font-family: "Nunito", sans-serif;
   font-size: 100px;
   line-height: 136.4px;
   letter-spacing: 0em;
@@ -65,6 +68,7 @@
   cursor: pointer;
 }
 .buttonText{
+  font-family: "Nunito", sans-serif;
   font-size: 32px;
   color: black;
   -webkit-text-stroke-width: 0.6px;
@@ -91,6 +95,7 @@
     width: 733px; 
     height: 322px; 
     text-align: left;
+    font-family: "Nunito", sans-serif;
     font-size: 45px; 
     font-weight: 700;
     line-height: 68px; 
@@ -105,6 +110,7 @@
     left: 100px; 
     top: 251px; 
     width: 300px; 
+    font-family: "Nunito", sans-serif;
     font-size: 30px; 
     font-weight: 700;
     line-height: 65px; 
@@ -113,6 +119,7 @@
   }
   
   .textStyle {
+    
     font-size: 160px; 
     width: 352px;
   }
@@ -134,9 +141,13 @@
   }
   
   .buttonText {
+    font-family: "Nunito", sans-serif;
     font-size: 34px; 
     color: black;
   }
   
+}
+.tournamentNamefont{
+  font-family: "Nunito", sans-serif;
 }
   

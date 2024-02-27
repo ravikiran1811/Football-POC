@@ -50,7 +50,7 @@ const HeaderButton = ({
           }
         }}
       >
-        {name}
+        <Box className={styles.pageName}>{name}</Box>
         {subLinks && <Box className={styles.triangleDown}></Box>}
       </Button>
       {subLinks && showSublinks && (
