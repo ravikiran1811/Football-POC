@@ -88,9 +88,21 @@
 }
 @media screen and (max-width: 1400px) {
     .summarySection{
-      padding-left: 140px;
-    }
-    .heading{
-        padding-left: 100px;
-    }
+        padding-left: 140px;
+      }
+      .heading{
+          padding-left: 100px;
+      }
+      .tournaments{
+          padding: 150px;
+          gap:190px;
+          padding-top: 0px;
+      }
+      .summary{
+          width: 100%;
+      }
+      .qualities{
+          width: 1300px;
+      }
+    
 }

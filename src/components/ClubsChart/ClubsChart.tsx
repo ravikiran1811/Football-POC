@@ -33,7 +33,7 @@ const ClubsChart = () => {
             height={740.39}
           />
         </Box>
-        <Box>
+        <Box className={ClubsChartStyles.tableBox}>
           <TableContainer className={ClubsChartStyles.table} component={Paper}>
             <Table aria-label="simple table">
               <TableHead>

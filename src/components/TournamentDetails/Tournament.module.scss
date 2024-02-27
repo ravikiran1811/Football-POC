@@ -71,6 +71,8 @@
   -webkit-text-stroke-color: white;
 }
 
+
+ 
 @media screen and (max-width: 1400px) {
   .container {
     width: 200%;
@@ -86,8 +88,8 @@
     position: absolute;
     left: 1880px; 
     top: 1082px; 
-    width: 533px; 
-    height: 222px; 
+    width: 733px; 
+    height: 322px; 
     text-align: left;
     font-size: 45px; 
     font-weight: 700;
@@ -111,8 +113,8 @@
   }
   
   .textStyle {
-    font-size: 60px; /* Adjusted for 1366 resolution */
-    width: 352px; /* Adjusted for 1366 resolution */
+    font-size: 160px; 
+    width: 352px;
   }
   
   .rightTextFirstLine {
@@ -127,13 +129,14 @@
   
   .backButton {
     position: absolute;
-    top: 208px;
+    top: 178px;
     left: 31px; 
   }
   
   .buttonText {
-    font-size: 24px; 
+    font-size: 34px; 
     color: black;
   }
   
 }
+  
