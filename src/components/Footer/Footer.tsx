@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Box className={FooterStyles.container}>
       <Stack className={FooterStyles.newsletter}>
-        <Typography component="p" className={FooterStyles.heading}>
+        <Typography component="p" className={FooterStyles.heading} id={FooterStyles.status}>
           {constants.footer.newsletter.heading}
         </Typography>
         <Link to="/newsletter" className={FooterStyles.subHeading}>
@@ -17,8 +17,11 @@ const Footer = () => {
       <Stack
         className={`${FooterStyles.newsletter} ${FooterStyles.socialMedia}`}
       >
-        <Typography component="p" className={FooterStyles.heading}>
+        <Typography component="p" className={FooterStyles.heading} id={FooterStyles.headerNone}>
           {constants.footer.socialMedia.heading}
+        </Typography>
+        <Typography component="p" className={FooterStyles.headingFor}>
+          {constants.footer.socialMedia.headingfor1366}
         </Typography>
         {constants.footer.socialMedia.types.map((each, index) => {
           return (

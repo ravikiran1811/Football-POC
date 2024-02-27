@@ -9,6 +9,8 @@ import ClubReview from "../../components/ClubReview/ClubReview";
 import founder from "../../assets/Screenshot 2024-02-23 at 19.24 1.png";
 import petraClub from "../../assets/Screenshot 2024-02-22 at 22.11 1.png";
 import Carousel from "../../components/Carousel/Carousel";
+import SideNav from "../../components/SideNavBar/SideNav";
+import { sidebarData } from "../../DummyData/sidebarForTournamentPage";
 import { carouselData, secondCarouselData } from "../../DummyData/carouselData";
 const ClubDetails = () => {
   return (
@@ -20,14 +22,22 @@ const ClubDetails = () => {
         locations={locationData}
       />
       <Stack className={ClubDetailsStyles.AboutClubContainer}>
+        <Box id="About the Club">
         <AboutTheClub />
+        <Box className={ClubDetailsStyles.sideBar}>
+        <SideNav content={sidebarData} scrollValue={140}/>
+        </Box>
+        </Box>
+        <Box id="Founders">
         <ClubpageFounder
           heading="Vision"
           subheading="Founder's"
           description={visionData}
           image={founder}
         />
+        </Box>
       </Stack>
+      <Box id='Our Hall of Expertise'>
       <Carousel
         noOfSlides={5}
         data={carouselData}
@@ -40,7 +50,10 @@ const ClubDetails = () => {
         secondCarouselData={secondCarouselData}
         variant="secondary"
       />
+      </Box>
+      <Box id='Our Moments'>
       <ClubReview />
+      </Box>
     </Box>
   );
 };

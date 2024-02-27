@@ -10,8 +10,10 @@
     display: flex;
     font-family: "Nunito", sans-serif;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
+    padding-top: 3px;
     align-items: center;
+    justify-content: center;
     .heading {
       color: #fff;
       font-family: "Nunito", sans-serif;
@@ -59,3 +61,30 @@
     }
   }
 }
+.headingFor{
+  display: none;
+}
+
+@media (max-width: 1367px) {
+    #status{
+      display: none
+    }
+    .container{
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      gap:40px;
+    }
+    .headingFor{
+      display: inline;
+      color: #fff;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    #headerNone{
+      display: none;
+    }
+}
+

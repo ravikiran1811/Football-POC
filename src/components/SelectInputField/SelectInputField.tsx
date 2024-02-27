@@ -55,6 +55,7 @@ const SelectInputField: React.FC<SearchFieldProps> = ({
         value={selectedValue || (list.length > 0 ? list[0].name : "")}
         onChange={handleSelectChange}
         {...register}
+        className={SelectInputStyles.fontsizes}
       >
         {list &&
           Array.isArray(list) &&

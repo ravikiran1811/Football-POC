@@ -36,3 +36,26 @@
 .contentDescription::-webkit-scrollbar {
   display: none;
 }
+
+@media only screen and (max-width: 1367px) {
+  .contentDescription {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    height: 475px;
+    padding-top: 20px;
+    gap: 20px;
+    overflow: scroll;
+    text-align: left;
+    P {
+      font-size: 20px;
+    }
+  }
+  .contentImage {
+    width: 426px;
+    min-width: 326px;
+  }
+  .contentDescription::-webkit-scrollbar {
+    display: none;
+  }
+}

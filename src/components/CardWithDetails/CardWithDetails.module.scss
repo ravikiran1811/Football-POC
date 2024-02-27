@@ -27,7 +27,8 @@
 .academyTag {
   display: flex;
   gap: 2px;
-  background-color: #dfdfdf;
+  background-color: #415ce0;
+  color: #fff;
   width: (106.51px);
   padding: 6px;
   border-top-left-radius: 8px;
@@ -45,7 +46,7 @@
   justify-content: end;
 }
 .star {
-  background-color: #dfdfdf;
+  background-color: #415ce0;
   padding: 3px;
   padding-left: 7px;
   padding-top: 4px;
@@ -62,11 +63,14 @@
   padding-top: 8px;
   padding-bottom: 9px;
   padding-right: 8px;
-  background-color: #dfdfdf;
+  background-color: #415ce0;
+  color: #fff;
 }
 
 .part2 {
-  background-color: #dfdfdf;
+  background-color: #415ce0;
+  color: #fff;
+
   display: flex;
   height: 157px;
   position: relative;
