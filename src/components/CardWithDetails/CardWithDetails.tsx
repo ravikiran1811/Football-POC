@@ -13,7 +13,6 @@ export interface ICard {
   description: string;
   locationIcon: string;
   location: string;
-  CardWithDetails: string;
   group: string;
   tierIcon: string;
   tier: string;

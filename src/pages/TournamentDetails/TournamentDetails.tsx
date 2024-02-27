@@ -13,7 +13,6 @@ import { tournamentDetails } from "../../DummyData/tournamentDetails";
 import ViewerShipGraph from "../../components/ViewerShipGraph/ViewerShipGraph";
 import TournamentDetailsKeyHighlights from "../../components/TournamentDetailsKeyHighlights/TournamentDetailsKeyHighlights";
 import { tournamentHighlightData } from "../../DummyData/tournamentHighlightsData";
-import SectionHeading from "../../components/HeadingField/HeadingField";
 const TournamentDetails = () => {
   return (
     <>
@@ -32,7 +31,6 @@ const TournamentDetails = () => {
         />
         <SideNav content={sideNavData[0].durandCup} scrollValue={1000} />
       </Box>
-    
       <TournamentDetailsKeyHighlights data={tournamentHighlightData} />
       <ViewerShipGraph />
       <ClubsChart />
