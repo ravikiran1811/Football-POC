@@ -57,15 +57,14 @@
   }
 }
 @media screen and (max-width: 1400px) {
-  .navbar {
-    margin-left: 840px;
-    // width: 600px;
-    // height: 450px;
-  }
-  .fixedNav {
-    position: fixed;
-    top: 180px;
-    right: 0;
-    z-index: 1;
-  }
+  .navbar{
+   margin-left: -250px;
+}
+.fixedNav {
+  position: fixed;
+  top: 180px;
+  right: 0;
+  z-index: 1;
+}
+
 }

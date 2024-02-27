@@ -5,6 +5,7 @@ import upArrow from "../../assets/ArrowBendDownRight (1).svg";
 import highlightCup from "../../assets/Ellipse 986.png";
 
 import TournamentDetailsKeyHighlightsStyles from "./TournamentDetailsKeyHighlights.module.scss";
+import SectionHeading from "../HeadingField/HeadingField";
 const TournamentDetailsKeyHighlights = (props:any) => {
   const {data}=props;
   let topContainer:Array<Object> = [];
@@ -15,6 +16,9 @@ const TournamentDetailsKeyHighlights = (props:any) => {
   }
   return (
     <>
+      <Box className={TournamentDetailsKeyHighlightsStyles.tournamentHighlightsHeading}>
+      <SectionHeading heading="HIGHLIGHTS" subHeading="KEY" colors="false" />
+      </Box>
     <Box className={TournamentDetailsKeyHighlightsStyles.mainContainer}>
      <Box className={TournamentDetailsKeyHighlightsStyles.topContainer}>
       { topContainer && Array.isArray(topContainer)  && topContainer.length!=0 && topContainer.map((each:any)=>{

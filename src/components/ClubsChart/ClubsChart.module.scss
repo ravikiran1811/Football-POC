@@ -50,12 +50,15 @@ color: red;
   text-align: left;
 }
 @media screen and (max-width:1400px){
-  .clubsChart{
-    padding-left: 1040px;
-    gap:150px;
-  }
-  .clubsChartHeading{
-    padding-left: 250px;
-  }
 
+  .clubsChartHeading{
+    padding-left: 50px;
+  }
+  .clubsChart {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    padding: 0vw 5vw 5vw 5vw ;
+  }
 }

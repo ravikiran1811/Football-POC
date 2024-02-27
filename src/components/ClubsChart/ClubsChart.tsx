@@ -1,5 +1,4 @@
 import { PieChart } from "@mui/x-charts/PieChart";
-
 import { clubData } from "../../DummyData/clubChartsData";
 import ClubsChartStyles from "./ClubsChart.module.scss";
 import {
@@ -13,8 +12,35 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const ClubsChart = () => {
+  const [chartWidth, setChartWidth] = useState(300);
+  const [tableWidth, setTableWidth] = useState(300);
+  const [tableHeight, setTableHeight] = useState(300);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      console.log(windowWidth);
+      if (windowWidth >= 1920) {
+        setChartWidth(745);
+        setTableWidth(800);
+        setTableHeight(545);
+      } else if (windowWidth <= 1500) {
+        setChartWidth(500);
+        setTableWidth(750);
+        setTableHeight(535);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Box className={ClubsChartStyles.clubs}>
       <Typography className={ClubsChartStyles.clubsChartHeading}>
@@ -22,19 +48,23 @@ const ClubsChart = () => {
       </Typography>
 
       <Box className={ClubsChartStyles.clubsChart}>
-        <Box>
+        <Box className={ClubsChartStyles.pieChartWidth}>
           <PieChart
             series={[
               {
                 data: clubData,
               },
             ]}
-            width={740.39}
-            height={740.39}
+            width={chartWidth}
+            height={chartWidth}
           />
         </Box>
         <Box className={ClubsChartStyles.tableBox}>
-          <TableContainer className={ClubsChartStyles.table} component={Paper}>
+          <TableContainer
+            className={ClubsChartStyles.table}
+            component={Paper}
+            style={{ width: tableWidth, height: tableHeight }}
+          >
             <Table aria-label="simple table">
               <TableHead>
                 <TableRow className={ClubsChartStyles.tableHead}>
@@ -46,7 +76,10 @@ const ClubsChart = () => {
               </TableHead>
               <TableBody>
                 {clubData.map((row) => (
-                  <TableRow key={row.id} className={ClubsChartStyles.tableBody}>
+                  <TableRow
+                    key={row.id}
+                    className={ClubsChartStyles.tableBody}
+                  >
                     <TableCell
                       className={ClubsChartStyles.teamContainer}
                       component="th"
@@ -71,4 +104,5 @@ const ClubsChart = () => {
     </Box>
   );
 };
+
 export default ClubsChart;

@@ -1,7 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import { BarChart } from "@mui/x-charts/BarChart";
 import SectionHeading from "../HeadingField/HeadingField";
-import ViewerShipGraphStyles from './ViewerShipGraph.module.scss'
+import ViewerShipGraphStyles from './ViewerShipGraph.module.scss';
+import { useEffect, useState } from "react";
+
 const uData = [
     { country: 'Country 1', value: 4000 },
     { country: 'Country 2', value: 3000 },
@@ -26,25 +28,41 @@ const xLabels = [
 ];
 
 const ViewerShipGraph = () => {
+  const [chartWidth, setChartWidth] = useState(300); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1920) {
+        setChartWidth(1785);
+      } else if (window.innerWidth >= 1366) {
+        setChartWidth(1200); 
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Box id="Tournament stats">
-      <Box  className={ViewerShipGraphStyles.heading}>
+      <Box className={ViewerShipGraphStyles.heading}>
         <SectionHeading heading={"STATS"} subHeading={"TOURNAMENT"} colors={"false"} />
       </Box>
       <Box>
         <Typography className={ViewerShipGraphStyles.subHeading}>Durand Cup Viewership over the years</Typography>
       </Box>
       <Box className={ViewerShipGraphStyles.barGraph}>
-      <BarChart
-      className={ViewerShipGraphStyles.graph}
-        width={ 1785}
-        height={987.81}
-        series={[{ data: uData.map(item => item.value), id: "uvId", color:'gray' }]}
-        xAxis={[{ data: xLabels, scaleType: "band" }]}
-      />
+        <BarChart
+          className={ViewerShipGraphStyles.graph}
+          width={chartWidth}
+          height={987.81}
+          series={[{ data: uData.map(item => item.value), id: "uvId", color:'gray' }]}
+          xAxis={[{ data: xLabels, scaleType: "band" }]}
+        />
       </Box>
     </Box>
   );
 };
-export default ViewerShipGraph;
 
+export default ViewerShipGraph;
