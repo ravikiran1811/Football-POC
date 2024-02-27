@@ -4,6 +4,7 @@ import useCurrentLocation from "../../utils/useCurrentLocation";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
+
 const Dashboard = () => {
   // const navigate = useNavigate();
   // const handleLogout = () => {
@@ -19,11 +20,12 @@ const Dashboard = () => {
       <div className={DashboardStyles.container}>
         <Header />
         <Outlet />
-
         <Footer />
        
         {/* <button onClick={handleLogout}>Logout</button> */}
       </div>
+
+      
     </>
   );
 };
