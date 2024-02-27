@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { headerList } from "./HeaderData";
+import { headerList } from "./headerData";
 
 interface IHeaderButtonProps {
   page: {
@@ -28,7 +28,7 @@ const HeaderButton = ({
 }: IHeaderButtonProps) => {
   const { id, name, path, subLinks } = page;
 
-const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.addEventListener("click", (event: any) => {
@@ -38,9 +38,9 @@ const { pathname } = useLocation();
     });
   }, []);
   return (
-<Box className={subLinks ? styles.PathButton : ""}>
+    <Box className={subLinks ? styles.PathButton : ""}>
       <Button
-className={pathname === path ? styles.active : ""}
+        className={pathname === path ? styles.active : ""}
         key={id}
         onClick={() => {
           if (!subLinks) {
@@ -51,21 +51,25 @@ className={pathname === path ? styles.active : ""}
         }}
       >
         {name}
-{subLinks && <Box className={styles.triangleDown}></Box>}
+        {subLinks && <Box className={styles.triangleDown}></Box>}
       </Button>
       {subLinks && showSublinks && (
         <Box className={styles.pathCard}>
           {subLinks.map((item) => {
             const { name, path } = item;
             return (
-              <p key={name}  onClick={() => {
-              const { pathname } = useLocation();
-              console.log(pathname,"as the pathname")
-              console.log(path,"as the path")
-              const className = (pathname === path) ? styles.changeTextStyle : null;
-              console.log(className,"as the name")
-                navigate(path)}}
-                >
+              <p
+                key={name}
+                onClick={() => {
+                  const { pathname } = useLocation();
+                  console.log(pathname, "as the pathname");
+                  console.log(path, "as the path");
+                  const className =
+                    pathname === path ? styles.changeTextStyle : null;
+                  console.log(className, "as the name");
+                  navigate(path);
+                }}
+              >
                 {name}
               </p>
             );
@@ -78,7 +82,7 @@ className={pathname === path ? styles.active : ""}
 
 const Header = () => {
   const navigate = useNavigate();
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const [showSublinks, setShowSublinks] = useState(false);
   return (
     <AppBar position="fixed" className={styles.container}>
@@ -88,7 +92,7 @@ const Header = () => {
         </Box>
         <Box className={styles.container__content}>
           {headerList.map((page) => (
-            <HeaderButton 
+            <HeaderButton
               key={page.id}
               page={page}
               navigate={navigate}

@@ -1,6 +1,6 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 
-import { clubData } from "../../DummyData/ClubChartsData";
+import { clubData } from "../../DummyData/clubChartsData";
 import ClubsChartStyles from "./ClubsChart.module.scss";
 import {
   Box,
@@ -33,7 +33,7 @@ const ClubsChart = () => {
             height={740.39}
           />
         </Box>
-        <Box>
+        <Box className={ClubsChartStyles.tableBox}>
           <TableContainer className={ClubsChartStyles.table} component={Paper}>
             <Table aria-label="simple table">
               <TableHead>
