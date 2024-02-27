@@ -26,7 +26,7 @@ const ClubsListing = () => {
             {detailedCardList &&
               Array.isArray(detailedCardList) &&
               detailedCardList.length > 0 &&
-              detailedCardList.map((card: ICard) => (
+              detailedCardList.map((card: any) => (
                 <CardWithDetails card={card} />
               ))}
           </Box>

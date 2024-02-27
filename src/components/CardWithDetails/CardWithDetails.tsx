@@ -18,6 +18,7 @@ export interface ICard {
   tierIcon: string;
   tier: string;
   tierFlag: boolean;
+  groupIcon?: string;
 }
 interface ICardWithDetails {
   card: ICard;
