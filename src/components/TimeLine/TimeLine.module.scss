@@ -29,6 +29,7 @@
 .content {
   height: 100%;
   width: 40%;
+  overflow-y: scroll;
   p {
     font-size: 21px;
   }
@@ -37,12 +38,9 @@
     font-size: 38px;
     margin-bottom: 10px;
   }
-  .description {
-    overflow-y: scroll;
-  }
-  .description::-webkit-scrollbar {
-    display: none;
-  }
+}
+.content::-webkit-scrollbar{
+  display: none;
 }
 .oddContainer {
   padding-left: 0px;
