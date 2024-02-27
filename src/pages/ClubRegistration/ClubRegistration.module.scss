@@ -27,6 +27,9 @@
   font-weight: 600;
   line-height: 30px; /* 187.5% */
 }
+.container{
+  margin-top: 2%;
+}
 
 .containerLevelOne,
 .licenseContainer {
@@ -173,4 +176,33 @@
 }
 .optionalSectionContainer {
   flex-direction: column;
+}
+.registrationInformation{
+  display:flex ;
+  width:322px;
+  height:35px;
+  justify-content: space-between;
+}
+hr.clubInformation{
+  border: 5px solid #D9D9D9;
+  color:#4D6581 ;
+  border-radius: 5px;
+}
+hr.additionalInformation{
+  color:#4D6581 ;
+  border: 5px solid #415CE0;
+  border-radius: 5px;
+}
+.stepsColor{
+  padding-left: 53px;
+  color:#4D6581 ;
+}
+.detailsFilled{
+  color:#4D6581 ;
+  border: 5px solid #A1D777;
+
+  border-radius: 5px;
+}
+.infomationHeadingColor{
+  color:#4D6581 ;
 }
