@@ -27,7 +27,7 @@ const TournamentDetails = () => {
           About={summaryData.DuranCup.About}
           Eligibility={summaryData.DuranCup.Eligibility}
         />
-        <SideNav content={sideNavData[0].durandCup} />
+        <SideNav content={sideNavData[0].durandCup} scrollValue={1000} />
       </Box>
       <ViewerShipGraph />
       <ClubsChart />

@@ -22,7 +22,7 @@ function Carousel(props: IcarouselData) {
     infinite: false,
     gap: 100,
     speed: 500,
-    slidesToShow: noOfSlides,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
