@@ -3,6 +3,7 @@ import React from "react";
 import summarySectionStyles from "./summarySection.module.scss";
 import { constants } from "../../constants/stringConstants";
 import SectionHeading from "../HeadingField/HeadingField";
+import image from "../../../src/assets/Durand_Cup 3.svg";
 interface ISummaryProps {
   Eligibility: any;
   About: string;
@@ -23,7 +24,7 @@ const SummarySection: React.FC<ISummaryProps> = ({ Eligibility, About }) => {
         </Box>
         <Box className={summarySectionStyles.tournaments}>
           <Box className={summarySectionStyles.DuranCupImage}>
-            <img src="../../../src/assets/Durand_Cup 3.svg"></img>
+            <img src={image}></img>
           </Box>
           <Box className={summarySectionStyles.summary}>
             <Box className={summarySectionStyles.eligibleDiv}>
