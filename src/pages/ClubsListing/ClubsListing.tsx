@@ -4,7 +4,7 @@ import CardWithDetails, {
 } from "../../components/CardWithDetails/CardWithDetails";
 import ClubsListingStyles from "./ClubsListing.module.scss";
 import clubListingImage from "../../assets/playes1.jpg";
-import { detailedCardList } from "../../DummyData/CardWithDetails";
+import { detailedCardList } from "../../DummyData/cardWithDetails";
 import SectionHeading from "../../components/HeadingField/HeadingField";
 
 const ClubsListing = () => {
