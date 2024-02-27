@@ -44,11 +44,17 @@
 }
 @media screen and (max-width:1400px){
   .even,.card{
-    padding-left: 300px;
-    margin-left: 300px;
-    gap: 637px;
+    margin-left: 500px;
   }
   .heading{
     padding-left: 250px;
+  }
+  .image {
+    width: 940px;
+    height: 804px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
