@@ -54,6 +54,7 @@ export const constants = {
     },
     socialMedia: {
       heading: "Follow us on social media",
+      headingfor1366:"Follow us",
       types: [
         {
           id: 1,
