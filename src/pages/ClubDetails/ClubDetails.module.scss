@@ -9,19 +9,20 @@
   gap: 80px;
 
   // padding: 0 310px 0 160px;
-  padding-left:10% ;
+  padding-left: 10%;
   padding-right: 301px;
 }
 
 @media (max-width: 1367px) {
   .AboutClubContainer {
     gap: 60px;
-    padding-left:7%;
+    padding-left: 7%;
+    padding: 100px;
   }
 }
 
-.sideBar{
-position: absolute;
-right:0px;
-top:400px
+.sideBar {
+  position: absolute;
+  right: 0px;
+  top: 400px;
 }
