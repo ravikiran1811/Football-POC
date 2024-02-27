@@ -1,12 +1,14 @@
 .ClubRegistrationContainer {
   margin-top: 100px;
   padding: 0 60px;
+
 }
 .stepperContainer {
   margin-top: 35px;
 }
 .heading {
   color: #101c2d;
+  font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -15,6 +17,7 @@
 .subHeading {
   margin-top: 34px;
   color: #101c2d;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -22,6 +25,7 @@
 }
 .subHeading2 {
   color: #101c2d;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -47,6 +51,7 @@
 
 .error {
   color: red;
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
@@ -76,6 +81,7 @@
 .licenseContainer {
   h6 {
     color: #4d6581;
+    font-family: "Nunito", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -106,6 +112,7 @@
     gap: 6px;
     cursor: pointer;
     color: red;
+    font-family: "Nunito", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -126,6 +133,7 @@
     cursor: pointer;
     color: #415ce0;
     font-size: 14px;
+    font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -155,6 +163,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
+    font-family: "Nunito", sans-serif;
     line-height: 16px; /* 114.286% */
     background: #fff;
     padding: 10px 12px;

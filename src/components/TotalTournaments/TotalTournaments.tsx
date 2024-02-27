@@ -10,7 +10,7 @@ const SecondarySectionHeading: React.FC<ITournamentsProps> = ({ heading }) => {
     <>
       <Box className={TotalTournament.title}>
         <Box className={TotalTournament.text}>{heading}</Box>
-        <Link to={"#"}>View More</Link>
+        <Link to={"#"} className={TotalTournament.viewMore}>View More</Link>
       </Box>
     </>
   );

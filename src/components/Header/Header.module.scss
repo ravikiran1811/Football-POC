@@ -1,4 +1,5 @@
 .container {
+  font-family: "Nunito", sans-serif;
   display: flex;
   top: 0px;
   padding: 0px;
@@ -7,7 +8,6 @@
   height: 60px;
   box-sizing: border-box;
   align-items: center;
-  font-family: Nunito Sans;
   font-size: 22px;
   background-color: #fff;
   font-weight: 400;
@@ -15,6 +15,8 @@
   letter-spacing: 0em;
   text-align: left;
   max-width: 100%;
+  font-family: "Nunito", sans-serif;
+
   &__logo {
     width: 232px;
     height: 60px;
@@ -35,6 +37,7 @@
 }
 
 .container__content {
+  font-family: "Nunito", sans-serif;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -57,15 +60,17 @@
 
   button:hover,
   button:active {
+    font-family: "Nunito", sans-serif;
     font-weight: 700px;
     border: none !important;
     border: transparent !important;
     list-style: none;
-    outline: none!important;
+    outline: none !important;
   }
 }
 
 .container__content__select {
+  font-family: "Nunito", sans-serif;
   outline: none;
   color: black;
   border: 0px solid black;
@@ -102,7 +107,6 @@
   border-top: 7px solid #555;
 }
 
-
 .active {
   color: #415ce0 !important;
   position: relative;
@@ -117,15 +121,16 @@
     background-color: #415ce0;
   }
 }
+.pageName {
+  font-family: "Nunito", sans-serif;
+}
 
 @media only screen and (max-width: 1367px) {
-  .container{
+  .container {
     min-width: 100%;
   }
 }
 
-
-
-._container__content_utrmz_36 button{
-  outline: none!important;
+._container__content_utrmz_36 button {
+  outline: none !important;
 }

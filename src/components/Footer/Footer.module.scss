@@ -8,6 +8,7 @@
   margin-top: 0px;
   .newsletter {
     display: flex;
+    font-family: "Nunito", sans-serif;
     flex-direction: row;
     gap: 20px;
     padding-top: 3px;
@@ -15,6 +16,7 @@
     justify-content: center;
     .heading {
       color: #fff;
+      font-family: "Nunito", sans-serif;
       font-size: 22px;
       font-style: normal;
       font-weight: 600;
@@ -22,7 +24,7 @@
     }
     .subHeading {
       color: #fff;
-      font-family: "Nunito Sans";
+        font-family: "Nunito", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -32,7 +34,7 @@
   }
   .allRights {
     color: #fff;
-    font-family: "Nunito Sans";
+      font-family: "Nunito", sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -45,7 +47,7 @@
     align-items: center;
     .email {
       color: #fff;
-      font-family: "Nunito Sans";
+        font-family: "Nunito", sans-serif;
       font-size: 22px;
       font-style: normal;
       font-weight: 600;
@@ -54,6 +56,7 @@
   }
   .socialMedia {
     .heading {
+      font-family: "Nunito", sans-serif;
       margin-top: -6px;
     }
   }

@@ -19,7 +19,7 @@
       align-items: center;
       gap: 5px;
       color: #101c2d;
-      font-family: "Nunito Sans";
+      font-family: "Nunito", sans-serif;
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
@@ -28,6 +28,7 @@
     .selectText {
       color: #415ce0;
       font-size: 13px;
+      font-family: "Nunito", sans-serif;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -150,7 +151,7 @@
 .labelText {
   text-align: left;
   color: #4d6581;
-  font-family: "Nunito Sans";
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -165,7 +166,7 @@
 
 .singleUploadSubHeading {
   color: #101c2d;
-  font-family: "Nunito Sans";
+  font-family: "Nunito", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;

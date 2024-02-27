@@ -1,4 +1,5 @@
 .RegistrationBox {
+  font-family: "Nunito", sans-serif;
   background-image: url("../../assets/RegistrationBoxImage.svg");
   height: 186px;
   width: 100%;
@@ -16,13 +17,13 @@
     color: white;
     padding-top: 10px;
     &__heading {
-      font-family: Inter;
+      font-family: "Nunito", sans-serif;
       font-size: 20px;
       font-weight: 700;
       line-height: 24px;
     }
     &__subheading {
-      font-family: Nunito Sans;
+      font-family: "Nunito", sans-serif;
       font-size: 16px;
       font-weight: 600;
       line-height: 22px;
@@ -35,6 +36,7 @@
   }
 
   &__Button__registrationButton {
+    font-family: "Nunito", sans-serif;
     border-radius: 1600px;
     width: 199px;
     height: 54px;
