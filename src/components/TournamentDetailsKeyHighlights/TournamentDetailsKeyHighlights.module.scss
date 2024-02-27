@@ -1,7 +1,6 @@
 .topContainer {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 500px;
   .Image {
     width: 188px;
     height: 188px;
@@ -143,10 +142,30 @@
     display: flex;
     flex-direction: column;
     gap:100px;
+    padding: 100px;
+    padding-left: 0px;
+}
+.tournamentHighlightsHeading{
+  margin-left: 162px;
 }
 hr{
     width:55%;
     margin:auto;
     border-top: 2px dashed gray;
     background-color: transparent;
+}
+@media screen and (max-width:1400px){
+  .mainContainer{
+    display: flex;
+    flex-direction: column;
+    gap:100px;
+    padding: 100px;
+    padding-left: 0px;
+}
+.tournamentHighlightsHeading{
+  margin-left: 50px;
+}
+hr{
+  width:57%;
+}
 }
