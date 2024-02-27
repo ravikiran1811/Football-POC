@@ -3,7 +3,7 @@ import TournamentSectionStyles from "./TournamentSection.module.scss";
 import DisplayCard from "../Card/DisplayCard";
 import SectionHeading from "../HeadingField/HeadingField";
 import SecondarySectionHeading from "../TotalTournaments/TotalTournaments";
-import { card } from "../../DummyData/cardData";
+import { card } from "../../DummyData/CardData";
 
 const TournamentSection = () => {
   return (

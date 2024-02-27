@@ -5,7 +5,7 @@ import TournamentSection from "../../components/TournamentSection/TournamentSect
 import VideoSection from "../../components/VideoSection/VideoSection";
 import WhyUsSection from "../../components/WhyUsSection/WhyUsSection";
 import HomeStyles from "./Home.module.scss";
-import { timeLineData, timeLineDataEven } from "../../DummyData/timeLineData";
+import { timeLineData, timeLineDataEven } from "../../DummyData/TimeLineData";
 
 
 const Home = () => {

@@ -6,12 +6,8 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
-import { headerList } from "./HeaderData";
-=======
 import { headerList } from "./headerData";
 
->>>>>>> 05cca8a71b19bcefb3a0f934d4554dba31b8b307
 interface IHeaderButtonProps {
   page: {
     id: number;

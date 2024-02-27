@@ -75,7 +75,7 @@
  
 @media screen and (max-width: 1400px) {
   .container {
-    width: 200%;
+    width: 100%;
   }
   
   .homeImage {
@@ -86,10 +86,10 @@
   
   .homeImage__textright {
     position: absolute;
-    left: 1880px; 
-    top: 1082px; 
-    width: 733px; 
-    height: 322px; 
+    left: 780px; 
+    top: 432px; 
+    width: 533px; 
+    height: 222px; 
     text-align: left;
     font-size: 45px; 
     font-weight: 700;
@@ -103,7 +103,7 @@
   .homeImage__textleft {
     position: absolute;
     left: 100px; 
-    top: 251px; 
+    top: 131px; 
     width: 300px; 
     font-size: 30px; 
     font-weight: 700;
@@ -113,8 +113,9 @@
   }
   
   .textStyle {
-    font-size: 160px; 
+    font-size: 100px; 
     width: 352px;
+    font-weight: 800;
   }
   
   .rightTextFirstLine {
@@ -129,7 +130,7 @@
   
   .backButton {
     position: absolute;
-    top: 178px;
+    top: 108px;
     left: 31px; 
   }
   
