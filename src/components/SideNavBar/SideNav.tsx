@@ -3,8 +3,9 @@ import sideNavstyles from "./SideNav.module.scss";
 import React, { useEffect, useState } from "react";
 interface ITournamentSummaryProps {
   content: any;
+  scrollValue:number;
 }
-const SideNav: React.FC<ITournamentSummaryProps> = ({ content }) => {
+const SideNav: React.FC<ITournamentSummaryProps> = ({ content,scrollValue}) => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const handleClick = (tournamentTitle: string) => {
     setSelectedItem(tournamentTitle);
@@ -26,7 +27,7 @@ const SideNav: React.FC<ITournamentSummaryProps> = ({ content }) => {
       <Box
         className={`${sideNavstyles.navbar}
         
-        ${scrollPosition > 1000 ? sideNavstyles.fixedNav : ""}      `}
+        ${scrollPosition > scrollValue ? sideNavstyles.fixedNav : ""}      `}
       >
         {content &&
           Array.isArray(content) &&

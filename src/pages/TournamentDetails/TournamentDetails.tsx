@@ -1,4 +1,4 @@
-import { summaryData } from "../../DummyData/SummaryContent";
+import { summaryData } from "../../DummyData/summaryContent";
 import { hallOfFameData } from "../../DummyData/hallOfFameData";
 import { sideNavData } from "../../DummyData/sideNavData";
 import { Box } from "@mui/material";
@@ -27,7 +27,7 @@ const TournamentDetails = () => {
           About={summaryData.DuranCup.About}
           Eligibility={summaryData.DuranCup.Eligibility}
         />
-        <SideNav content={sideNavData[0].durandCup} />
+        <SideNav content={sideNavData[0].durandCup} scrollValue={1000} />
       </Box>
       <ViewerShipGraph />
       <ClubsChart />
