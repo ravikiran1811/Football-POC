@@ -17,7 +17,7 @@ const TimeLineDisplay = (props: ITimeLineDisplay) => {
   return (
     <div className={TimeLineDisplayStyles.container}>
       <div className={TimeLineDisplayStyles.followUpButton}>
-        <button>You can Begin from</button>
+        <button className={TimeLineDisplayStyles.beginButton}>You can Begin from</button>
       </div>
       <Box className={TimeLineDisplayStyles.timeline}>
         {data &&
