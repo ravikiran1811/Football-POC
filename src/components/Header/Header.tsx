@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { headerList } from "./HeaderData";
+import { headerList } from "./headerData";
 
 interface IHeaderButtonProps {
   page: {

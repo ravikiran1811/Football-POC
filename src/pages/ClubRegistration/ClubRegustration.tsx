@@ -12,9 +12,9 @@ import ClubRegistrationStyles from "./ClubRegistration.module.scss";
 import MobileNumberInputField from "../../components/MobileNumberComponent/MobileNumberComponent";
 import UploadMedia from "../../components/UploadMedia/UploadMedia";
 import SelectInputField from "../../components/SelectInputField/SelectInputField";
-import { list } from "../../DummyData/SelectInputData";
 import addButtonIcon from "../../assets/tabler_circle-plus.svg";
 import { useNavigate } from "react-router-dom";
+import { list } from "../../DummyData/selectInputData";
 
 const schema = yup.object().shape({
   clubName: yup.string().required("Club name is required"),

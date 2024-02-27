@@ -1,6 +1,6 @@
 import { PieChart } from "@mui/x-charts/PieChart";
 
-import { clubData } from "../../DummyData/ClubChartsData";
+import { clubData } from "../../DummyData/clubChartsData";
 import ClubsChartStyles from "./ClubsChart.module.scss";
 import {
   Box,
