@@ -1,4 +1,4 @@
-import { summaryData } from "../../DummyData/SummaryContent";
+import { summaryData } from "../../DummyData/summaryContent";
 import { hallOfFameData } from "../../DummyData/hallOfFameData";
 import { sideNavData } from "../../DummyData/sideNavData";
 import { Box } from "@mui/material";
