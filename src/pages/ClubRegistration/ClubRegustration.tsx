@@ -168,7 +168,7 @@ export default function ClubRegistration() {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setActiveStep((prevActiveStep) => prevActiveStep = 0);
   };
 
   return (
@@ -189,25 +189,14 @@ export default function ClubRegistration() {
         activeStep={activeStep}
         alternativeLabel
       >
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel
-              StepIconComponent={(props) => (
-                <StepIcon
-                  {...props}
-                  style={{
-                    borderRadius: "30px",
-                    width: "100px",
-                    height: "30px",
-                  }}
-                />
-              )}
-            >
-              <Typography variant="h6">Club Information</Typography>
-              {label}
-            </StepLabel>
-          </Step>
-        ))}
+            <Box className={ClubRegistrationStyles.registrationInformation}>
+            <Box className={ClubRegistrationStyles.infomationHeadingColor}>Club Information
+                <hr className={activeStep == 0 ?  ClubRegistrationStyles.additionalInformation: ClubRegistrationStyles.detailsFilled}></hr></Box>
+              <Box  className={ClubRegistrationStyles.infomationHeadingColor}>Additional Information<hr className={activeStep == 1 ?  ClubRegistrationStyles.additionalInformation :ClubRegistrationStyles.clubInformation}></hr></Box>
+            </Box>
+            <Box className={ClubRegistrationStyles.stepsColor}>{steps[activeStep]} of 2</Box>
+        
+      
       </Stepper>
 
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -287,11 +276,11 @@ export default function ClubRegistration() {
                   )}
                 />
 
-                {(errors.clubContactNumberCode?.message as any) ||
+                {((errors.clubContactNumberCode?.message as any) && <p className={ClubRegistrationStyles.error as any}> {(errors.clubContactNumberCode?.message as any)}</p> ) ||
                   ((errors.clubContactNumber?.message as any) && (
                     <p className={ClubRegistrationStyles.error as any}>
-                      {errors.clubContactNumberCode?.message ||
-                        (errors.clubContactNumber?.message as any)}
+                     {
+                      (errors.clubContactNumber?.message as any)}
                     </p>
                   ))}
               </Stack>

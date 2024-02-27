@@ -5,8 +5,8 @@
   flex-direction: column;
   background: linear-gradient(
     180deg,
-    #7c7c7c 0%,
-    rgba(217, 217, 217, 0) 83.73%
+    rgba(136, 156, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
   );
 }
 .container {
@@ -65,7 +65,7 @@
   justify-content: space-around;
   width: 175px;
   height: 52px;
-  background: #4e4e4e;
+  background: #000;
   padding: 8px;
   font-size: 20px;
   color: #ffffff;
@@ -107,7 +107,18 @@
   }
   .locations {
     padding: 5px 20px;
-    background: #dedede;
+    background: #415ce0;
     border-radius: 99px;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1367px) {
+  .contentDetails {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 14px;
   }
 }

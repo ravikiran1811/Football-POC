@@ -8,11 +8,21 @@
     gap: 20px;
     .para {
       color: #000;
-      font-family: "Nunito Sans";
+      font-family: Nunito Sans;
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .part1 {
+    .description {
+      .para {
+        font-size: 20px;
+      }
     }
   }
 }
