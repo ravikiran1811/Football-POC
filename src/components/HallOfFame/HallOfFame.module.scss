@@ -44,10 +44,12 @@
 }
 @media screen and (max-width:1400px){
   .even,.card{
-    margin-left: 500px;
+
+    gap:160px;
+    width:80vw;
   }
   .heading{
-    padding-left: 250px;
+    padding-left: 50px;
   }
   .image {
     width: 940px;
