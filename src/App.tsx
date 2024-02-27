@@ -3,6 +3,7 @@ import "./App.scss";
 import Router from "./routes";
 import ThemeProvider from "./themes/ThemeProvider";
 import { scrollToTop } from "./utils/scrollToTop";
+import { useLocation } from "react-router-dom";
 function App() {
   // const [countryCode, setCountryCode] = useState("");
   // const [number, setNumber] = useState("");
@@ -14,9 +15,10 @@ function App() {
   //   console.log(a, "as the code");
   //   setCountryCode(a);
   // }
+  const location = useLocation();
   useEffect(() => {
     scrollToTop();
-  }, [window.location.pathname]);
+  }, [location?.pathname]);
   return (
     <>
       <ThemeProvider>

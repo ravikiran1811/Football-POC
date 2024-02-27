@@ -1,7 +1,6 @@
-import certificate from "../assets/Certificate.png";
-import experience from "../assets/Experience.png"
+import certificate from "../assets/Certificate.svg";
+import experience from "../assets/Briefcase.svg";
 export const coachCertificationImages = {
-   certificate:certificate,
-    experience:experience
+  certificate: certificate,
+  experience: experience,
 };
-  
