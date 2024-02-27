@@ -58,8 +58,10 @@
   button:hover,
   button:active {
     font-weight: 700px;
-    border: none;
+    border: none !important;
+    border: transparent !important;
     list-style: none;
+    outline: none!important;
   }
 }
 
@@ -71,6 +73,7 @@
 
 .PathButton {
   position: relative;
+  text-align: left;
 }
 
 .pathCard {
@@ -80,10 +83,11 @@
   list-style: none;
   background-color: white;
   color: black;
-  top: 50px;
+  top: 65px;
   left: 5px;
-  text-align: center;
+  text-align: left;
   text-wrap: wrap;
+  padding-left: 8px;
   cursor: pointer;
 }
 
@@ -118,4 +122,10 @@
   .container{
     min-width: 100%;
   }
+}
+
+
+
+._container__content_utrmz_36 button{
+  outline: none!important;
 }
