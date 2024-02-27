@@ -6,8 +6,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+import { headerList } from "./HeaderData";
+=======
 import { headerList } from "./headerData";
 
+>>>>>>> 05cca8a71b19bcefb3a0f934d4554dba31b8b307
 interface IHeaderButtonProps {
   page: {
     id: number;
@@ -28,7 +32,7 @@ const HeaderButton = ({
 }: IHeaderButtonProps) => {
   const { id, name, path, subLinks } = page;
 
-  const { pathname } = useLocation();
+const { pathname } = useLocation();
 
   useEffect(() => {
     window.addEventListener("click", (event: any) => {
@@ -38,9 +42,9 @@ const HeaderButton = ({
     });
   }, []);
   return (
-    <Box className={subLinks ? styles.PathButton : ""}>
+<Box className={subLinks ? styles.PathButton : ""}>
       <Button
-        className={pathname === path ? styles.active : ""}
+className={pathname === path ? styles.active : ""}
         key={id}
         onClick={() => {
           if (!subLinks) {
@@ -51,14 +55,21 @@ const HeaderButton = ({
         }}
       >
         {name}
-        {subLinks && <Box className={styles.triangleDown}></Box>}
+{subLinks && <Box className={styles.triangleDown}></Box>}
       </Button>
       {subLinks && showSublinks && (
         <Box className={styles.pathCard}>
           {subLinks.map((item) => {
             const { name, path } = item;
             return (
-              <p key={name} onClick={() => navigate(path)}>
+              <p key={name}  onClick={() => {
+              const { pathname } = useLocation();
+              console.log(pathname,"as the pathname")
+              console.log(path,"as the path")
+              const className = (pathname === path) ? styles.changeTextStyle : null;
+              console.log(className,"as the name")
+                navigate(path)}}
+                >
                 {name}
               </p>
             );
@@ -71,6 +82,7 @@ const HeaderButton = ({
 
 const Header = () => {
   const navigate = useNavigate();
+  const {pathname} = useLocation();
   const [showSublinks, setShowSublinks] = useState(false);
   return (
     <AppBar position="fixed" className={styles.container}>
@@ -80,7 +92,7 @@ const Header = () => {
         </Box>
         <Box className={styles.container__content}>
           {headerList.map((page) => (
-            <HeaderButton
+            <HeaderButton 
               key={page.id}
               page={page}
               navigate={navigate}
