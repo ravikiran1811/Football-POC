@@ -37,7 +37,7 @@ const TournamentDetails = () => {
       <HallOfFame data={hallOfFameData} />
       <ChampionsSection />
     </>
-  );
+);
 };
 
 export default TournamentDetails;
